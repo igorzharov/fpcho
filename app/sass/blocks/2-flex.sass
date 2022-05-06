@@ -1,0 +1,27 @@
+.flex
+	display: flex
+	flex-wrap: wrap
+	margin: (-$gutter) / 2
+	> .flex-item
+		padding: $gutter / 2
+		box-sizing: border-box
+		flex: 0 0 auto
+
+.flex-between
+	justify-content: space-between
+
+.flex-end
+	display: flex
+	justify-content: flex-end
+
+.flex-center
+	align-items: center
+
+.flex-100 > .flex-item
+	max-width: 100%
+.flex-50 > .flex-item
+	max-width: 50%
+.flex-33 > .flex-item
+	max-width: 33.33333333333333%
+.flex-25 > .flex-item
+	max-width: 25%

@@ -1,0 +1,68 @@
+// USER VARIABLES SECTION
+
+$blue: #00378C
+$blue-light: #E5F0FF
+$blue-ghost: #F8F8FB
+
+$text-dark: #001940
+$text-light: #999BBF
+
+// additional
+$note: #0097F1
+$alert: #FFC107
+$alert-light: #FFF8E5
+$warning: #DC3545
+$warning-light: #F6CCD0
+$success: #30BF54
+$success-light: #D9FFE2
+
+
+$fontsize: 18px // Body Font Size
+$textcolor: $blue-light // Text Color
+$lineheight: 1.65 // Document Line Height
+$roboto: roboto-fp, sans-serif // User Font Family
+$mont: roboto-fp, sans-serif // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+
+$gutter: 24px
+$height: 56px
+
+$sm: 576px
+$md: 768px
+$lg: 992px
+$xl: 1200px
+
+@import 'node_modules/normalize.css/normalize' // normalize
+@import 'node_modules/@fancyapps/ui/dist/fancybox' // fancybox
+@import 'node_modules/swiper/swiper-bundle.min' // swiper
+@import 'node_modules/slim-select/dist/slimselect.min' // swiper
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl) format('woff2')
+
+@include font('roboto-fp', normal, 400, '../fonts/roboto-regular-webfont.woff2')
+@include font('roboto-fp', normal, 700, '../fonts/roboto-bold-webfont.woff2')
+
+@include font('montserrat-fp', normal, 600, '../fonts/montserrat-semibold-webfont.woff2')
+@include font('montserrat-fp', normal, 700, '../fonts/montserrat-bold-webfont.woff2')
+
+body
+	font-family: $roboto
+	font-size: $fontsize
+	line-height: $lineheight
+	color: $text-light
+	min-width: 320px
+	position: relative
+	overflow-x: hidden
+
+
+
+
+
+

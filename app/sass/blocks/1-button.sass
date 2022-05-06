@@ -1,0 +1,26 @@
+.button
+	position: relative
+	display: inline-block
+	height: $height
+	line-height: $height
+	background-color: transparent
+	text-decoration: none
+	border: 0
+	padding: 0
+	margin: 0
+	transition: background-color .25s ease, color .25s ease
+	cursor: pointer
+	padding: 0 $gutter
+	border-radius: $gutter / 4
+
+.button-primary
+	background-color: $blue
+	color: #fff
+	&:hover
+		background-color: lighten($blue, 2%)
+
+.button-secondary
+	background-color: $blue-light
+	color: $blue
+	&:hover
+		background-color: darken($blue-light, 2%)
