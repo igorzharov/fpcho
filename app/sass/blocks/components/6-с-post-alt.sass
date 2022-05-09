@@ -1,0 +1,62 @@
+.с-post-alt
+	padding: 0
+	@media screen and ( min-width: $lg )
+		.flex-100
+			.flex-item
+				padding: $gutter / 2 $gutter / 2 $gutter / 4 $gutter / 2
+
+	@media screen and ( min-width: $md )
+		.post__wrapper
+			display: flex
+			height: 100%
+			flex-direction: column
+
+			.c-post__link
+				display: block
+				margin: auto 0 0 0
+
+		.c-post__date
+			margin-top: 0
+
+
+@media ( min-width: $lg ) and ( max-width: $xl )
+	.с-post-alt
+		.flex-50
+			flex-direction: row
+			.flex-item
+				width: 50%
+			.c-post__title
+				font-size: 18px
+
+@media ( min-width: $md ) and ( max-width: $lg )
+	.с-post-alt
+		.flex
+			flex-direction: column
+
+		.flex-item
+			padding: $gutter / 2 $gutter / 2
+			width: 100%
+
+		.c-post__title
+			font-size: 22px
+
+		.c-post__description
+			display: none
+
+		.c-post__link
+			margin: 0
+
+@media screen and ( max-width: $md )
+	.с-post-alt
+		.flex
+			.flex-item:nth-child(2)
+				padding: 0 $gutter / 2
+
+		.c-post__date
+			margin: 0
+
+		.c-post__description
+			display: none
+
+		.c-post__title
+			font-size: 22px

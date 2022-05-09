@@ -1,0 +1,26 @@
+.swiper
+	margin: 0 (-$gutter) / 2
+	.flex
+		margin: 0
+		.flex-item
+			height: auto
+
+.swiper .swiper-slide:last-child
+	display: none
+
+.swiper-last-news
+	margin: 0
+
+@media screen and ( max-width: $md )
+	.swiper
+		margin: 0
+		> .flex
+			flex-wrap: nowrap
+			.flex-item
+				padding: 0
+	.swiper .swiper-slide:last-child
+		display: block
+
+@media ( min-width: $md ) and ( max-width: $lg )
+	.swiper
+		margin: 0 (-$gutter) / 4

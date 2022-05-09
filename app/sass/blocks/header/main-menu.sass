@@ -1,0 +1,161 @@
+.main-menu
+	width: 100%
+	> ul
+		padding: 0
+		margin: 0
+		display: flex
+		> li
+			list-style-type: none
+			flex: 1 0 0%
+
+	&__buttons
+		display: none
+
+	&__item
+		position: relative
+		border-bottom: 3px solid $blue-light
+		transition: border-color .25s ease
+		white-space: nowrap
+		&:hover, &.is-active
+			border-color: $blue
+			> a
+				color: $blue
+
+		a
+			display: block
+			text-align: center
+			text-decoration: none
+			height: $height
+			line-height: $height
+			color: $text-dark
+
+		form
+			display: flex
+
+	&__item-search
+		img
+			margin: 0 $gutter / 2
+
+	&__search
+		height: $height
+		line-height: $height
+		border: 0
+		outline: 0
+
+
+	&__dropdown
+		.dropdown-menu + a img
+			vertical-align: middle
+			transition: transform .25s ease
+		&:hover
+			.dropdown-menu + a img
+				transform: rotate(180deg)
+			.dropdown-menu
+				opacity: 1
+				visibility: visible
+
+.dropdown-menu
+	position: absolute
+	z-index: 100
+	top: $height + 3px
+	left: -1px
+	width: 300px
+	padding: 0
+	margin: 0
+	opacity: 0
+	background-color: #fff
+	visibility: hidden
+	transition: opacity .25s ease, visibility .25s ease
+	&__item
+		list-style-type: none
+		border: 1px solid $blue-ghost
+		transition: background-color .25s ease
+		border-top: 0
+		&:hover
+			background-color: $blue
+			a
+				color: #fff
+		a
+			text-align: left
+			text-indent: $gutter / 4
+			transition: color .25s ease
+	
+
+@media screen and ( max-width: $lg )
+	.main-menu
+		max-height: 0
+		overflow: hidden
+		transition: max-height .6s ease
+		> ul
+			display: block
+
+		&__buttons
+			margin: $gutter 0
+			text-align: left
+			display: block
+			.main-menu__signup
+				margin-right: $gutter
+
+		&__item
+			border-width: 2px
+			a
+				text-align: left
+
+		&__dropdown
+			display: flex
+			flex-direction: column
+			border: 0
+			cursor: pointer
+			.dropdown-menu + a img
+				transform: rotate(180deg)
+			&:hover
+				.dropdown-menu + a img
+					transform: rotate(180deg)
+
+		&__dropdown-is-active
+			.dropdown-menu + a img
+				transform: rotate(0deg)
+			&:hover
+				.dropdown-menu + a img
+					transform: rotate(0deg)
+
+		&__item-search
+			margin: $gutter 0
+			background-color: $blue-ghost
+			border: 0
+			border-radius: $gutter / 4
+
+		&__search
+			width: 100%
+			background-color: transparent
+			
+		
+
+	.dropdown-menu
+		order: 2
+		opacity: 1
+		visibility: visible
+		position: relative
+		top: 0
+		width: 100%
+		max-height: 0
+		overflow: hidden
+		transition: max-height .6s ease
+		&__item
+			border: 0
+			border-bottom: 2px solid $blue-light
+			transition: border-color .25s ease
+			a
+				position: relative
+				text-indent: $gutter
+			&:hover,&.is-active
+				border-color: $blue
+				a
+					color: $blue
+					background-color: #fff
+			
+@media screen and ( max-width: $md )
+	.main-menu
+
+		&__buttons
+			display: none

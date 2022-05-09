@@ -1,0 +1,28 @@
+.c-news
+
+	&__header
+		margin-top: 0
+
+	&__title
+		overflow: hidden
+		display: -webkit-box
+		-webkit-line-clamp: 3
+		-webkit-box-orient: vertical
+		text-overflow: ellipsis
+
+	&__item
+		display: block
+		text-decoration: none
+		color: $text-light
+		&:hover
+			.c-news__title
+				text-decoration: underline
+
+		&:not(:last-child)
+			border-bottom: 2px solid $blue-ghost
+			margin-bottom: $gutter / 2
+
+@media screen and ( max-width: $md )
+	.c-news
+		&__item
+			display: none

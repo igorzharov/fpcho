@@ -1,0 +1,72 @@
+.c-post
+	display: flex
+	flex-direction: column
+	text-decoration: none
+	color: $text-light
+	&__date
+		display: block
+		margin: $gutter / 2 0 0 0
+		text-decoration: none !important
+
+	&__description
+		margin: 0
+		overflow: hidden
+		display: -webkit-box
+		-webkit-line-clamp: 3
+		-webkit-box-orient: vertical
+		text-overflow: ellipsis
+
+	&__link
+		margin-top: $gutter / 2
+
+	&__title
+		overflow: hidden
+		display: -webkit-box
+		-webkit-line-clamp: 3
+		-webkit-box-orient: vertical
+		text-overflow: ellipsis
+
+	&:hover
+		.c-post__link
+			text-decoration: underline
+
+		.c-post__title
+			text-decoration: underline
+
+@media ( min-width: $md ) and ( max-width: $lg )
+	.c-post
+		margin-bottom: $gutter / 2
+
+@media screen and ( max-width: $md )
+	.c-post
+		padding: $gutter / 2
+		border-radius: $gutter / 2
+		background-color: $blue-ghost
+
+		&__date
+			order: 1
+
+		&__title
+			order: 2
+
+		&__description
+			order: 3
+
+		&__location
+			order: 4
+
+		&__link
+			display: none
+
+	.c-post-big
+		order: 2
+		.c-post__description
+			display: none
+
+		.c-post__title
+			order: 1
+
+		.c-post__date
+			margin: 0
+			order: 2
+	

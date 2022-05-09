@@ -1,0 +1,84 @@
+.header
+	padding-top: $gutter
+	&__flex
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		align-items: center
+
+	&__logo
+		width: auto
+
+	&__buttons
+		width: auto
+		display: flex
+		align-items: center
+		justify-content: flex-end
+
+	&__signup
+		margin-right: $gutter
+
+	&__notifications
+		position: relative
+		padding: $gutter / 2
+		margin-right: $gutter / 2
+		transition: opacity .25s ease
+		img
+			display: block
+		&:hover
+			opacity: .9
+
+	&__notifications-on
+		&:after
+			content: ''
+			position: absolute
+			top: $gutter / 2 - 3px
+			right: $gutter / 2 - 3px
+			width: 8px
+			height: 8px
+			border: 3px solid #fff
+			border-radius: 50%
+			background-color: $note
+			box-sizing: content-box
+
+	&__avatar
+		position: relative
+		display: flex
+		align-items: center
+		text-decoration: none
+		transition: opacity .25s ease
+		span
+			display: block
+			margin-right: $gutter / 2
+		img
+			width: 32px
+			height: 32px
+			border-radius: 50%
+
+		&:hover
+			opacity: .9
+
+	&__avatar-notifications-on
+		&:after
+			content: ''
+			position: absolute
+			top: 2px
+			right: -4px
+			width: 10px
+			height: 10px
+			border: 3px solid #fff
+			border-radius: 50%
+			background-color: $note
+			box-sizing: content-box
+	
+@media screen and ( max-width: $lg )
+	.header
+
+		&__flex
+			justify-content: space-between
+
+		&__logo img
+			height: 60px
+
+		&__buttons
+			display: none

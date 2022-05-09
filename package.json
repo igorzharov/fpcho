@@ -31,6 +31,8 @@
 	},
 	"dependencies": {
 		"@fancyapps/ui": "^4.0.26",
+		"hamburgers": "^1.2.1",
+		"imask": "^6.4.2",
 		"normalize.css": "^8.0.1",
 		"slim-select": "^1.27.1",
 		"swiper": "^8.1.3"

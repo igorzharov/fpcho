@@ -4,11 +4,20 @@
 	margin: (-$gutter) / 2
 	> .flex-item
 		padding: $gutter / 2
-		box-sizing: border-box
 		flex: 0 0 auto
+	> .flex-none
+			flex: none
+			padding: 0
+	> .flex-1
+			flex: 1
 
 .flex-between
 	justify-content: space-between
+
+.flex-justify-content-center
+	justify-content: center
+	@media screen and ( max-width: $md )
+		justify-content: inherit
 
 .flex-end
 	display: flex
@@ -17,11 +26,64 @@
 .flex-center
 	align-items: center
 
+.flex-nowrap
+	flex-wrap: nowrap
+
+.flex-auto > .flex-item
+	flex: 1 0 0%
+
 .flex-100 > .flex-item
-	max-width: 100%
+	width: 100%
 .flex-50 > .flex-item
-	max-width: 50%
+	width: 50%
 .flex-33 > .flex-item
-	max-width: 33.33333333333333%
+	width: 33.33333333333333%
 .flex-25 > .flex-item
-	max-width: 25%
+	width: 25%
+
+.flex-item-33
+	width: 33.33333333333333%
+
+.flex-item-66
+	width: 66.66666666666666%
+
+@media screen and ( max-width: $lg )
+	.flex-50 > .flex-item, .flex-33 > .flex-item, .flex-25 > .flex-item
+		width: 50%
+
+	.flex-lg-order1
+		order: 1
+	.flex-lg-order2
+		order: 2
+
+@media screen and ( max-width: $md )
+	.flex-50 > .flex-item, .flex-33 > .flex-item, .flex-25 > .flex-item, .flex-wrap > .flex-item
+		width: 100%
+
+	.flex-md-order1
+		order: 1
+	.flex-md-order2
+		order: 2
+
+	.flex
+		> .flex-none
+			padding: $gutter / 2
+
+@media ( max-width: $lg )
+	.flex
+		margin: (-$gutter) / 4
+		> .flex-item
+			padding: $gutter / 2
+			flex: 0 0 auto
+		> .flex-none
+			flex: none
+			padding: 0
+			
+		> .flex-1
+			flex: 1
+
+@media ( max-width: $md )
+	.flex
+		> .flex-none
+			flex: none
+			padding: $gutter / 2
