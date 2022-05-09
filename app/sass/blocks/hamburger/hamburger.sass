@@ -1,0 +1,10 @@
+.hamburger
+	display: none
+	padding-right: $gutter / 4
+
+@media screen and ( max-width: $lg )
+	.hamburger
+		display: block
+	
+.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before, .hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::after, .hamburger.is-active .hamburger-inner::before
+	background-color: $blue

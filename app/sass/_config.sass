@@ -7,6 +7,10 @@ $blue-ghost: #F8F8FB
 $text-dark: #001940
 $text-light: #999BBF
 
+$blueF: invert(7%) sepia(85%) saturate(5356%) hue-rotate(208deg) brightness(96%) contrast(106%)
+$text-lightF: invert(71%) sepia(23%) saturate(340%) hue-rotate(199deg) brightness(84%) contrast(95%)
+
+
 // additional
 $note: #0097F1
 $alert: #FFC107
@@ -16,12 +20,14 @@ $warning-light: #F6CCD0
 $success: #30BF54
 $success-light: #D9FFE2
 
+$noteF: invert(44%) sepia(19%) saturate(6106%) hue-rotate(177deg) brightness(125%) contrast(91%)
+
 
 $fontsize: 18px // Body Font Size
 $textcolor: $blue-light // Text Color
-$lineheight: 1.65 // Document Line Height
+$lineheight: 1.5 // Document Line Height
 $roboto: roboto-fp, sans-serif // User Font Family
-$mont: roboto-fp, sans-serif // User Font Family
+$mont: montserrat-fp, sans-serif // User Font Family
 $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
 
 $gutter: 24px
@@ -35,7 +41,8 @@ $xl: 1200px
 @import 'node_modules/normalize.css/normalize' // normalize
 @import 'node_modules/@fancyapps/ui/dist/fancybox' // fancybox
 @import 'node_modules/swiper/swiper-bundle.min' // swiper
-@import 'node_modules/slim-select/dist/slimselect.min' // swiper
+@import 'node_modules/slim-select/dist/slimselect.min' // slimselect
+@import 'node_modules/hamburgers/dist/hamburgers' // hamburgers
 
 // FONTS LOAD SECTION
 
@@ -60,6 +67,16 @@ body
 	min-width: 320px
 	position: relative
 	overflow-x: hidden
+
+*, ::after, ::before
+	box-sizing: border-box
+
+::placeholder
+	color: $text-light
+
+::selection
+	background-color: $text-light
+	color: #fff
 
 
 

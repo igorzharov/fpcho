@@ -1,0 +1,64 @@
+.c-pagination
+	display: flex
+	align-items: center
+	flex-direction: row
+	justify-content: space-between
+	margin: $gutter * 2 0
+
+	&__left, &__center, &__right
+		display: flex
+
+	&__left
+		.c-pagination__item
+			margin-right: $gutter
+	
+	&__right
+		.c-pagination__item
+			margin-left: $gutter
+
+@media (max-width : $xl)
+	.c-pagination
+		&__left
+			.c-pagination__item
+				margin-right: $gutter / 2
+	
+		&__right
+			.c-pagination__item
+				margin-left: $gutter / 2
+
+
+@media (max-width : $lg)
+	.c-pagination
+
+		&__left
+
+			.c-pagination__item:not(:nth-child(-n+4))
+				display: none
+
+		&__right
+			
+			.c-pagination__item:not(:nth-child(n+3))
+				display: none
+
+@media (max-width : $md)
+	.c-pagination
+		margin: $gutter * 1 0
+		
+		&__left
+			
+			.c-pagination__item:not(:nth-child(-n+3))
+				display: none
+
+			.c-pagination__item:first-child:after
+				content: '<'
+
+		&__right
+			
+			.c-pagination__item:not(:nth-child(n+4))
+				display: none
+
+			.c-pagination__item:last-child:after
+				content: '>'
+
+		&__item span
+			display: none

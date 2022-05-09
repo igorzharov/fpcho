@@ -1,0 +1,168 @@
+.c-table
+	display: table
+	width: 100%
+	&__head
+		display: table-row
+
+	&__header .h4
+		color: $note
+
+	&__body
+		display: table-footer-group
+		
+	&__row
+		display: table-row
+		&:nth-child(even)
+			background-color: $blue-ghost
+
+	&__row-link
+		text-decoration: none
+		color: $text-light
+		transition: background-color .25s ease
+		@media screen and ( min-width: $lg )
+			.h4
+				font-weight: 400
+				color: $text-light
+				font-family: $roboto
+		&:hover
+			background-color: darken($blue-ghost, 2%)
+			color: $note
+			.h4
+				color: $note
+
+	&__cell
+		display: table-cell
+		vertical-align: middle
+		height: $height
+		padding: 0 $gutter / 2
+			
+	&__cell-right
+		text-align: right
+
+	&__title
+		display: none
+
+.c-table-card
+	display: flex
+	flex-wrap: wrap
+	width: calc(100% + 24px)
+	margin: 0 (-$gutter) / 2
+
+	.c-table__head
+		display: none
+
+	.c-table__body
+		display: flex
+		flex-wrap: wrap
+
+	.c-table__row
+		display: flex
+		width: 33.333333333%
+		flex-direction: column
+		justify-content: center
+		background-color: #fff !important
+		padding: $gutter
+		border: 12px solid transparent
+		border-radius: $gutter
+		box-sizing: border-box
+		box-shadow: inset 0px 0px 0 3px $blue-light
+
+	.c-table__title
+		display: block
+
+	.c-table__text
+		color: $blue
+		font-weight: 600
+		font-family: $mont
+
+	.c-table__cell
+		height: auto
+		padding: $gutter / 4 0
+		.h4
+			margin: 0
+
+	.c-table__cell-right
+		text-align: left
+
+	.c-table__group
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+@media screen and ( max-width: $lg )
+	.c-table
+		display: flex
+		flex-wrap: wrap
+		width: calc(100% + 24px)
+		margin: 0 (-$gutter) / 2
+
+		&__head
+			display: none
+
+		&__body
+			width: 100%
+			display: flex
+			flex-wrap: wrap
+
+		&__row
+			display: flex
+			width: 50%
+			flex-direction: column
+			justify-content: center
+			background-color: #fff !important
+			padding: $gutter
+			border: 12px solid transparent
+			border-radius: $gutter
+			box-sizing: border-box
+			box-shadow: inset 0px 0px 0 3px $blue-light
+
+		&__row-link
+			text-decoration: none
+			color: $text-light
+			transition: background-color .25s ease
+			@media screen and ( min-width: $lg )
+				.h4
+					font-weight: 400
+					color: $text-light
+					font-family: $roboto
+			&:hover
+				background-color: darken($blue-ghost, 2%)
+				color: $text-light
+				.h4
+					color: $text-dark
+
+		&__title
+			display: block
+
+		&__text
+			color: $blue
+			font-weight: 600
+			font-family: $mont
+			text-align: right
+
+		&__cell
+			height: auto
+			padding: $gutter / 4 0
+			.h4
+				margin: 0
+
+		&__cell-right
+			text-align: left
+
+		&__group
+			display: flex
+			justify-content: space-between
+			align-items: center
+
+	.c-table-card
+		.c-table__row
+			width: 50%
+
+@media screen and ( max-width: $md )
+	.c-table
+		&__row
+			width: 100%
+
+	.c-table-card
+		.c-table__row
+			width: 100%

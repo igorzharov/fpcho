@@ -1,0 +1,38 @@
+.tabbar-menu
+	position: fixed
+	z-index: 1000
+	bottom: 0
+	display: none
+	flex-direction: row
+	width: 100%
+	background-color: #fff
+	&__item
+		width: 20%
+		height: $height * 2
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		text-decoration: none
+		img
+			height: $height / 2
+
+		span
+			color: $text-light
+			margin-top: $gutter / 4
+
+	&__active
+		span
+			color: $blue
+			font-weight: 700
+		img
+			filter: $blueF
+
+	&__avatar
+		width: 28px
+		height: 28px
+		border-radius: 50%
+
+@media screen and ( max-width: $md )
+	.tabbar-menu
+		display: flex
