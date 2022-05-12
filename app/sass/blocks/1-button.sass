@@ -18,6 +18,7 @@
 	&:hover
 		color: lighten($blue, 5%)
 		box-shadow: 0 0 0 4px $note
+		text-decoration: none !important
 	&:visited
 		color: darken($blue, 5%)
 
@@ -53,35 +54,28 @@
 
 .button-icon
 	display: inline-flex
-	flex-direction: row
 	img
-		margin: auto
-	@media screen and ( max-width: $md )
-		width: $height
-		padding: 0
+		margin: auto 0
 
 .button-icon-right
-	img
-		margin-left: $gutter / 4
-	@media screen and ( max-width: $md )
-		img
-			margin: auto
-		span
-			display: none
+	span
+		margin-right: $gutter / 3
 
 .button-icon-left
-	img
-		margin-right: $gutter / 4
-	@media screen and ( max-width: $md)
-		img
-			margin: auto
-		span
-			display: none
+	span
+		margin-left: $gutter / 3
+
+.button-icon-
 
 .button-full
 	width: 100%
 	text-align: center
 	padding: 0
+
+a.button-full
+	width: 100%
+	img
+		margin-left: $gutter
 
 .button-square
 	width: $height

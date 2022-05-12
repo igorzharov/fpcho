@@ -16,6 +16,16 @@
 		.c-pagination__item
 			margin-left: $gutter
 
+.c-pagination-small
+		.c-pagination__left
+			.c-pagination__item:not(:nth-child(-n+4))
+				display: none
+	
+		.c-pagination__right
+			.c-pagination__item:nth-child(-n+2)
+				display: none
+
+
 @media (max-width : $xl)
 	.c-pagination
 		&__left
@@ -37,7 +47,7 @@
 
 		&__right
 			
-			.c-pagination__item:not(:nth-child(n+3))
+			.c-pagination__item:nth-child(-n+2)
 				display: none
 
 @media (max-width : $md)
@@ -54,7 +64,7 @@
 
 		&__right
 			
-			.c-pagination__item:not(:nth-child(n+4))
+			.c-pagination__item:nth-child(-n+3)
 				display: none
 
 			.c-pagination__item:last-child:after

@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	function togglePassword() {
 
-		document.querySelector('.p-login').addEventListener('click', (e) => {
+		document.querySelector('body').addEventListener('click', (e) => {
 
 			if (e.target.classList.contains('c-form-control__toggle-visibility')) {
 				const input = e.target.offsetParent.children[0];
@@ -129,36 +129,73 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	}
 
-	if (document.querySelector('.p-login')) togglePassword();
+	if (document.querySelector('[type="password"]')) togglePassword();
 
-	const selects = Array.from(document.querySelectorAll('.c-form-control__select'));
+	function initSelect() {
 
-	selects.forEach(select => {
+		const selects = Array.from(document.querySelectorAll('.c-form-control__select'));
 
-		new SlimSelect({
-			select: select,
-			showSearch: false,
-			disabled: false,
+		selects.forEach(select => {
+
+			new SlimSelect({
+				select: select,
+				showSearch: false,
+				disabled: false,
+			});
+
+		});
+	}
+
+	if (document.querySelectorAll('.c-form-control__select')) initSelect()
+
+	const ss = new SlimSelect({
+		select: '.c-form-control__multiple-select',
+		showSearch: false,
+		disabled: false,
+		closeOnSelect: false,
+		// onChange: function (e) {
+		// 	console.log(e);
+			// return false
+			// console.log(this);
+			// console.log(e[0]);
+		// },
+		beforeOnChange: (info) => {
+			console.log(info)
+			return false // this will stop propagation
+		}
+	});
+
+	ss.set(['28561246', 'value2'])
+
+	// console.log(ss.onChange);
+
+	function initPopup() {
+
+		Fancybox.bind('.c-filter-form__button', {
+			hideScrollbar: false,
+			autoFocus: false,
+			mainClass: 'c-popup-filter__container',
 		});
 
-	});
+		Fancybox.bind('.c-profile-card-button', {
+			hideScrollbar: false,
+			autoFocus: false,
+			mainClass: 'c-popup-filter__container',
+		});
 
-	Fancybox.bind('.c-filter-form__button', {
-		hideScrollbar: false,
-		autoFocus: false,
-		mainClass: 'c-popup-filter__container',
-		// type: 'clone'
-	});
+	}
 
-	function initMask() {
+	initPopup()
 
+	function initMaskPhone() {
 		const phoneMask = IMask(document.querySelector('.c-form-control__phone-mask'), {
 			mask: '+{7} (000) 000-00-00'
 		});
+	}
 
-		// const dateMask = IMask(document.querySelector('.c-form-control__birthday-mask'), {
+	if (document.querySelector('.c-form-control__phone-mask')) initMaskPhone();
 
-		// });
+	function initMaskDate() {
 
 		var lazyMask = IMask(document.querySelector('.c-form-control__birthday-mask'),
 			{
@@ -174,40 +211,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	}
 
-	initMask();
+	if (document.querySelector('.c-form-control__birthday-mask')) initMaskDate();
 
-	// function initSelect() {
 
-	// 	if (document.querySelector('.p-rating')) {
+	if (window.location.href == 'http://localhost:3000/lk-federation-alert.html') {
 
-	// 		new SlimSelect({
-	// 			select: '.с-select-school',
-	// 			showSearch: false,
-	// 			disabled: false,
-	// 		})
-	// 		new SlimSelect({
-	// 			select: '.с-select-trener',
-	// 			showSearch: false,
-	// 			disabled: false,
-	// 		})
-	// 		new SlimSelect({
-	// 			select: '.с-select-type',
-	// 			showSearch: false,
-	// 			disabled: false,
-	// 		})
-	// 		new SlimSelect({
-	// 			select: '.с-select-bassen',
-	// 			showSearch: false,
-	// 			disabled: false,
-	// 		})
-	// 		new SlimSelect({
-	// 			select: '.с-select-distance',
-	// 			showSearch: false,
-	// 			disabled: false,
-	// 		})
-	// 	}
+		Fancybox.show([
+			{
+				src: '#dialog-content',
+				type: 'inline',
+				mainClass: 'c-alert-popup'
+			}
+		]);
 
-	// }
+	}
+
+
 
 
 })

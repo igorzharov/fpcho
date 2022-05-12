@@ -5,13 +5,13 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Контакты</title>
+	<title>Личный кабинет / Член Федерации / Членские взносы</title>
 
 	<link rel="stylesheet" href="css/main.min.css">
 
 </head>
 
-<body class="p-contacts">
+<body class="p-lk">
 
 	<header class="header">
 
@@ -26,12 +26,16 @@
 					<span class="hamburger-box">
 						<span class="hamburger-inner"></span>
 					</span>
-				</button>  
+				</button>
 
 				<div class="header__buttons">
 
-					<a href="#" class="header__signup button button-secondary">Регистрация</a>
-					<a href="#" class="header__signin button button-primary">Войти</a>
+					<a href="#" class="header__notifications"><img src="images/icons/bell.svg" alt="icon"></a>
+
+					<a href="#" class="header__avatar">
+						<span class="h4">Алиса Иванова</span>
+						<img class="img-responsive" src="./images/dist/image-4.jpg" alt="avatar">
+					</a>
 
 				</div>
 				<!-- /.header__buttons -->
@@ -42,7 +46,7 @@
 
 						<a href="#" class="main-menu__signup button button-middle button-secondary">Регистрация</a>
 						<a href="#" class="main-menu__signin button button-middle button-primary">Войти</a>
-	
+
 					</div>
 					<!-- /.header__buttons -->
 
@@ -66,7 +70,7 @@
 
 								<li class="dropdown-menu__item"><a href="federation.html">Документы</a></li>
 								<li class="dropdown-menu__item"><a href="federation.html">Тренерский состав</a></li>
-								<li class="dropdown-menu__item"><a href="federation2.html">Бассейны</a></li>
+								<li class="dropdown-menu__item is-active"><a href="federation2.html">Бассейны</a></li>
 								<li class="dropdown-menu__item"><a href="federation.html">Руководящий состав</a></li>
 								<li class="dropdown-menu__item"><a href="federation2.html">Спортивные организации</a></li>
 								<li class="dropdown-menu__item"><a href="federation.html">Члены Федерации</a></li>
@@ -78,7 +82,7 @@
 
 						</li>
 
-						<li class="main-menu__item is-active"><a href="contacts.html">Контакты</a></li>
+						<li class="main-menu__item"><a href="contacts.html">Контакты</a></li>
 
 					</ul>
 
@@ -98,84 +102,67 @@
 
 		<div class="container">
 
-			<div class="flex flex-33">
+			<div class="flex flex-wrap">
 
-				<div class="flex-item">
+				<div class="flex-item flex-item-33 flex-1">
 
-					<div class="c-group-text">
+					<a href="#popupProfile" class="c-profile-card-button button button-secondary button-icon button-icon-left"><img class="icon-blue" src="./images/icons/user.svg" alt="icon"><span style="display: block;">Ваш профиль</span></a>
 
-						<div class="c-group-text__title h3">Наш телефон</div>
+					<div id="popupProfile" class="c-profile-card">
 
-						<img class="c-group-text__icon c-group-text__icon-left icon icon-blue-light" src="images/icons/phone.svg" alt="icon">
+						<div class="c-profile-card__avatar">
+							<img class="img-responsive" src="./images/dist/avatar.png" alt="avatar">
+						</div>
+						<!-- /.c-profile-card__avatar -->
 
-						<span class="c-group-text__text">8 (351) 721-27-89</span>
+						<div class="c-profile-card__profile-info c-group-text c-group-text-caption c-group-text-center">
 
-					</div>
-					<!-- /.group-text -->
+							<div class="c-group-text__title h3">Алиса Иванова</div>
 
-				</div>
-				<!-- /.flex-item -->
-
-				<div class="flex-item">
-					
-					<div class="c-group-text">
-
-						<div class="c-group-text__title h3">Наша почта</div>
-						
-						<img class="c-group-text__icon c-group-text__icon-left icon icon-blue-light" src="images/icons/mail.svg" alt="icon">
-
-						<span class="c-group-text__text">FP4O@yandex.ru</span>
-
-					</div>
-					<!-- /.group-text -->
-
-				</div>
-				<!-- /.flex-item -->
-
-				<div class="flex-item">
-
-					<div class="c-group-text">
-						
-						<div class="c-group-text__title h3">Президент федерации</div>
-
-						<img class="c-group-text__icon c-group-text__icon-left icon icon-blue-light" src="images/icons/user.svg" alt="icon">
-
-						<span class="c-group-text__text">Галеев Валерий Фаритович</span>
-
-					</div>
-					<!-- /.group-text -->
-
-				</div>
-				<!-- /.flex-item -->
-
-				<div class="flex-item">
-
-					<div class="h3">Соц. сети</div>
-
-					<div class="flex">
-
-						<div class="flex-item">
-
-							<a class="c-soc-icon" href="#"><img src="images/icons/vk.svg" alt="icon"></a>
+							<span class="c-group-text__text">Член федерации</span>
 
 						</div>
-						<!-- /.flex-item -->
+						<!-- /.c-group-text -->
 
-						<div class="flex-item">
+						<div class="c-profile-card__controls">
 
-							<a class="c-soc-icon" href="#"><img src="images/icons/vk.svg" alt="icon"></a>
+							<a href="#" class="button button-ghost button-full button-icon button-icon-left"><img class="icon-blue" src="./images/icons/users.svg" alt="icon"> <span>Передача/прикрепление</span></a>
+
+							<a href="#" class="button button-primary button-full button-icon button-icon-left"><img class="icon-white" src="./images/icons/credit-card.svg" alt="icon"> <span>Членские взносы</span></a>
+
+							<hr class="c-profile-card__hr hr">
+
+							<a href="#" class="button button-ghost button-full button-icon button-icon-left"><img class="icon-blue" src="./images/icons/user.svg" alt="icon"> <span>Настройки профиля</span></a>
+
+							<a href="#" class="button button-ghost button-full button-icon button-icon-left"><img class="icon-blue" src="./images/icons/shield.svg" alt="icon"> <span>Смена пароля</span></a>
+
+							<hr class="c-profile-card__hr hr">
+
+							<a href="#" class="button button-secondary button-full">Сменить кабинет</a>
+							<a href="#" class="button button-ghost button-full">Выход</a>
 
 						</div>
-						<!-- /.flex-item -->
+						<!-- /.c-profile-card__controls -->
 
 					</div>
-					<!-- /.flex -->
+					<!-- /.c-profile-card -->
 
 				</div>
-				<!-- /.flex-item -->
+				<!-- /.flex-item flex-item-33 -->
+
+				<div class="flex-item flex-item-66">
+
+					<div class="h3 mt0">Оплата членского взноса</div>
+
+					<p>К оплате за годовой членский взнос 900 ₽</p>
+
+					<a href="#" class="button button-primary">Оплатить взнос</a>
+
+				</div>
+				<!-- /.flex-item flex-item-66 -->
 
 			</div>
-			<!-- /.flex flex-33 -->
+			<!-- /.flex -->
 
 		</div>
 		<!-- /.container -->
@@ -280,7 +267,7 @@
 			<!-- /.tabbar-menu__item -->
 
 			<a class="tabbar-menu__item" href="#">
-				<img class="tabbar-menu__avatar img-responsive" src="./images/dist/avatar.png" alt="#">
+				<img class="tabbar-menu__avatar img-responsive" src="./images/icons/Avatar Empty.svg" alt="#">
 				<span>Кабинет</span>
 			</a>
 			<!-- /.tabbar-menu -->

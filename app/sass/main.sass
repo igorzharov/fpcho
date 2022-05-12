@@ -37,7 +37,18 @@
 
 .p2
 	font-size: 16px
-	margin: $gutter / 3 0
+
+a
+	text-decoration: none
+	transition: color .25s ease
+	&:hover
+		color: darken($note, 7%)
+
+.hr
+	border: 0
+	height: 2px
+	background-color: $blue-light
+	margin: $gutter 0
 	
 @import 'blocks/**/*'
 
@@ -74,11 +85,17 @@
 .icon
 	display: block
 
+.icon-white
+	filter: invert(94%) sepia(94%) saturate(24%) hue-rotate(57deg) brightness(105%) contrast(108%)
+
 .icon-blue
 	filter: $blueF
 
 .icon-blue-light
 	filter: $text-lightF
+
+.icon-note
+	filter: $noteF
 
 .c-note
 	color: $note
@@ -89,7 +106,7 @@
 .nowrap
 	white-space: nowrap
 
-.lg-md-none
+.md-d-none
 	@media screen and ( max-width: $md )
 		display: none
 

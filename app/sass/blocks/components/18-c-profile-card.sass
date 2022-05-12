@@ -1,0 +1,34 @@
+.c-profile-card
+	padding: $gutter
+	border: 2px solid $blue-light
+	border-radius: $gutter / 2
+	display: block
+
+	&__hr
+		background-color: $blue-ghost
+		margin: $gutter / 2 0
+
+	.c-profile-card__avatar
+		margin: 0 auto $gutter / 2 auto
+		width: 96px
+		height: 96px
+		img
+			border-radius: 50%
+
+	.c-profile-card__profile-info
+		margin-bottom: $gutter
+
+	.button
+		margin: $gutter / 4 0
+
+.c-profile-card-button
+	display: none
+
+@media screen and ( max-width: $lg )
+	.c-profile-card
+		display: none
+		
+	.c-profile-card-button
+		display: inline-flex
+
+	
