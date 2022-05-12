@@ -12,7 +12,6 @@
 	cursor: pointer
 	padding: 0 $gutter
 	box-shadow: 0 0 0 4px transparent
-	// border: 4px solid $note
 	box-sizing: content-box
 	border-radius: $gutter / 4
 	&:hover
@@ -27,6 +26,8 @@
 	color: #fff !important
 	&:hover
 		background-color: lighten($blue, 5%)
+	img
+		filter: invert(94%) sepia(94%) saturate(24%) hue-rotate(57deg) brightness(105%) contrast(108%)
 
 .button-secondary
 	background-color: $blue-light
@@ -39,6 +40,8 @@
 	color: $blue
 	&:hover
 		background-color: darken($blue-light, 3%)
+	img
+		filter: $blueF
 
 .button-gray
 	background-color: $blue-ghost
@@ -52,6 +55,23 @@
 	&:hover
 		background-color: darken($blue-ghost, 3%)
 
+.button-success
+	background-color: $success-light
+	color: $success
+	cursor: default
+	&:hover
+		box-shadow: none
+		color: $success
+
+.button-warning
+	background-color: $warning-light
+	color: $warning
+	cursor: default
+	&:hover
+		box-shadow: none
+		color: $warning
+
+
 .button-icon
 	display: inline-flex
 	img
@@ -64,8 +84,6 @@
 .button-icon-left
 	span
 		margin-left: $gutter / 3
-
-.button-icon-
 
 .button-full
 	width: 100%

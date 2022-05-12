@@ -141,31 +141,28 @@ document.addEventListener('DOMContentLoaded', () => {
 				select: select,
 				showSearch: false,
 				disabled: false,
+				allowDeselectOption: true
 			});
 
 		});
 	}
 
-	if (document.querySelectorAll('.c-form-control__select')) initSelect()
+	if (document.querySelectorAll('.c-form-control__select')) initSelect();
 
-	const ss = new SlimSelect({
-		select: '.c-form-control__multiple-select',
-		showSearch: false,
-		disabled: false,
-		closeOnSelect: false,
-		// onChange: function (e) {
-		// 	console.log(e);
-			// return false
-			// console.log(this);
-			// console.log(e[0]);
-		// },
-		beforeOnChange: (info) => {
-			console.log(info)
-			return false // this will stop propagation
-		}
-	});
+	// const ss = new SlimSelect({
+	// 	select: '.c-form-control__multiple-select',
+	// 	showSearch: false,
+	// 	selectByGroup: true,
+	// 	allowDeselectOption: true,
+	// });
 
-	ss.set(['28561246', 'value2'])
+
+	// console.log(ss.data.data);
+
+	// console.log(ss.data.data[0].options);
+	
+
+	// ss.set(['28561246', 'value2'])
 
 	// console.log(ss.onChange);
 
