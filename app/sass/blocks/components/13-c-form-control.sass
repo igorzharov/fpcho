@@ -120,6 +120,7 @@
 			border: 0
 			max-height: 285px
 			.ss-option
+				padding: 0
 				&:hover
 					background-color: $blue
 					color: #fff 
@@ -130,7 +131,7 @@
 	&__select-item
 		height: 56px
 		line-height: 56px
-		padding: 0 !important
+		padding: 0
 		border-left: 1px solid $blue-ghost
 		border-right: 1px solid $blue-ghost
 		border-bottom: 1px solid $blue-ghost
@@ -145,7 +146,6 @@
 	&__select-item:last-child
 		border-bottom-left-radius: $gutter / 4
 		border-bottom-right-radius: $gutter / 4
-
 
 	&__multiple-select
 		.ss-multi-selected
@@ -162,31 +162,34 @@
 			.placeholder
 				color: $text-light
 
-		.ss-optgroup-label
-			padding: $gutter / 2 !important
+			.ss-values
+				height: 30px
 
-		.ss-list
-			max-height: 100% !important
+			.ss-add
+				padding-right: $gutter / 2
+				flex: 0 1 auto
+				margin: 0 6px
+				align-items: center
+				.ss-plus
+					border: solid $text-dark
+					border-width: 0 2px 2px 0
+					display: inline-block
+					padding: 4px
+					transition: margin .2s,-webkit-transform .2s
+					transition: transform .2s,margin .2s
+					transition: transform .2s,margin .2s,-webkit-transform .2s
+					height: inherit
+					width: inherit
+					background: transparent
+					transform: rotate(45deg)
+					&:after
+						display: none
 
-		.ss-add
-			padding-right: $gutter / 2
-			flex: 0 1 auto !important
-			margin: 0 6px !important
-			align-items: center !important
-			span
-				border: solid $text-dark !important
-				border-width: 0 2px 2px 0 !important
-				display: inline-block !important
-				padding: 4px !important
-				transition: margin .2s,-webkit-transform .2s !important
-				transition: transform .2s,margin .2s !important
-				transition: transform .2s,margin .2s,-webkit-transform .2s !important
-				height: inherit !important
-				width: inherit !important
-				background: transparent !important
-				transform: rotate(45deg)
-				&:after
-					display: none
+		// .ss-optgroup-label
+		// 	padding: $gutter / 2 !important
+
+		// .ss-list
+		// 	max-height: 100% !important
 
 		.ss-open-below
 			.ss-add

@@ -149,6 +149,88 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	if (document.querySelectorAll('.c-form-control__select')) initSelect();
 
+	class SAccordion {
+
+		constructor(el) {
+
+			this._el = document.querySelector(el);
+			this.countItems();
+			this.addEventListener();
+		}
+		countItems() {
+			const elBody = this._el.querySelector('.c-select-accordion__body');
+
+			const elCount = this._el.querySelector('.c-select-accordion__text span');
+
+			elCount.innerHTML = elBody.children.length;
+		}
+		addEventListener() {
+			this._el.addEventListener('click', (e) => {
+				const elButton = e.target.classList.contains('c-select-accordion__button');
+				if (elButton) this.toggle()
+
+				const elItem = e.target.classList.contains('c-select-accordion__item');
+
+				if (elItem) {
+					// this = bind(this)
+					console.log(this);
+					// e.stopPropagation()
+					// console.log(elItem.querySelector('.c-form-control__radio'));
+				}
+
+			})
+		}
+		show() {
+			const elBody = this._el.querySelector('.c-select-accordion__body');
+			elBody.style['display'] = `block`;
+			const height = elBody.clientHeight;
+			elBody.style['height'] = `0`;
+			elBody.style['transition'] = `height 250ms ease`;
+			setTimeout(() => {
+				elBody.style['height'] = `${height}px`;
+			})
+		}
+		hide() {
+			const elBody = this._el.querySelector('.c-select-accordion__body');
+			elBody.style['transition'] = `height 250ms ease`;
+			elBody.style['height'] = `0`;
+			setTimeout(() => {
+				elBody.style['display'] = '';
+				elBody.style['height'] = '';
+			}, 250)
+		}
+		toggle() {
+			this._el.classList.toggle('c-select-accordion--show');
+			this._el.classList.contains('c-select-accordion--show') ? this.show() : this.hide();
+		}
+
+	}
+
+	new SAccordion('.c-select-accordion')
+
+	// function selectAll() {
+
+	// 	const selectAll = document.querySelector('.c-form-control__radio-select-all')
+
+	// 	const checkboxes = document.querySelectorAll('[name="checkbox"]')
+
+	// 	selectAll.addEventListener('click', () => {
+
+	// 		checkboxes.forEach(checkbox => {
+	// 			checkbox.checked = selectAll.checked;
+	// 		})
+
+	// 	})
+		
+	// }
+
+	// if (document.querySelectorAll('.c-form-control__radio-select-all')) selectAll();
+
+
+	// new Itcaccordion(document.querySelector('.c-accordion'), {
+	// 	alwaysOpen: false
+	// });
+
 	// const ss = new SlimSelect({
 	// 	select: '.c-form-control__multiple-select',
 	// 	showSearch: false,
