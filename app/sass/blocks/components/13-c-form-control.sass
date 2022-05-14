@@ -90,7 +90,20 @@
 	&__radio-label
 		cursor: pointer
 		flex: auto
+		display: flex
+		align-items: center
+		height: 100%
 		padding-left: $gutter / 4
+		pointer-events: none
+
+	// Фикс SLIM SELECT для Required
+
+	select.c-form-control__select
+		display: block !important
+		position: absolute
+		height: $height
+		top: 0
+		opacity: 0
 
 	&__select
 		.ss-single-selected

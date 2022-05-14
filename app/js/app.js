@@ -1,14 +1,7 @@
-import { Fancybox, Carousel, Panzoom } from "@fancyapps/ui"
-import Swiper, { Pagination, Autoplay } from 'swiper'
+import { Fancybox } from "@fancyapps/ui"
+import Swiper, { Pagination } from 'swiper'
 import SlimSelect from 'slim-select'
 import IMask from 'imask'
-
-// import './calendar.js'
-// import './calendar-event.js'
-// import './posts.js'
-// import './post.js'
-// import './gallery.js'
-// import './login.js'
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -153,60 +146,99 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		constructor(el) {
 
-			this._el = document.querySelector(el);
-			this.countItems();
+			this.$el = document.querySelector(el);
+			this.recalculation();
 			this.addEventListener();
 		}
-		countItems() {
-			const elBody = this._el.querySelector('.c-select-accordion__body');
-
-			const elCount = this._el.querySelector('.c-select-accordion__text span');
-
-			elCount.innerHTML = elBody.children.length;
-		}
 		addEventListener() {
-			this._el.addEventListener('click', (e) => {
-				const elButton = e.target.classList.contains('c-select-accordion__button');
-				if (elButton) this.toggle()
+			this.$el.addEventListener('click', (e) => {
 
-				const elItem = e.target.classList.contains('c-select-accordion__item');
+				const $elHeader = e.target.closest('.c-select-accordion__header .c-select-accordion__text');
+				const $elButton = e.target.closest('.c-select-accordion__button');
+				const $elItem = e.target.closest('.c-select-accordion__item');
 
-				if (elItem) {
-					// this = bind(this)
-					console.log(this);
-					// e.stopPropagation()
-					// console.log(elItem.querySelector('.c-form-control__radio'));
+				if ($elButton) this.toggle();
+
+				if ($elItem) {
+					this.recalculation();
+				}
+
+				if ($elHeader) {
+					this.selectAll();
+					if (e.pointerId == 1) this.toggle()
 				}
 
 			})
 		}
+
+		selectAll() {
+			const checkboxes = this.$el.querySelectorAll('.c-select-accordion__body .c-form-control__radio');
+
+			const $checkboxSelectAll = this.$el.querySelector('.c-select-accordion__header .c-form-control__radio');
+
+			checkboxes.forEach((checkbox) => {
+				checkbox.checked = $checkboxSelectAll.checked;
+			})
+
+			this.recalculation();
+
+		}
+		recalculation() {
+			const checkboxes = this.$el.querySelectorAll('.c-select-accordion__body .c-form-control__radio');
+
+			const $checkboxSelectAll = this.$el.querySelector('.c-select-accordion__header .c-form-control__radio');
+
+			const countCheck = Array.from(checkboxes).filter(checkbox => checkbox.checked == true).length;
+
+			const $elCount = this.$el.querySelector('.c-select-accordion__text span');
+
+			if (countCheck) {
+				$elCount.innerHTML = `Выбрано (${countCheck})`;
+
+				$checkboxSelectAll.required = false;
+
+				checkboxes.forEach(checkbox => {
+					checkbox.required = false;
+				});
+
+			} else {
+				$elCount.innerHTML = `Выбрать всех (${checkboxes.length})`;
+				$checkboxSelectAll.checked = false;
+
+				$checkboxSelectAll.required = true;
+
+				checkboxes.forEach(checkbox => {
+					checkbox.required = true;
+				});
+			}
+		}
 		show() {
-			const elBody = this._el.querySelector('.c-select-accordion__body');
-			elBody.style['display'] = `block`;
-			const height = elBody.clientHeight;
-			elBody.style['height'] = `0`;
-			elBody.style['transition'] = `height 250ms ease`;
+			const $elBody = this.$el.querySelector('.c-select-accordion__body');
+			$elBody.style['display'] = `block`;
+			const height = $elBody.clientHeight;
+			$elBody.style['height'] = `0`;
+			$elBody.style['transition'] = `height 250ms ease`;
 			setTimeout(() => {
-				elBody.style['height'] = `${height}px`;
+				$elBody.style['height'] = `${height}px`;
 			})
 		}
 		hide() {
-			const elBody = this._el.querySelector('.c-select-accordion__body');
-			elBody.style['transition'] = `height 250ms ease`;
-			elBody.style['height'] = `0`;
+			const $elBody = this.$el.querySelector('.c-select-accordion__body');
+			$elBody.style['transition'] = `height 250ms ease`;
+			$elBody.style['height'] = `0`;
 			setTimeout(() => {
-				elBody.style['display'] = '';
-				elBody.style['height'] = '';
+				$elBody.style['display'] = '';
+				$elBody.style['height'] = '';
 			}, 250)
 		}
 		toggle() {
-			this._el.classList.toggle('c-select-accordion--show');
-			this._el.classList.contains('c-select-accordion--show') ? this.show() : this.hide();
+			this.$el.classList.toggle('c-select-accordion--show');
+			this.$el.classList.contains('c-select-accordion--show') ? this.show() : this.hide();
 		}
 
 	}
 
-	new SAccordion('.c-select-accordion')
+	if (document.querySelector('.c-select-accordion')) new SAccordion('.c-select-accordion');
 
 	// function selectAll() {
 
@@ -221,7 +253,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	// 		})
 
 	// 	})
-		
+
 	// }
 
 	// if (document.querySelectorAll('.c-form-control__radio-select-all')) selectAll();
@@ -242,7 +274,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	// console.log(ss.data.data);
 
 	// console.log(ss.data.data[0].options);
-	
+
 
 	// ss.set(['28561246', 'value2'])
 
