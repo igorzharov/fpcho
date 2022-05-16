@@ -240,46 +240,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	if (document.querySelector('.c-select-accordion')) new SAccordion('.c-select-accordion');
 
-	// function selectAll() {
-
-	// 	const selectAll = document.querySelector('.c-form-control__radio-select-all')
-
-	// 	const checkboxes = document.querySelectorAll('[name="checkbox"]')
-
-	// 	selectAll.addEventListener('click', () => {
-
-	// 		checkboxes.forEach(checkbox => {
-	// 			checkbox.checked = selectAll.checked;
-	// 		})
-
-	// 	})
-
-	// }
-
-	// if (document.querySelectorAll('.c-form-control__radio-select-all')) selectAll();
-
-
-	// new Itcaccordion(document.querySelector('.c-accordion'), {
-	// 	alwaysOpen: false
-	// });
-
-	// const ss = new SlimSelect({
-	// 	select: '.c-form-control__multiple-select',
-	// 	showSearch: false,
-	// 	selectByGroup: true,
-	// 	allowDeselectOption: true,
-	// });
-
-
-	// console.log(ss.data.data);
-
-	// console.log(ss.data.data[0].options);
-
-
-	// ss.set(['28561246', 'value2'])
-
-	// console.log(ss.onChange);
-
 	function initPopup() {
 
 		Fancybox.bind('.c-filter-form__button', {
