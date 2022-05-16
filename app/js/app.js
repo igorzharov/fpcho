@@ -5,6 +5,52 @@ import IMask from 'imask'
 
 document.addEventListener('DOMContentLoaded', () => {
 
+	function initSlider($slider, sliderOptions) {
+
+		let swiper = Swiper;
+		let init = false;
+
+		function swiperMode($slider, sliderOptions) {
+			let mobile = window.matchMedia('(min-width: 0px) and (max-width: 768px)');
+			let desktop = window.matchMedia('(min-width: 768px)');
+
+			// Enable (for mobile)
+			if (mobile.matches) {
+				if (!init) {
+					init = true;
+					swiper = new Swiper($slider, sliderOptions);
+				}
+			}
+
+			// Disable (for desktop)
+			else if (desktop.matches) {
+				if (init) {
+					if (!Array.isArray(swiper)) {
+						swiper.destroy();
+					} else {
+						swiper.forEach(item => {
+							item.destroy();
+						})
+					}
+				}
+				init = false;
+
+			}
+		}
+
+		// On Load
+
+		window.addEventListener('load', function () {
+			swiperMode($slider, sliderOptions);
+		});
+
+		// On Resize
+		window.addEventListener('resize', function () {
+			swiperMode($slider, sliderOptions);
+		});
+
+	}
+
 	const swiperLastNewsOptions = {
 		modules: [Pagination],
 		slidesPerView: 1,
@@ -18,46 +64,17 @@ document.addEventListener('DOMContentLoaded', () => {
 		autoplay: {
 			delay: 2500,
 		}
-	}
+	};
 
 	const swiperOptions = {
 		slidesPerView: 1.2,
 		speed: 1000,
 		spaceBetween: 20,
-	}
+	};
 
-	let swiperNews = undefined
-	let swiper = undefined
+	if (document.querySelector('.swiper-last-news-slider')) initSlider('.swiper-last-news-slider', swiperLastNewsOptions);
 
-	function initSwiper() {
-
-		const screenWidth = window.window.window.innerWidth;
-
-		if (screenWidth < 768 && swiperNews == undefined) {
-
-			swiperNews = new Swiper('.swiper-last-news-slider', swiperLastNewsOptions)
-
-		} else if (screenWidth > 768 && swiperNews != undefined) {
-			swiperNews.destroy()
-			swiperNews = undefined
-		}
-
-		if (screenWidth < 768 && swiper == undefined) {
-
-			swiper = new Swiper('.swiper-slider', swiperOptions)
-
-		} else if (screenWidth > 768 && swiper != undefined) {
-			swiper.destroy()
-			swiper = undefined
-		}
-
-	}
-
-	initSwiper()
-
-	window.addEventListener('resize', () => {
-		initSwiper()
-	})
+	if (document.querySelector('.swiper-slider')) initSlider('.swiper-slider', swiperOptions);
 
 	function toggleMainMenu() {
 
