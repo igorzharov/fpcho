@@ -316,22 +316,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	initPopup()
 
-	function initSelectPopup(slims) {
-
-		console.log(slims);
-	
-		slims.forEach(slim => {
-
-			new SlimSelect({
-				select: slim['select']['element'],
-				showSearch: false,
-				disabled: false,
-				allowDeselectOption: true
-			});
-
-		});
-	}
-
 	function initMaskPhone() {
 		const phoneMask = IMask(document.querySelector('.c-form-control__phone-mask'), {
 			mask: '+{7} (000) 000-00-00'
