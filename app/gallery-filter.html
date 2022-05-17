@@ -98,13 +98,13 @@
 
 		<div class="container">
 
-			<div class="c-filter-form mb1">
+			<div id="popupFilter">
 
-				<div class="flex">
+				<form action="#" class="c-form">
 
-					<div class="flex-item flex-1">
+					<div class="flex flex-lg-50 flex-md-100">
 
-						<form action="" class="c-filter-form__form c-form">
+						<div class="flex-item flex-1">
 
 							<div class="c-form-control c-form-control-icon-left">
 
@@ -115,76 +115,74 @@
 								</div>
 
 							</div>
-							<!-- /.c-form-control -->
 
-						</form>
-						<!-- /.c-form -->
+						</div>
+						<!-- /.flex-item -->
 
-					</div>
-					<!-- /.flex-item -->
+						<div class="flex-item lg-d-none">
 
-					<div class="flex-item">
+							<div class="flex flex-lg-50 flex-md-100">
 
-						<a href="#popupFilter" class="c-filter-form__button button button-gray button-icon button-icon-left"><img class="icon-blue" src="./images/icons/sliders.svg" alt="ic on"><span>Фильтры</span></a>
+								<div class="flex-item">
 
-					</div>
-					<!-- /.flex-item -->
+									<select class="c-form-control__select">
+										<option value="" data-placeholder="true">Выберите год</option>
+										<option value="2022" class="c-form-control__select-item">2022</option>
+										<option value="2021" class="c-form-control__select-item" selected>2021</option>
+										<option value="2020" class="c-form-control__select-item">2020</option>
+										<option value="2019" class="c-form-control__select-item">2019</option>
+										<option value="2018" class="c-form-control__select-item">2018</option>
+										<option value="2017" class="c-form-control__select-item">2017</option>
+										<option value="2016" class="c-form-control__select-item">2016</option>
+									</select>
 
-				</div>
-				<!-- /.flex -->
+								</div>
+								<!-- /.flex-item -->
 
-			</div>
-			<!-- /.c-filter-form -->
+								<div class="flex-item">
 
-			<form id="popupFilter" class="c-form c-filter-form-popup" style="display: none;">
+									<button class="button button-primary button-full">Применить фильтр</button>
 
-				<div class="h3">Рейтинг пловцов</div>
+								</div>
+								<!-- /.flex-item -->
 
-				<p>Используйте фильтр чтобы найти определенные результаты</p>
+							</div>
+							<!-- /.flex flex-50 -->
 
-				<div class="flex flex-100">
+						</div>
+						<!-- /.flex-item -->
 
-					<div class="flex-item">
+						<div class="flex-item xl-d-none c-form__filter-button-wrapper">
 
-						<div class="flex-item">
-
-							<select class="c-form-control__select">
-								<option value="" data-placeholder="true" class="c-form-control__select-item">Год соревнования</option>
-								<option value="2022" class="c-form-control__select-item">2022</option>
-								<option value="2021" class="c-form-control__select-item">2021</option>
-								<option value="2020" class="c-form-control__select-item">2020</option>
-								<option value="2019" class="c-form-control__select-item">2019</option>
-							</select>
+							<a href="#popupFilter" class="button-call-popup button button-gray button-icon button-icon-md button-icon-left"><img class="icon-blue" src="./images/icons/sliders.svg" alt="ic on"><span>Фильтры</span></a>
 
 						</div>
 						<!-- /.flex-item -->
 
 					</div>
-					<!-- /.flex-item -->
+					<!-- /.flex flex-50 -->
 
-					<div class="flex-item">
+				</form>
+				<!-- /.c-form -->
 
-						<div class="c-form-control">
+			</div>
+			<!-- /#popupFilter -->
 
-							<button class="button button-primary button-full">Применить фильтр</button>
+		</div>
+		<!-- /.container -->
 
-						</div>
-						<!-- /.c-form-control -->
+	</section>
+	<!-- /.s-main -->
 
-					</div>
-					<!-- /.flex-item -->
+	<section class="s-main">
 
-				</div>
-				<!-- /.flex flex-50 -->
-
-			</form>
-			<!-- /.c-form -->
+		<div class="container">
 
 			<div class="c-group-text c-group-text-caption mb1">
 
 				<div class="c-group-text__title h2">2021 год</div>
 
-				<span class="c-group-text__text">Все соревнования за 2021 год</span>
+				<span class="c-group-text__text">Все фотоотчеты соревнований за 2021 год</span>
 
 			</div>
 
