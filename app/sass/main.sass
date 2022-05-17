@@ -123,13 +123,17 @@ a
 	@media ( min-width: $md ) and ( max-width: $lg )
 		display: block
 
+.min-md-d-none
+	@media ( min-width: $md )
+		display: none
+
 
 .md-d-none
-	@media screen and ( max-width: $md )
+	@media ( max-width: $md )
 		display: none
 
 .lg-d-none
-	@media screen and ( max-width: $lg )
+	@media ( max-width: $lg )
 		display: none
 
 .xl-d-none

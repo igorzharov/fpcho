@@ -94,17 +94,24 @@
 	</header>
 	<!-- /.header -->
 
-	<section class="s-main">
+	<section class="s-main mb0">
 
 		<div class="container">
 
-			<div class="c-filter-form mb1">
+			<div id="popupFilter">
 
-				<div class="flex">
+				<form action="#" class="c-form">
 
-					<div class="flex-item flex-1">
+					<div class="flex">
 
-						<form action="" class="c-filter-form__form c-form">
+						<div class="flex-item lg-d-none xl-d-none">
+
+							<div class="h3 mb0 mt0">Поиск</div>
+
+						</div>
+						<!-- /.flex-item -->
+
+						<div class="flex-item flex-1">
 
 							<div class="c-form-control c-form-control-icon-left">
 
@@ -115,85 +122,97 @@
 								</div>
 
 							</div>
-							<!-- /.c-form-control -->
 
-						</form>
-						<!-- /.c-form -->
+						</div>
+						<!-- /.flex-item -->
+
+						<div class="flex-item md-d-none flex-item-100">
+
+							<div class="c-group-text c-group-text-caption mb1">
+
+								<div class="c-group-text__title h3">Фильтры</div>
+
+								<p class="c-group-text__text">Используйте фильтр, чтобы посмотреть соревнования за определенное время</p>
+
+							</div>
+
+							<div class="flex flex-100">
+
+								<div class="flex-item">
+
+									<div class="c-form__label">Выберите год</div>
+
+									<div class="c-form-control">
+
+										<select class="c-form-control__select">
+											<option value="2022" class="c-form-control__select-item">2022 год</option>
+											<option value="2021" class="c-form-control__select-item">2021 год</option>
+											<option value="2020" class="c-form-control__select-item">2020 год</option>
+											<option value="2019" class="c-form-control__select-item">2013 год</option>
+											<option value="2018" class="c-form-control__select-item">2019 год</option>
+											<option value="2017" class="c-form-control__select-item">2018 год</option>
+											<option value="2016" class="c-form-control__select-item">2017 год</option>
+											<option value="2015" class="c-form-control__select-item">2016 год</option>
+											<option value="2014" class="c-form-control__select-item">2015 год</option>
+											<option value="2013" class="c-form-control__select-item">2014 год</option>
+										</select>
+
+									</div>
+									<!-- /.c-form-control -->
+
+									<div class="c-form__label">Выберите месяц</div>
+
+									<div class="c-form-control">
+
+										<select class="c-form-control__select">
+											<option value="Январь" class="c-form-control__select-item">Январь</option>
+											<option value="Февраль" class="c-form-control__select-item">Февраль</option>
+											<option value="Март" class="c-form-control__select-item">Март</option>
+											<option value="Апрель" class="c-form-control__select-item">Апрель</option>
+											<option value="Май" class="c-form-control__select-item">Май</option>
+											<option value="Июнь" class="c-form-control__select-item">Июнь</option>
+											<option value="Июль" class="c-form-control__select-item">Июль</option>
+											<option value="Август" class="c-form-control__select-item">Август</option>
+											<option value="Сентябрь" class="c-form-control__select-item">Сентябрь</option>
+											<option value="Октябрь" class="c-form-control__select-item">Октябрь</option>
+											<option value="Ноябрь" class="c-form-control__select-item">Ноябрь</option>
+											<option value="Декабрь" class="c-form-control__select-item">Декабрь</option>
+										</select>
+
+									</div>
+									<!-- /.c-form-control -->
+
+									<div class="c-form-control">
+
+										<button class="button button-primary button-full">Применить</button>
+
+									</div>
+									<!-- /.c-form-control -->
+
+								</div>
+								<!-- /.flex-item -->
+
+							</div>
+							<!-- /.flex flex-100 -->
+
+						</div>
+						<!-- /.flex-item xl-d-none -->
+
+						<div class="flex-item min-md-d-none c-form__filter-button-wrapper">
+
+							<a href="#popupFilter" class="button-call-popup button button-gray button-icon button-icon-md button-icon-left"><img class="icon-blue" src="./images/icons/sliders.svg" alt="ic on"><span>Фильтры</span></a>
+
+						</div>
+						<!-- /.flex-item -->
 
 					</div>
-					<!-- /.flex-item -->
+					<!-- /.flex flex-50 -->
 
-					<div class="flex-item flex-none">
-
-						<a href="#popupFilter" class="c-filter-form__button p-calendar__filter-button button button-square button-gray button-icon"><img class="icon-blue"
-								src="./images/icons/sliders.svg" alt="icon"></a>
-
-					</div>
-					<!-- /.flex-item -->
-
-				</div>
-				<!-- /.flex -->
+				</form>
+				<!-- /.c-form -->
 
 			</div>
-			<!-- /.c-filter-form -->
-
-			<form id="popupFilter" class="c-form c-filter-form-popup">
-
-				<div class="h3">Фильтры</div>
-
-				<p>Используйте фильтр, чтобы посмотреть соревнования за определенный год</p>
-
-				<div class="c-form__label">Выберите год</div>
-
-				<div class="c-form-control">
-
-					<select class="c-form-control__select">
-						<option value="2022" class="c-form-control__select-item">2022 год</option>
-						<option value="2021" class="c-form-control__select-item">2021 год</option>
-						<option value="2020" class="c-form-control__select-item">2020 год</option>
-						<option value="2019" class="c-form-control__select-item">2013 год</option>
-						<option value="2018" class="c-form-control__select-item">2019 год</option>
-						<option value="2017" class="c-form-control__select-item">2018 год</option>
-						<option value="2016" class="c-form-control__select-item">2017 год</option>
-						<option value="2015" class="c-form-control__select-item">2016 год</option>
-						<option value="2014" class="c-form-control__select-item">2015 год</option>
-						<option value="2013" class="c-form-control__select-item">2014 год</option>
-					</select>
-
-				</div>
-				<!-- /.c-form-control -->
-
-				<div class="c-form__label">Выберите месяц</div>
-
-				<div class="c-form-control">
-
-					<select class="c-form-control__select">
-						<option value="Январь" class="c-form-control__select-item">Январь</option>
-						<option value="Февраль" class="c-form-control__select-item">Февраль</option>
-						<option value="Март" class="c-form-control__select-item">Март</option>
-						<option value="Апрель" class="c-form-control__select-item">Апрель</option>
-						<option value="Май" class="c-form-control__select-item">Май</option>
-						<option value="Июнь" class="c-form-control__select-item">Июнь</option>
-						<option value="Июль" class="c-form-control__select-item">Июль</option>
-						<option value="Август" class="c-form-control__select-item">Август</option>
-						<option value="Сентябрь" class="c-form-control__select-item">Сентябрь</option>
-						<option value="Октябрь" class="c-form-control__select-item">Октябрь</option>
-						<option value="Ноябрь" class="c-form-control__select-item">Ноябрь</option>
-						<option value="Декабрь" class="c-form-control__select-item">Декабрь</option>
-					</select>
-
-				</div>
-				<!-- /.c-form-control -->
-
-				<div class="c-form-control">
-
-					<button class="button button-primary button-full">Применить</button>
-
-				</div>
-				<!-- /.c-form-control -->
-
-			</form>
-			<!-- /.c-form -->
+			<!-- /#popupFilter -->
 
 		</div>
 		<!-- /.container -->
