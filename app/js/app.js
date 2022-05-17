@@ -141,20 +141,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	if (document.querySelector('[type="password"]')) togglePassword();
 
+	const slims = []; // Array from init SlimSelects
+
 	function initSelect() {
 
-		const selects = Array.from(document.querySelectorAll('.c-form-control__select'));
+		const selects = Array.from(document.querySelectorAll('select.c-form-control__select'));
 
 		selects.forEach(select => {
 
-			new SlimSelect({
+			slims.push(new SlimSelect({
 				select: select,
 				showSearch: false,
 				disabled: false,
 				allowDeselectOption: true
-			});
+			}));
 
 		});
+
 	}
 
 	if (document.querySelectorAll('.c-form-control__select')) initSelect();
@@ -263,6 +266,42 @@ document.addEventListener('DOMContentLoaded', () => {
 			hideScrollbar: false,
 			autoFocus: false,
 			mainClass: 'c-popup-filter__container',
+			type: "clone",
+			on: {
+				done: () => {
+
+					// Проблема. В попап окне не работает слайдер т.к он не проинициализирован.
+
+					// Решение. Скрыть скопированный слимСелект
+					// Проиницализировать селекты внутри попап окна
+
+					const $oldSlims = document.querySelectorAll('.fancybox__content .ss-main.c-form-control__select');
+
+					console.log($oldSlims);
+
+					$oldSlims.forEach(item => {
+						console.log(item);
+						item.style.display = 'none';
+					})
+
+					const selects = document.querySelectorAll('.fancybox__content select.c-form-control__select');
+
+					console.log(selects);
+
+					selects.forEach(item => {
+						delete item.dataset.ssid;
+						item.style.display = 'block';
+
+						new SlimSelect({
+							select: item,
+							showSearch: false,
+							disabled: false,
+							allowDeselectOption: true
+						});
+
+					});
+				},
+			},
 		});
 
 		Fancybox.bind('.c-profile-card-button', {
@@ -274,6 +313,22 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	initPopup()
+
+	function initSelectPopup(slims) {
+
+		console.log(slims);
+	
+		slims.forEach(slim => {
+
+			new SlimSelect({
+				select: slim['select']['element'],
+				showSearch: false,
+				disabled: false,
+				allowDeselectOption: true
+			});
+
+		});
+	}
 
 	function initMaskPhone() {
 		const phoneMask = IMask(document.querySelector('.c-form-control__phone-mask'), {

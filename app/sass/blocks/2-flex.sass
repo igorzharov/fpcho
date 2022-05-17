@@ -75,7 +75,6 @@
 
 @media ( max-width: $lg )
 	.flex
-		margin: (-$gutter) / 4
 		> .flex-item
 			padding: $gutter / 2
 			flex: 0 0 auto
@@ -89,5 +88,14 @@
 @media ( max-width: $md )
 	.flex
 		> .flex-none
-			flex: none
-			padding: $gutter / 2
+				flex: none
+				padding: $gutter / 2
+
+
+@media ( min-width: $lg )
+	.flex-lg-50
+		> .flex-item
+			width: 50%
+			
+
+			

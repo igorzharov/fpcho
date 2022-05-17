@@ -116,12 +116,24 @@ a
 .nowrap
 	white-space: nowrap
 
+.d-none
+	display: none
+
+.md-d
+	@media ( min-width: $md ) and ( max-width: $lg )
+		display: block
+
+
 .md-d-none
 	@media screen and ( max-width: $md )
 		display: none
 
 .lg-d-none
 	@media screen and ( max-width: $lg )
+		display: none
+
+.xl-d-none
+	@media ( min-width: $lg )
 		display: none
 
 .soc-icon
