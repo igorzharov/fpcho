@@ -98,9 +98,9 @@
 
 		<div class="container">
 
-			<div id="popupFilter" class="p-gallery__popup-form">
+			<div id="popupFilter">
 
-				<form action="" class="c-form">
+				<form action="#" class="c-form">
 
 					<div class="flex flex-lg-50 flex-md-100">
 
@@ -126,8 +126,14 @@
 								<div class="flex-item">
 
 									<select class="c-form-control__select">
-										<option value="Областные" class="c-form-control__select-item">Областные</option>
-										<option value="Районные" class="c-form-control__select-item">Районные</option>
+										<option value="" data-placeholder="true">Выберите год</option>
+										<option value="2022" class="c-form-control__select-item">2022</option>
+										<option value="2021" class="c-form-control__select-item">2021</option>
+										<option value="2020" class="c-form-control__select-item">2020</option>
+										<option value="2019" class="c-form-control__select-item">2019</option>
+										<option value="2018" class="c-form-control__select-item">2018</option>
+										<option value="2017" class="c-form-control__select-item">2017</option>
+										<option value="2016" class="c-form-control__select-item">2016</option>
 									</select>
 
 								</div>
@@ -146,9 +152,9 @@
 						</div>
 						<!-- /.flex-item -->
 
-						<div class="flex-item xl-d-none c-filter-form__button-wrapper">
+						<div class="flex-item xl-d-none c-form__filter-button-wrapper">
 
-							<a href="#popupFilter" class="c-filter-form__button button button-gray button-icon button-icon-left"><img class="icon-blue" src="./images/icons/sliders.svg" alt="ic on"><span>Фильтры</span></a>
+							<a href="#popupFilter" class="button-call-popup button button-gray button-icon button-icon-md button-icon-left"><img class="icon-blue" src="./images/icons/sliders.svg" alt="ic on"><span>Фильтры</span></a>
 
 						</div>
 						<!-- /.flex-item -->

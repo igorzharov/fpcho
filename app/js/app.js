@@ -262,7 +262,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	function initPopup() {
 
-		Fancybox.bind('.c-filter-form__button', {
+		Fancybox.bind('.button-call-popup', {
 			hideScrollbar: false,
 			autoFocus: false,
 			mainClass: 'c-popup-filter__container',

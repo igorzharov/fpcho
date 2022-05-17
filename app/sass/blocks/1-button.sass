@@ -73,7 +73,6 @@
 		box-shadow: none
 		color: $warning
 
-
 .button-icon
 	display: inline-flex
 	img
@@ -86,6 +85,15 @@
 .button-icon-left
 	span
 		margin-left: $gutter / 3
+
+.button-icon-md
+	@media screen and ( max-width: $md )
+		width: $height
+		padding: 0
+		img
+			margin: auto
+		span
+			display: none
 
 .button-full
 	width: 100%
