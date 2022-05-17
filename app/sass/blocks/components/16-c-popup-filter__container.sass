@@ -23,13 +23,27 @@
 
 		.fancybox__content
 			padding: $gutter * 2.5 $gutter * 2.5
-			width: $sm
+			@media ( min-width: $lg )
+				min-width: $lg
+			@media ( min-width: $xl )
+				min-width: $xl
+			@media ( min-width: $xll )
+				min-width: $xll
+			@media ( max-width: $lg )
+				width: $sm
 			.flex
 				> .flex-item
 					display: block
+					width: 100%
 
 				.c-form__filter-button-wrapper
 					display: none
+
+			.flex-50
+				> .flex-item 
+					width: 50%
+					@media ( max-width: $lg )
+						width: 100%
 
 			.flex-md-100
 				> .flex-item

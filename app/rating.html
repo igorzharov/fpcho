@@ -98,13 +98,13 @@
 
 		<div class="container">
 
-			<div class="c-filter-form mb1">
+			<div id="popupFilter">
 
-				<div class="flex">
+				<form action="#" class="c-form">
 
-					<div class="flex-item flex-1">
+					<div class="flex">
 
-						<form action="" class="c-filter-form__form c-form">
+						<div class="flex-item flex-1">
 
 							<div class="c-form-control c-form-control-icon-left">
 
@@ -115,150 +115,142 @@
 								</div>
 
 							</div>
-							<!-- /.c-form-control -->
 
-						</form>
-						<!-- /.c-form -->
+						</div>
+						<!-- /.flex-item -->
+
+						<div class="flex-item lg-d-none xl-d-none">
+
+							<div class="flex flex-50">
+
+								<div class="flex-item">
+
+									<div class="c-form__label">День рождения</div>
+
+									<div class="c-form-control">
+
+										<input class="c-form-control__input c-form-control__birthday-mask" type="text" placeholder="ДД.ММ.ГГГГ" maxlength="54">
+
+										<div class="c-form-control__caption">Обязательное поле</div>
+
+									</div>
+									<!-- /.c-form-control -->
+
+									<div class="c-form__label">ФИО</div>
+
+									<div class="c-form-control">
+
+										<input class="c-form-control__input c-form-control__birthday-mask" type="text" placeholder="Иванов Иван Иванович" maxlength="54">
+
+										<div class="c-form-control__caption">Обязательное поле</div>
+
+									</div>
+									<!-- /.c-form-control -->
+
+									<div class="c-form__label">Спортивная школа</div>
+
+									<div class="c-form-control">
+
+										<select class="c-form-control__select">
+											<option value="СДЮСШОР № 7" class="c-form-control__select-item">СДЮСШОР № 7</option>
+											<option value="СДЮСШОР № 7" class="c-form-control__select-item">СДЮСШОР № 7</option>
+											<option value="СДЮСШОР № 7" class="c-form-control__select-item">СДЮСШОР № 7</option>
+										</select>
+
+									</div>
+									<!-- /.c-form-control -->
+
+									<div class="c-form__label">Тренер</div>
+
+									<div class="c-form-control">
+
+										<select class="c-form-control__select">
+											<option value="Степанов Степан Степанович" class="c-form-control__select-item">Степанов Степан Степанович</option>
+											<option value="Иванов Иван Иванович" class="c-form-control__select-item">Иванов Иван Иванович</option>
+											<option value="Степанов Степан Степанович" class="c-form-control__select-item">Степанов Степан Степанович</option>
+										</select>
+
+									</div>
+									<!-- /.c-form-control -->
+
+								</div>
+								<!-- /.flex-item -->
+
+								<div class="flex-item">
+
+									<div class="c-form__label">Тип соревнования</div>
+
+									<div class="c-form-control">
+
+										<select class="c-form-control__select">
+											<option value="Областные" class="c-form-control__select-item">Областные</option>
+											<option value="Районные" class="c-form-control__select-item">Районные</option>
+										</select>
+
+									</div>
+									<!-- /.c-form-control -->
+
+									<div class="c-form__label">Бассейн</div>
+
+									<div class="c-form-control">
+
+										<select class="c-form-control__select">
+											<option value="Все виды" class="c-form-control__select-item">Все виды</option>
+											<option value="Строитель" class="c-form-control__select-item">Строитель</option>
+											<option value="Строитель" class="c-form-control__select-item">Строитель</option>
+											<option value="Строитель" class="c-form-control__select-item">Строитель</option>
+											<option value="Строитель" class="c-form-control__select-item">Строитель</option>
+										</select>
+
+									</div>
+									<!-- /.c-form-control -->
+
+									<div class="c-form__label">Дистанция</div>
+
+									<div class="c-form-control">
+
+										<select class="c-form-control__select">
+											<option value="1500 м вольный стиль" class="c-form-control__select-item">1500 м вольный стиль</option>
+											<option value="1000 м вольный стиль" class="c-form-control__select-item">1000 м вольный стиль</option>
+											<option value="500 м вольный стиль" class="c-form-control__select-item">500 м вольный стиль</option>
+										</select>
+
+									</div>
+									<!-- /.c-form-control -->
+
+									<div class="c-form-control">
+
+										<div class="c-form__label">⠀</div>
+
+										<button class="button button-primary button-full">Показать результаты</button>
+
+									</div>
+									<!-- /.c-form-control -->
+
+								</div>
+								<!-- /.flex-item -->
+
+							</div>
+							<!-- /.flex flex-50 -->
+
+						</div>
+						<!-- /.flex-item xl-d-none -->
+
+						<div class="flex-item c-form__filter-button-wrapper">
+
+							<a href="#popupFilter" class="button-call-popup button button-gray button-icon button-icon-md button-icon-left"><img class="icon-blue" src="./images/icons/sliders.svg" alt="ic on"><span>Фильтры</span></a>
+
+						</div>
+						<!-- /.flex-item -->
 
 					</div>
-					<!-- /.flex-item -->
+					<!-- /.flex flex-50 -->
 
-					<div class="flex-item">
-
-						<a href="#popupFilter" class="c-filter-form__button button button-gray button-icon button-icon-left"><img
-								class="icon-blue" src="./images/icons/sliders.svg" alt="ic on"><span>Фильтры</span></a>
-
-					</div>
-					<!-- /.flex-item -->
-
-				</div>
-				<!-- /.flex -->
+				</form>
+				<!-- /.c-form -->
 
 			</div>
-			<!-- /.c-filter-form -->
-
-			<form id="popupFilter" class="c-form c-filter-form-popup" style="display: none;">
-
-				<div class="h3">Рейтинг пловцов</div>
-
-				<p>Используйте фильтр чтобы найти определенные результаты</p>
-
-				<div class="flex flex-50">
-
-					<div class="flex-item">
-
-						<div class="c-form__label">День рождения</div>
-
-						<div class="c-form-control">
-
-							<input class="c-form-control__input c-form-control__birthday-mask" type="text" placeholder="ДД.ММ.ГГГГ"
-								maxlength="54">
-
-							<div class="c-form-control__caption">Обязательное поле</div>
-
-						</div>
-						<!-- /.c-form-control -->
-
-						<div class="c-form__label">ФИО</div>
-
-						<div class="c-form-control">
-
-							<input class="c-form-control__input c-form-control__birthday-mask" type="text" placeholder="Иванов Иван Иванович"
-								maxlength="54">
-
-							<div class="c-form-control__caption">Обязательное поле</div>
-
-						</div>
-						<!-- /.c-form-control -->
-
-						<div class="c-form__label">Спортивная школа</div>
-
-						<div class="c-form-control">
-		
-							<select class="c-form-control__select">
-								<option value="СДЮСШОР № 7" class="c-form-control__select-item">СДЮСШОР № 7</option>
-								<option value="СДЮСШОР № 7" class="c-form-control__select-item">СДЮСШОР № 7</option>
-								<option value="СДЮСШОР № 7" class="c-form-control__select-item">СДЮСШОР № 7</option>
-							</select>
-		
-						</div>
-						<!-- /.c-form-control -->
-
-						<div class="c-form__label">Тренер</div>
-
-						<div class="c-form-control">
-		
-							<select class="c-form-control__select">
-								<option value="Степанов Степан Степанович" class="c-form-control__select-item">Степанов Степан Степанович</option>
-								<option value="Иванов Иван Иванович" class="c-form-control__select-item">Иванов Иван Иванович</option>
-								<option value="Степанов Степан Степанович" class="c-form-control__select-item">Степанов Степан Степанович</option>
-							</select>
-		
-						</div>
-						<!-- /.c-form-control -->
-
-					</div>
-					<!-- /.flex-item -->
-
-					<div class="flex-item">
-
-						<div class="c-form__label">Тип соревнования</div>
-
-						<div class="c-form-control">
-		
-							<select class="c-form-control__select">
-								<option value="Областные" class="c-form-control__select-item">Областные</option>
-								<option value="Районные" class="c-form-control__select-item">Районные</option>
-							</select>
-		
-						</div>
-						<!-- /.c-form-control -->
-
-						<div class="c-form__label">Бассейн</div>
-
-						<div class="c-form-control">
-		
-							<select class="c-form-control__select">
-								<option value="Все виды" class="c-form-control__select-item">Все виды</option>
-								<option value="Строитель" class="c-form-control__select-item">Строитель</option>
-								<option value="Строитель" class="c-form-control__select-item">Строитель</option>
-								<option value="Строитель" class="c-form-control__select-item">Строитель</option>
-								<option value="Строитель" class="c-form-control__select-item">Строитель</option>
-							</select>
-		
-						</div>
-						<!-- /.c-form-control -->
-
-						<div class="c-form__label">Дистанция</div>
-
-						<div class="c-form-control">
-		
-							<select class="c-form-control__select">
-								<option value="1500 м вольный стиль" class="c-form-control__select-item">1500 м вольный стиль</option>
-								<option value="1000 м вольный стиль" class="c-form-control__select-item">1000 м вольный стиль</option>
-								<option value="500 м вольный стиль" class="c-form-control__select-item">500 м вольный стиль</option>
-							</select>
-		
-						</div>
-						<!-- /.c-form-control -->
-
-						<div class="c-form-control">
-
-							<div class="c-form__label">⠀</div>
-
-							<button class="button button-primary button-full">Показать результаты</button>
-		
-						</div>
-						<!-- /.c-form-control -->
-
-					</div>
-					<!-- /.flex-item -->
-
-				</div>
-				<!-- /.flex flex-50 -->
-
-			</form>
-			<!-- /.c-form -->
+			<!-- /#popupFilter -->
 
 		</div>
 		<!-- /.container -->
