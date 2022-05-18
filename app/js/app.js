@@ -310,6 +310,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			hideScrollbar: false,
 			autoFocus: false,
 			mainClass: 'c-popup-filter__container',
+			type: "clone"
 		});
 
 	}
