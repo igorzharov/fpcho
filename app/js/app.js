@@ -78,13 +78,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	function toggleMainMenu() {
 
-		const menu = document.querySelector('.main-menu')
+		const menu = document.querySelector('.main-menu');
 
-		const hamburger = document.querySelector('.hamburger')
+		const hamburger = document.querySelector('.hamburger');
 
-		const dropdown = document.querySelector('.main-menu__dropdown')
+		const dropdown = document.querySelector('.main-menu__dropdown');
 
-		const dropdownMenu = document.querySelector('.dropdown-menu')
+		const dropdownMenu = document.querySelector('.dropdown-menu');
 
 		hamburger.addEventListener('click', function () {
 
@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 				if ($elHeader) {
 					this.selectAll();
-					if (e.pointerId == 1) this.toggle()
+					if (e.pointerId == 1) this.toggle();
 				}
 
 			})
@@ -249,7 +249,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			setTimeout(() => {
 				$elBody.style['display'] = '';
 				$elBody.style['height'] = '';
-			}, 250)
+			}, 250);
 		}
 		toggle() {
 			this.$el.classList.toggle('c-select-accordion--show');
@@ -350,8 +350,5 @@ document.addEventListener('DOMContentLoaded', () => {
 		]);
 
 	}
-
-
-
 
 })
