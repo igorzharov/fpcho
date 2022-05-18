@@ -279,16 +279,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 					const $oldSlims = document.querySelectorAll('.fancybox__content .ss-main.c-form-control__select');
 
-					console.log($oldSlims);
-
 					$oldSlims.forEach(item => {
-						console.log(item);
 						item.style.display = 'none';
-					})
+					});
 
 					const selects = document.querySelectorAll('.fancybox__content select.c-form-control__select');
-
-					console.log(selects);
 
 					selects.forEach(item => {
 						delete item.dataset.ssid;
