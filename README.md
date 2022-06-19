@@ -2,8 +2,8 @@
 http://www.chelswimming.ru/
 
 Технологии:
-Сборка на gulp
-html
-sass
-js
+Сборка на gulp,
+html,
+sass,
+js,
 БЭМ
