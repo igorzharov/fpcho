@@ -1,5 +1,5 @@
 .swiper
-	margin: 0 (-$gutter) / 2
+	margin: (-$gutter) / 2
 	.flex
 		margin: 0
 		.flex-item
@@ -8,8 +8,17 @@
 .swiper .swiper-slide:last-child
 	display: none
 
+.swiper-slider-gallery
+	margin: 0
+
+.swiper-last-news-slider
+	margin: 0
+
 .swiper-last-news
 	margin: 0
+
+.swiper-margin
+	margin: (-$gutter) / 2
 
 @media screen and ( max-width: $md )
 	.swiper
@@ -20,7 +29,3 @@
 				padding: 0
 	.swiper .swiper-slide:last-child
 		display: block
-
-@media ( min-width: $md ) and ( max-width: $lg )
-	.swiper
-		margin: 0 (-$gutter) / 4

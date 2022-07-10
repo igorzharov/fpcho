@@ -5,16 +5,52 @@
 		// overflow: hidden
 
 		.c-filter-form-popup
-			// height: 100%
-			width: 100%
+			min-width: 50%
+			@media screen and ( max-width: $md )
+				min-width: 100%
 
 		.carousel__button
-			padding: $gutter
+			padding: $gutter / 2
 			color: $text-dark
-			top: $gutter / 1.5
+			top: 0
+			right: 0
 			box-sizing: content-box
 			svg
 				filter: none
 
 		.fancybox__carousel.is-draggable .fancybox__slide, .fancybox__carousel.is-draggable .fancybox__slide .fancybox__content
 			overflow: hidden
+
+		.fancybox__content
+			padding: $gutter * 2.5 $gutter * 2.5
+			@media ( min-width: $lg )
+				min-width: $lg
+			@media ( min-width: $xl )
+				min-width: $xl
+			@media ( min-width: $xll )
+				min-width: $xll
+			@media ( max-width: $lg )
+				width: $sm
+			.flex
+				> .flex-item
+					display: block
+					width: 100%
+
+				.c-form__filter-button-wrapper
+					display: none
+
+			.flex-50
+				> .flex-item 
+					width: 50%
+					@media ( max-width: $lg )
+						width: 100%
+
+			.flex-md-100
+				> .flex-item
+					width: 100%
+
+			@media ( max-width: $md )
+				width: 100%
+				padding: $gutter * 3 $gutter * 2
+				.c-form
+					margin: auto

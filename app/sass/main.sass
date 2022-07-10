@@ -24,7 +24,7 @@
 	font-size: 36px
 	margin: $gutter 0
 	@media screen and ( max-width: $sm )
-		font-size: 22px
+		font-size: 30px
 .h2
 	font-size: 28px
 	@media screen and ( max-width: $sm )
@@ -37,7 +37,18 @@
 
 .p2
 	font-size: 16px
-	margin: $gutter / 3 0
+
+a
+	text-decoration: none
+	transition: color .25s ease
+	&:hover
+		color: darken($note, 7%)
+
+.hr
+	border: 0
+	height: 2px
+	background-color: $blue-light
+	margin: $gutter 0
 	
 @import 'blocks/**/*'
 
@@ -62,6 +73,9 @@
 .mt0
 	margin-top: 0
 
+.mt05
+	margin-top: $gutter / 2
+
 .mt1
 	margin-top: $gutter
 
@@ -71,14 +85,30 @@
 .mt3
 	margin-top: $gutter * 3
 
+.c1
+	font-size: 14px
+
+.c2
+	font-size: 12px
+
+.c3
+	font-size: 12px
+	font-weight: 600
+
 .icon
 	display: block
+
+.icon-white
+	filter: invert(94%) sepia(94%) saturate(24%) hue-rotate(57deg) brightness(105%) contrast(108%)
 
 .icon-blue
 	filter: $blueF
 
 .icon-blue-light
 	filter: $text-lightF
+
+.icon-note
+	filter: $noteF
 
 .c-note
 	color: $note
@@ -89,12 +119,27 @@
 .nowrap
 	white-space: nowrap
 
-.lg-md-none
-	@media screen and ( max-width: $md )
+.d-none
+	display: none
+
+.md-d
+	@media ( min-width: $sm ) and ( max-width: $lg )
+		display: block
+
+.min-md-d-none
+	@media ( min-width: $md )
+		display: none
+
+.md-d-none
+	@media ( max-width: $md )
 		display: none
 
 .lg-d-none
-	@media screen and ( max-width: $lg )
+	@media ( max-width: $lg )
+		display: none
+
+.xl-d-none
+	@media ( min-width: $lg )
 		display: none
 
 .soc-icon

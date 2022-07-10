@@ -1,16 +1,55 @@
-import { Fancybox, Carousel, Panzoom } from "@fancyapps/ui"
-import Swiper, { Pagination, Autoplay } from 'swiper'
+import { Fancybox } from "@fancyapps/ui"
+import Swiper, { Pagination } from 'swiper'
 import SlimSelect from 'slim-select'
 import IMask from 'imask'
 
-// import './calendar.js'
-// import './calendar-event.js'
-// import './posts.js'
-// import './post.js'
-// import './gallery.js'
-// import './login.js'
-
 document.addEventListener('DOMContentLoaded', () => {
+
+	function initSlider($slider, sliderOptions) {
+
+		let swiper = Swiper;
+		let init = false;
+
+		function swiperMode($slider, sliderOptions) {
+			let mobile = window.matchMedia('(min-width: 0px) and (max-width: 768px)');
+			let desktop = window.matchMedia('(min-width: 768px)');
+
+			// Enable (for mobile)
+			if (mobile.matches) {
+				if (!init) {
+					init = true;
+					swiper = new Swiper($slider, sliderOptions);
+				}
+			}
+
+			// Disable (for desktop)
+			else if (desktop.matches) {
+				if (init) {
+					if (!Array.isArray(swiper)) {
+						swiper.destroy();
+					} else {
+						swiper.forEach(item => {
+							item.destroy();
+						})
+					}
+				}
+				init = false;
+
+			}
+		}
+
+		// On Load
+
+		window.addEventListener('load', function () {
+			swiperMode($slider, sliderOptions);
+		});
+
+		// On Resize
+		window.addEventListener('resize', function () {
+			swiperMode($slider, sliderOptions);
+		});
+
+	}
 
 	const swiperLastNewsOptions = {
 		modules: [Pagination],
@@ -25,56 +64,27 @@ document.addEventListener('DOMContentLoaded', () => {
 		autoplay: {
 			delay: 2500,
 		}
-	}
+	};
 
 	const swiperOptions = {
 		slidesPerView: 1.2,
 		speed: 1000,
 		spaceBetween: 20,
-	}
+	};
 
-	let swiperNews = undefined
-	let swiper = undefined
+	if (document.querySelector('.swiper-last-news-slider')) initSlider('.swiper-last-news-slider', swiperLastNewsOptions);
 
-	function initSwiper() {
-
-		const screenWidth = window.window.window.innerWidth;
-
-		if (screenWidth < 768 && swiperNews == undefined) {
-
-			swiperNews = new Swiper('.swiper-last-news-slider', swiperLastNewsOptions)
-
-		} else if (screenWidth > 768 && swiperNews != undefined) {
-			swiperNews.destroy()
-			swiperNews = undefined
-		}
-
-		if (screenWidth < 768 && swiper == undefined) {
-
-			swiper = new Swiper('.swiper-slider', swiperOptions)
-
-		} else if (screenWidth > 768 && swiper != undefined) {
-			swiper.destroy()
-			swiper = undefined
-		}
-
-	}
-
-	initSwiper()
-
-	window.addEventListener('resize', () => {
-		initSwiper()
-	})
+	if (document.querySelector('.swiper-slider')) initSlider('.swiper-slider', swiperOptions);
 
 	function toggleMainMenu() {
 
-		const menu = document.querySelector('.main-menu')
+		const menu = document.querySelector('.main-menu');
 
-		const hamburger = document.querySelector('.hamburger')
+		const hamburger = document.querySelector('.hamburger');
 
-		const dropdown = document.querySelector('.main-menu__dropdown')
+		const dropdown = document.querySelector('.main-menu__dropdown');
 
-		const dropdownMenu = document.querySelector('.dropdown-menu')
+		const dropdownMenu = document.querySelector('.dropdown-menu');
 
 		hamburger.addEventListener('click', function () {
 
@@ -109,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	function togglePassword() {
 
-		document.querySelector('.p-login').addEventListener('click', (e) => {
+		document.querySelector('body').addEventListener('click', (e) => {
 
 			if (e.target.classList.contains('c-form-control__toggle-visibility')) {
 				const input = e.target.offsetParent.children[0];
@@ -129,36 +139,188 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	}
 
-	if (document.querySelector('.p-login')) togglePassword();
+	if (document.querySelector('[type="password"]')) togglePassword();
 
-	const selects = Array.from(document.querySelectorAll('.c-form-control__select'));
+	const slims = []; // Array from init SlimSelects
 
-	selects.forEach(select => {
+	function initSelect() {
 
-		new SlimSelect({
-			select: select,
-			showSearch: false,
-			disabled: false,
+		const selects = Array.from(document.querySelectorAll('select.c-form-control__select'));
+
+		selects.forEach(select => {
+
+			slims.push(new SlimSelect({
+				select: select,
+				showSearch: false,
+				disabled: false,
+				allowDeselectOption: true
+			}));
+
 		});
 
-	});
+	}
 
-	Fancybox.bind('.c-filter-form__button', {
-		hideScrollbar: false,
-		autoFocus: false,
-		mainClass: 'c-popup-filter__container',
-		// type: 'clone'
-	});
+	if (document.querySelectorAll('.c-form-control__select')) initSelect();
 
-	function initMask() {
+	class SAccordion {
 
+		constructor(el) {
+
+			this.$el = document.querySelector(el);
+			this.recalculation();
+			this.addEventListener();
+		}
+		addEventListener() {
+			this.$el.addEventListener('click', (e) => {
+
+				const $elHeader = e.target.closest('.c-select-accordion__header .c-select-accordion__text');
+				const $elButton = e.target.closest('.c-select-accordion__button');
+				const $elItem = e.target.closest('.c-select-accordion__item');
+
+				if ($elButton) this.toggle();
+
+				if ($elItem) {
+					this.recalculation();
+				}
+
+				if ($elHeader) {
+					this.selectAll();
+					if (e.pointerId == 1) this.toggle();
+				}
+
+			})
+		}
+
+		selectAll() {
+			const checkboxes = this.$el.querySelectorAll('.c-select-accordion__body .c-form-control__radio');
+
+			const $checkboxSelectAll = this.$el.querySelector('.c-select-accordion__header .c-form-control__radio');
+
+			checkboxes.forEach((checkbox) => {
+				checkbox.checked = $checkboxSelectAll.checked;
+			})
+
+			this.recalculation();
+
+		}
+		recalculation() {
+			const checkboxes = this.$el.querySelectorAll('.c-select-accordion__body .c-form-control__radio');
+
+			const $checkboxSelectAll = this.$el.querySelector('.c-select-accordion__header .c-form-control__radio');
+
+			const countCheck = Array.from(checkboxes).filter(checkbox => checkbox.checked == true).length;
+
+			const $elCount = this.$el.querySelector('.c-select-accordion__text span');
+
+			if (countCheck) {
+				$elCount.innerHTML = `Выбрано (${countCheck})`;
+
+				$checkboxSelectAll.required = false;
+
+				checkboxes.forEach(checkbox => {
+					checkbox.required = false;
+				});
+
+			} else {
+				$elCount.innerHTML = `Выбрать всех (${checkboxes.length})`;
+				$checkboxSelectAll.checked = false;
+
+				$checkboxSelectAll.required = true;
+
+				checkboxes.forEach(checkbox => {
+					checkbox.required = true;
+				});
+			}
+		}
+		show() {
+			const $elBody = this.$el.querySelector('.c-select-accordion__body');
+			$elBody.style['display'] = `block`;
+			const height = $elBody.clientHeight;
+			$elBody.style['height'] = `0`;
+			$elBody.style['transition'] = `height 250ms ease`;
+			setTimeout(() => {
+				$elBody.style['height'] = `${height}px`;
+			})
+		}
+		hide() {
+			const $elBody = this.$el.querySelector('.c-select-accordion__body');
+			$elBody.style['transition'] = `height 250ms ease`;
+			$elBody.style['height'] = `0`;
+			setTimeout(() => {
+				$elBody.style['display'] = '';
+				$elBody.style['height'] = '';
+			}, 250);
+		}
+		toggle() {
+			this.$el.classList.toggle('c-select-accordion--show');
+			this.$el.classList.contains('c-select-accordion--show') ? this.show() : this.hide();
+		}
+
+	}
+
+	if (document.querySelector('.c-select-accordion')) new SAccordion('.c-select-accordion');
+
+	function initPopup() {
+
+		Fancybox.bind('.button-call-popup', {
+			hideScrollbar: false,
+			autoFocus: false,
+			mainClass: 'c-popup-filter__container',
+			type: "clone",
+			on: {
+				done: () => {
+
+					// Фэнсибокс копирует dom. Но не копирует проинициализированный slimSelect
+
+					// Проблема. В попап окне не работает слайдер т.к он не проинициализирован.
+
+					// Решение. Скрыть скопированный слимСелект
+					// Проиницализировать селекты внутри попап окна
+
+					const $oldSlims = document.querySelectorAll('.fancybox__content .ss-main.c-form-control__select');
+
+					$oldSlims.forEach(item => {
+						item.style.display = 'none';
+					});
+
+					const selects = document.querySelectorAll('.fancybox__content select.c-form-control__select');
+
+					selects.forEach(item => {
+						delete item.dataset.ssid;
+						item.style.display = 'block';
+
+						new SlimSelect({
+							select: item,
+							showSearch: false,
+							disabled: false,
+							allowDeselectOption: true
+						});
+
+					});
+				},
+			},
+		});
+
+		Fancybox.bind('.c-profile-card-button', {
+			hideScrollbar: false,
+			autoFocus: false,
+			mainClass: 'c-popup-filter__container',
+			type: "clone"
+		});
+
+	}
+
+	initPopup()
+
+	function initMaskPhone() {
 		const phoneMask = IMask(document.querySelector('.c-form-control__phone-mask'), {
 			mask: '+{7} (000) 000-00-00'
 		});
+	}
 
-		// const dateMask = IMask(document.querySelector('.c-form-control__birthday-mask'), {
+	if (document.querySelector('.c-form-control__phone-mask')) initMaskPhone();
 
-		// });
+	function initMaskDate() {
 
 		var lazyMask = IMask(document.querySelector('.c-form-control__birthday-mask'),
 			{
@@ -174,40 +336,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	}
 
-	initMask();
+	if (document.querySelector('.c-form-control__birthday-mask')) initMaskDate();
 
-	// function initSelect() {
 
-	// 	if (document.querySelector('.p-rating')) {
+	if (window.location.href == 'http://localhost:3000/lk-federation-alert.html') {
 
-	// 		new SlimSelect({
-	// 			select: '.с-select-school',
-	// 			showSearch: false,
-	// 			disabled: false,
-	// 		})
-	// 		new SlimSelect({
-	// 			select: '.с-select-trener',
-	// 			showSearch: false,
-	// 			disabled: false,
-	// 		})
-	// 		new SlimSelect({
-	// 			select: '.с-select-type',
-	// 			showSearch: false,
-	// 			disabled: false,
-	// 		})
-	// 		new SlimSelect({
-	// 			select: '.с-select-bassen',
-	// 			showSearch: false,
-	// 			disabled: false,
-	// 		})
-	// 		new SlimSelect({
-	// 			select: '.с-select-distance',
-	// 			showSearch: false,
-	// 			disabled: false,
-	// 		})
-	// 	}
+		Fancybox.show([
+			{
+				src: '#dialog-content',
+				type: 'inline',
+				mainClass: 'c-alert-popup'
+			}
+		]);
 
-	// }
-
+	}
 
 })

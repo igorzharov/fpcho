@@ -24,6 +24,7 @@
 	justify-content: flex-end
 
 .flex-center
+	display: flex
 	align-items: center
 
 .flex-nowrap
@@ -47,6 +48,9 @@
 .flex-item-66
 	width: 66.66666666666666%
 
+.flex-item-100
+	width: 100%
+
 @media screen and ( max-width: $lg )
 	.flex-50 > .flex-item, .flex-33 > .flex-item, .flex-25 > .flex-item
 		width: 50%
@@ -55,6 +59,9 @@
 		order: 1
 	.flex-lg-order2
 		order: 2
+
+	.flex-item-33, .flex-item-66
+		width: 100%
 
 @media screen and ( max-width: $md )
 	.flex-50 > .flex-item, .flex-33 > .flex-item, .flex-25 > .flex-item, .flex-wrap > .flex-item
@@ -71,7 +78,6 @@
 
 @media ( max-width: $lg )
 	.flex
-		margin: (-$gutter) / 4
 		> .flex-item
 			padding: $gutter / 2
 			flex: 0 0 auto
@@ -87,3 +93,8 @@
 		> .flex-none
 			flex: none
 			padding: $gutter / 2
+
+@media ( min-width: $lg )
+	.flex-lg-50
+		> .flex-item
+			width: 50%

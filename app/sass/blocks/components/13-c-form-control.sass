@@ -19,7 +19,7 @@
 		text-indent: $gutter
 		background-color: $blue-ghost
 		border-radius: $gutter / 4
-		outline: none
+		outline: none !important
 		padding: 0
 		border: 0
 		box-shadow: 0px 0px 0px 4px transparent
@@ -27,10 +27,10 @@
 		&:hover,&:focus
 			box-shadow: 0px 0px 0px 4px #BFE5FB
 		&:focus:required:invalid
-			box-shadow: 0px 0px 0px 2px $warning
+			box-shadow: 0px 0px 0px 2px $danger
 			+ .c-form-control__caption
 				display: block
-				color: $warning
+				color: $danger
 		&:required:valid
 			box-shadow: 0px 0px 0px 2px $success
 
@@ -90,7 +90,19 @@
 	&__radio-label
 		cursor: pointer
 		flex: auto
+		display: flex
+		align-items: center
+		height: 100%
 		padding-left: $gutter / 4
+
+	// Фикс SLIM SELECT для Required
+
+	select.c-form-control__select
+		display: block !important
+		position: absolute
+		height: $height
+		top: 0
+		opacity: 0
 
 	&__select
 		.ss-single-selected
@@ -118,8 +130,9 @@
 
 		.ss-list
 			border: 0
-			// max-height: 285px !important
+			max-height: 285px
 			.ss-option
+				padding: 0
 				&:hover
 					background-color: $blue
 					color: #fff 
@@ -130,9 +143,9 @@
 	&__select-item
 		height: 56px
 		line-height: 56px
-		padding: 0 !important
+		padding: 0
 		border-left: 1px solid $blue-ghost
-		border-rigth: 1px solid $blue-ghost
+		border-right: 1px solid $blue-ghost
 		border-bottom: 1px solid $blue-ghost
 		text-indent: $gutter
 		transition: background-color .25s ease
@@ -142,6 +155,51 @@
 		background-color: $blue
 		color: #fff
 
-	&__select-item:last-child
-		border-bottom-left-radius: $gutter / 4
-		border-bottom-right-radius: $gutter / 4
+	&__multiple-select
+		.ss-multi-selected
+			position: relative
+			height: 56px
+			padding: 0
+			text-indent: $gutter
+			background-color: $blue-ghost
+			border: 0
+			box-shadow: 0px 0px 0px 4px transparent
+			transition: box-shadow .25s ease
+			&:hover,&:focus
+				box-shadow: 0px 0px 0px 4px #BFE5FB
+			.placeholder
+				color: $text-light
+
+			.ss-values
+				height: 30px
+
+			.ss-add
+				padding-right: $gutter / 2
+				flex: 0 1 auto
+				margin: 0 6px
+				align-items: center
+				.ss-plus
+					border: solid $text-dark
+					border-width: 0 2px 2px 0
+					display: inline-block
+					padding: 4px
+					transition: margin .2s,-webkit-transform .2s
+					transition: transform .2s,margin .2s
+					transition: transform .2s,margin .2s,-webkit-transform .2s
+					height: inherit
+					width: inherit
+					background: transparent
+					transform: rotate(45deg)
+					&:after
+						display: none
+
+		// .ss-optgroup-label
+		// 	padding: $gutter / 2 !important
+
+		// .ss-list
+		// 	max-height: 100% !important
+
+		.ss-open-below
+			.ss-add
+				.ss-plus
+					transform: translateY(2px) rotate(-134deg) !important

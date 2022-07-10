@@ -1,0 +1,51 @@
+.c-select-accordion
+	width: 100%
+
+	&__text
+		width: 70%
+		display: flex
+		align-items: center
+	
+	&__header
+		display: flex
+		justify-content: space-between
+
+	&__button
+		cursor: pointer
+		position: relative
+		span
+			border: solid $text-dark
+			border-width: 0 2px 2px 0
+			display: inline-block
+			padding: 4px
+			transition: transform .2s ease, margin .2s ease
+			transform: translateY(-2px) rotate(45deg)
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			transform: scale(12, 2)
+
+	&__body
+		position: relative
+		top: $gutter / 3
+		overflow: hidden
+		transition: height .25s ease
+
+	&:not(.c-select-accordion--show)
+		.c-select-accordion__body
+			display: none
+
+	&__item
+		display: flex
+		align-items: center
+		height: 44px
+		padding-left: $gutter
+
+	&__count
+		pointer-events: none
+

@@ -3,10 +3,12 @@
 	flex-direction: column
 	text-decoration: none
 	color: $text-light
+	outline: none !important
 	&__date
 		display: block
 		margin: $gutter / 2 0 0 0
 		text-decoration: none !important
+		color: $text-light
 
 	&__description
 		margin: 0
@@ -15,6 +17,10 @@
 		-webkit-line-clamp: 3
 		-webkit-box-orient: vertical
 		text-overflow: ellipsis
+		color: $text-light
+
+	&__location
+		color: $text-light
 
 	&__link
 		margin-top: $gutter / 2

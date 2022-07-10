@@ -1,0 +1,47 @@
+.c-alert
+	display: flex
+	flex-direction: row
+	align-items: flex-start
+	max-width: $md
+	padding: $gutter * 2 $gutter
+
+	&__icon
+		margin-right: $gutter / 2
+		height: 32px
+		width: 32px
+
+	&__title
+		margin: 0
+
+	.carousel__button
+		box-shadow: none !important
+		top: 9px !important
+		right: 9px !important
+		svg
+			filter: none
+			stroke: $text-light
+
+.c-alert-note
+	.c-alert__title
+		color: $note
+	.c-alert__icon
+		filter: $noteF
+
+.c-alert-warning
+	.c-alert__title
+		color: $warning
+	.c-alert__icon
+		filter: $warningF
+
+.c-alert-danger
+	.c-alert__title
+		color: $danger
+	.c-alert__icon
+		filter: $dangerF
+
+.c-alert-success
+	.c-alert__title
+		color: $success
+	.c-alert__icon
+		filter: $successF
+
