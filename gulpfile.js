@@ -88,11 +88,11 @@ function buildcopy() {
 	.pipe(dest('dist'))
 }
 
-// async function buildhtml() {
-// 	let includes = new ssi('app/', 'dist/', '/**/*.html')
-// 	includes.compile()
-// 	del('dist/parts', { force: true })
-// }
+async function buildhtml() {
+	let includes = new ssi('app/', 'dist/', '/**/*.html')
+	includes.compile()
+	del('dist/parts', { force: true })
+}
 
 function cleandist() {
 	return del('dist/**/*', { force: true })
@@ -125,5 +125,5 @@ exports.styles  = styles
 exports.images  = images
 exports.deploy  = deploy
 exports.assets  = series(scripts, styles, images)
-exports.build   = series(cleandist, scripts, styles, images, buildcopy)
+exports.build   = series(cleandist, scripts, styles, images, buildcopy, buildhtml)
 exports.default = series(scripts, styles, images, parallel(browsersync, startwatch))
