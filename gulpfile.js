@@ -1,24 +1,31 @@
 let preprocessor = 'sass', // Preprocessor (sass, less, styl); 'sass' also work with the Scss syntax in blocks/ folder.
 		fileswatch   = 'html,htm,txt,json,md,woff2' // List of files extensions for watching & hard reload
 
-const { src, dest, parallel, series, watch } = require('gulp')
-const browserSync  = require('browser-sync').create()
-const bssi         = require('browsersync-ssi')
-const ssi          = require('ssi')
-const webpack      = require('webpack-stream')
-const sass         = require('gulp-sass')
-const sassglob     = require('gulp-sass-glob')
-const less         = require('gulp-less')
-const lessglob     = require('gulp-less-glob')
-const styl         = require('gulp-stylus')
-const stylglob     = require("gulp-empty")
-const cleancss     = require('gulp-clean-css')
-const autoprefixer = require('gulp-autoprefixer')
-const rename       = require('gulp-rename')
-const imagemin     = require('gulp-imagemin')
-const newer        = require('gulp-newer')
-const rsync        = require('gulp-rsync')
-const del          = require('del')
+import pkg from 'gulp'
+const { gulp, src, dest, parallel, series, watch } = pkg
+
+import browserSync   from 'browser-sync'
+import bssi          from 'browsersync-ssi'
+import ssi           from 'ssi'
+import webpackStream from 'webpack-stream'
+import webpack       from 'webpack'
+import TerserPlugin  from 'terser-webpack-plugin'
+import gulpSass      from 'gulp-sass'
+import dartSass      from 'sass'
+import sassglob      from 'gulp-sass-glob'
+const  sass          = gulpSass(dartSass)
+import less          from 'gulp-less'
+import lessglob      from 'gulp-less-glob'
+import styl          from 'gulp-stylus'
+import stylglob      from 'gulp-noop'
+import postCss       from 'gulp-postcss'
+import cssnano       from 'cssnano'
+import autoprefixer  from 'autoprefixer'
+import imagemin      from 'gulp-imagemin'
+import changed       from 'gulp-changed'
+import concat        from 'gulp-concat'
+import rsync         from 'gulp-rsync'
+import {deleteAsync} from 'del'
 
 function browsersync() {
 	browserSync.init({
@@ -35,44 +42,60 @@ function browsersync() {
 
 function scripts() {
 	return src(['app/js/*.js', '!app/js/*.min.js'])
-		.pipe(webpack({
-			mode: 'development',
+		.pipe(webpackStream({
+			mode: 'production',
 			performance: { hints: false },
+			plugins: [
+				new webpack.ProvidePlugin({ $: 'jquery', jQuery: 'jquery', 'window.jQuery': 'jquery' }), // jQuery (npm i jquery)
+			],
 			module: {
 				rules: [
 					{
-						test: /\.(js)$/,
+						test: /\.m?js$/,
 						exclude: /(node_modules)/,
-						loader: 'babel-loader',
-						query: {
-							presets: ['@babel/env'],
-							plugins: ['babel-plugin-root-import']
+						use: {
+							loader: 'babel-loader',
+							options: {
+								presets: ['@babel/preset-env'],
+								plugins: ['babel-plugin-root-import']
+							}
 						}
 					}
 				]
-			}
-		})).on('error', function handleError() {
+			},
+			optimization: {
+				minimize: true,
+				minimizer: [
+					new TerserPlugin({
+						terserOptions: { format: { comments: false } },
+						extractComments: false
+					})
+				]
+			},
+		}, webpack)).on('error', (err) => {
 			this.emit('end')
 		})
-		.pipe(rename('app.min.js'))
+		.pipe(concat('app.min.js'))
 		.pipe(dest('app/js'))
 		.pipe(browserSync.stream())
 }
 
 function styles() {
-	return src([`app/sass/*.*`, `!app/sass/_*.*`])
-		.pipe(eval(`sassglob`)())
-		.pipe(eval('sass')())
-		.pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
-		.pipe(cleancss({ level: { 1: { specialComments: 0 } },/* format: 'beautify' */ }))
-		.pipe(rename({ suffix: ".min" }))
+	return src([`app/${preprocessor}/*.*`, `!app/${preprocessor}/_*.*`])
+		.pipe(eval(`${preprocessor}glob`)())
+		.pipe(eval(preprocessor)({ 'include css': true }))
+		.pipe(postCss([
+			autoprefixer({ grid: 'autoplace' }),
+			cssnano({ preset: ['default', { discardComments: { removeAll: true } }] })
+		]))
+		.pipe(concat('main.min.css'))
 		.pipe(dest('app/css'))
 		.pipe(browserSync.stream())
 }
 
 function images() {
 	return src(['app/images/src/**/*'])
-		.pipe(newer('app/images/dist'))
+		.pipe(changed('app/images/dist'))
 		.pipe(imagemin())
 		.pipe(dest('app/images/dist'))
 		.pipe(browserSync.stream())
@@ -91,11 +114,11 @@ function buildcopy() {
 async function buildhtml() {
 	let includes = new ssi('app/', 'dist/', '/**/*.html')
 	includes.compile()
-	del('dist/parts', { force: true })
+	await deleteAsync('dist/parts', { force: true })
 }
 
-function cleandist() {
-	return del('dist/**/*', { force: true })
+async function cleandist() {
+	await deleteAsync('dist/**/*', { force: true })
 }
 
 function deploy() {
@@ -104,6 +127,7 @@ function deploy() {
 			root: 'dist/',
 			hostname: 'username@yousite.com',
 			destination: 'yousite/public_html/',
+			// clean: true, // Mirror copy with file deletion
 			include: [/* '*.htaccess' */], // Included files to deploy,
 			exclude: [ '**/Thumbs.db', '**/*.DS_Store' ],
 			recursive: true,
@@ -114,16 +138,13 @@ function deploy() {
 }
 
 function startwatch() {
-	watch(`app/sass/**/*`, { usePolling: true }, styles)
+	watch(`app/${preprocessor}/**/*`, { usePolling: true }, styles)
 	watch(['app/js/**/*.js', '!app/js/**/*.min.js'], { usePolling: true }, scripts)
-	watch('app/images/src/**/*.{jpg,jpeg,png,webp,svg,gif}', { usePolling: true }, images)
 	watch(`app/**/*.{${fileswatch}}`, { usePolling: true }).on('change', browserSync.reload)
 }
 
-exports.scripts = scripts
-exports.styles  = styles
-exports.images  = images
-exports.deploy  = deploy
-exports.assets  = series(scripts, styles, images)
-exports.build   = series(cleandist, scripts, styles, images, buildcopy, buildhtml)
-exports.default = series(scripts, styles, images, parallel(browsersync, startwatch))
+export { scripts, styles, deploy }
+export let assets = series(scripts, styles)
+export let build = series(cleandist, scripts, styles, buildcopy, buildhtml)
+
+export default series(scripts, styles, parallel(browsersync, startwatch))

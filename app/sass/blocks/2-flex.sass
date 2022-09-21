@@ -5,6 +5,9 @@
 	> .flex-item
 		padding: $gutter / 2
 		flex: 0 0 auto
+	> .flex-item--small
+		padding: $gutter / 4
+		flex: 0 0 auto
 	> .flex-none
 			flex: none
 			padding: 0
@@ -41,12 +44,20 @@
 	width: 33.33333333333333%
 .flex-25 > .flex-item
 	width: 25%
+.flex-66 > .flex-item
+	width: 66%
 
 .flex-item-33
 	width: 33.33333333333333%
 
 .flex-item-66
 	width: 66.66666666666666%
+
+.flex-item-40
+	width: 40%
+
+.flex-item-60
+	width: 60%
 
 .flex-item-100
 	width: 100%
@@ -71,6 +82,10 @@
 		order: 1
 	.flex-md-order2
 		order: 2
+
+	.flex-md-order--1
+		order: -1
+		
 
 	.flex
 		> .flex-none
