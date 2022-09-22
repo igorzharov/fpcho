@@ -6,7 +6,7 @@
 		display: flex
 		> li
 			list-style-type: none
-			flex: 1 0 0%
+			flex: auto
 
 	&__buttons
 		display: none
@@ -41,7 +41,7 @@
 		line-height: $height
 		border: 0
 		outline: 0
-
+		padding: 0
 
 	&__dropdown
 		.dropdown-menu + a img
@@ -81,7 +81,7 @@
 			transition: color .25s ease
 	
 
-@media screen and ( max-width: $lg )
+@media screen and (max-width: $lg)
 	.main-menu
 		max-height: 0
 		overflow: hidden
@@ -107,17 +107,17 @@
 			border: 0
 			cursor: pointer
 			.dropdown-menu + a img
-				transform: rotate(180deg)
-			&:hover
-				.dropdown-menu + a img
-					transform: rotate(180deg)
-
-		&__dropdown-is-active
-			.dropdown-menu + a img
 				transform: rotate(0deg)
 			&:hover
 				.dropdown-menu + a img
 					transform: rotate(0deg)
+
+		&__dropdown-is-active
+			.dropdown-menu + a img
+				transform: rotate(180deg)
+			&:hover
+				.dropdown-menu + a img
+					transform: rotate(180deg)
 
 		&__item-search
 			margin: $gutter 0

@@ -1,558 +1,352 @@
-<!DOCTYPE html>
-<html lang="en">
+<!--#include virtual="/parts/header.html" -->
 
-<head>
+<section class="s-main mb0">
 
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Фотогалерея с фильтром</title>
+	<div class="container">
 
-	<link rel="stylesheet" href="./css/main.min.css">
+		<div id="popupFilter">
 
-</head>
+			<form action="#" class="c-form">
 
-<body class="p-posts">
+				<div class="flex flex-lg-50 flex-md-100">
 
-	<header class="header">
+					<div class="flex-item lg-d-none xl-d-none">
 
-		<div class="container">
-
-			<div class="header__flex">
-
-				<a href="index.html" class="header__logo"><img src="./images/logo.svg" alt="Логотип"></a>
-				<!-- /.header__logo -->
-
-				<button class="hamburger hamburger--collapse" type="button">
-					<span class="hamburger-box">
-						<span class="hamburger-inner"></span>
-					</span>
-				</button>
-
-				<div class="header__buttons">
-
-					<a href="login2.html" class="header__signup button button-secondary">Регистрация</a>
-					<a href="login1.html" class="header__signin button button-primary">Войти</a>
-
-				</div>
-				<!-- /.header__buttons -->
-
-				<nav class="main-menu">
-
-					<div class="main-menu__buttons">
-
-						<a href="login2.html" class="main-menu__signup button button-middle button-secondary">Регистрация</a>
-						<a href="login1.html" class="main-menu__signin button button-middle button-primary">Войти</a>
+						<div class="h3 mb0 mt0">Поиск</div>
 
 					</div>
-					<!-- /.header__buttons -->
+					<!-- /.flex-item -->
 
-					<ul>
+					<div class="flex-item flex-1">
 
-						<li class="main-menu__item main-menu__item-search">
-							<form action="">
-								<img class="icon-blue" src="./images/icons/search.svg" alt="icon-search">
-								<input class="main-menu__search" type="text" placeholder="Поиск...">
-							</form>
-						</li>
+						<div class="c-form-control c-form-control-icon-left">
 
-						<li class="main-menu__item"><a href="index.html">Главная</a></li>
-						<li class="main-menu__item"><a href="rating.html">Рейтинги</a></li>
-						<li class="main-menu__item"><a href="calendar.html">Календарь</a></li>
-						<li class="main-menu__item"><a href="posts.html">Статьи</a></li>
-						<li class="main-menu__item is-active"><a href="gallery.html">Фотогалерея</a></li>
-						<li class="main-menu__item main-menu__dropdown">
+							<input class="c-form-control__input" type="text" placeholder="Поиск">
 
-							<ul class="dropdown-menu">
-
-								<li class="dropdown-menu__item"><a href="federation1.html">Документы</a></li>
-								<li class="dropdown-menu__item"><a href="federation6.html">Тренерский состав</a></li>
-								<li class="dropdown-menu__item"><a href="federation4.html">Бассейны</a></li>
-								<li class="dropdown-menu__item"><a href="federation2.html">Руководящий состав</a></li>
-								<li class="dropdown-menu__item"><a href="federation5.html">Спортивные организации</a></li>
-								<li class="dropdown-menu__item"><a href="federation3.html">Члены Федерации</a></li>
-								<li class="dropdown-menu__item"><a href="federation6.html">Команда Челябинской области</a></li>
-
-							</ul>
-
-							<a>Федерация <img class="icon-blue" src="./images/icons/chevron-down.svg" alt="#"></a>
-
-						</li>
-
-						<li class="main-menu__item"><a href="contacts.html">Контакты</a></li>
-
-					</ul>
-
-				</nav>
-				<!-- /.main-menu -->
-
-			</div>
-			<!-- /.header__flex -->
-
-		</div>
-		<!-- /.container -->
-
-	</header>
-	<!-- /.header -->
-
-	<section class="s-main mb0">
-
-		<div class="container">
-
-			<div id="popupFilter">
-
-				<form action="#" class="c-form">
-
-					<div class="flex flex-lg-50 flex-md-100">
-
-						<div class="flex-item lg-d-none xl-d-none">
-
-							<div class="h3 mb0 mt0">Поиск</div>
-
-						</div>
-						<!-- /.flex-item -->
-
-						<div class="flex-item flex-1">
-
-							<div class="c-form-control c-form-control-icon-left">
-
-								<input class="c-form-control__input" type="text" placeholder="Поиск">
-
-								<div class="c-form-control__icons">
-									<img class="c-form-control__icon icon-blue" src="./images/icons/search.svg" alt="icon">
-								</div>
-
-							</div>
-
-						</div>
-						<!-- /.flex-item -->
-
-						<div class="flex-item lg-d-none xl-d-none">
-
-							<div class="c-group-text c-group-text-caption">
-
-								<div class="c-group-text__title h3">Фильтры</div>
-	
-								<p class="c-group-text__text">Используйте фильтр, чтобы посмотреть соревнования за определенный год</p>
-	
+							<div class="c-form-control__icons">
+								<img class="c-form-control__icon icon-blue" src="./images/icons/search.svg" alt="icon">
 							</div>
 
 						</div>
 
-						<div class="flex-item lg-d-none">
+					</div>
+					<!-- /.flex-item -->
 
-							<div class="flex flex-lg-50 flex-md-100">
+					<div class="flex-item lg-d-none xl-d-none">
 
-								<div class="flex-item">
+						<div class="c-group-text c-group-text-caption">
 
-									<select class="c-form-control__select">
-										<option value="" data-placeholder="true">Выберите год</option>
-										<option value="2022" class="c-form-control__select-item">2022</option>
-										<option value="2021" class="c-form-control__select-item" selected>2021</option>
-										<option value="2020" class="c-form-control__select-item">2020</option>
-										<option value="2019" class="c-form-control__select-item">2019</option>
-										<option value="2018" class="c-form-control__select-item">2018</option>
-										<option value="2017" class="c-form-control__select-item">2017</option>
-										<option value="2016" class="c-form-control__select-item">2016</option>
-									</select>
+							<div class="c-group-text__title h3">Фильтры</div>
 
-								</div>
-								<!-- /.flex-item -->
+							<p class="c-group-text__text">Используйте фильтр, чтобы посмотреть соревнования за определенный год</p>
 
-								<div class="flex-item">
+						</div>
 
-									<button class="button button-primary button-full">Применить фильтр</button>
+					</div>
 
-								</div>
-								<!-- /.flex-item -->
+					<div class="flex-item lg-d-none">
+
+						<div class="flex flex-lg-50 flex-md-100">
+
+							<div class="flex-item">
+
+								<select class="c-form-control__select">
+									<option value="" data-placeholder="true">Выберите год</option>
+									<option value="2022" class="c-form-control__select-item">2022</option>
+									<option value="2021" class="c-form-control__select-item" selected>2021</option>
+									<option value="2020" class="c-form-control__select-item">2020</option>
+									<option value="2019" class="c-form-control__select-item">2019</option>
+									<option value="2018" class="c-form-control__select-item">2018</option>
+									<option value="2017" class="c-form-control__select-item">2017</option>
+									<option value="2016" class="c-form-control__select-item">2016</option>
+								</select>
 
 							</div>
-							<!-- /.flex flex-50 -->
+							<!-- /.flex-item -->
+
+							<div class="flex-item">
+
+								<button class="button button-primary button-full">Применить фильтр</button>
+
+							</div>
+							<!-- /.flex-item -->
 
 						</div>
-						<!-- /.flex-item -->
-
-						<div class="flex-item xl-d-none c-form__filter-button-wrapper">
-
-							<a href="#popupFilter" class="button-call-popup button button-gray button-icon button-icon-md button-icon-left"><img class="icon-blue" src="./images/icons/sliders.svg" alt="ic on"><span>Фильтры</span></a>
-
-						</div>
-						<!-- /.flex-item -->
+						<!-- /.flex flex-50 -->
 
 					</div>
-					<!-- /.flex flex-50 -->
+					<!-- /.flex-item -->
 
-				</form>
-				<!-- /.c-form -->
+					<div class="flex-item xl-d-none c-form__filter-button-wrapper">
 
-			</div>
-			<!-- /#popupFilter -->
-
-		</div>
-		<!-- /.container -->
-
-	</section>
-	<!-- /.s-main -->
-
-	<section class="s-main">
-
-		<div class="container">
-
-			<div class="c-group-text c-group-text-caption mb1">
-
-				<div class="c-group-text__title h2">2021 год</div>
-
-				<span class="c-group-text__text">Все фотоотчеты соревнований за 2021 год</span>
-
-			</div>
-
-			<div class="flex flex-33">
-
-				<div class="flex-item">
-
-					<a href="post.html" class="c-post">
-
-						<div class="c-post__image"><img class="img-responsive img-rounded" src="./images/dist/image-1.jpg" alt="#">
-						</div>
-
-						<span class="c-post__date">23.06.2021</span>
-
-						<div class="c-post__title h2">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
-
-						<p class="c-post__description">Соревнования проводятся 21 марта 2021 года (воскресенье), на базе
-							плавательного бассейна «Строитель» (Челябинская область, г. Челябинск, ул. 50 лет ВЛКСМ, 14)…</p>
-
-						<div class="c-post__link c-link">Читать полностью</div>
-
-					</a>
-
-				</div>
-				<!-- /.flex-item -->
-
-				<div class="flex-item">
-
-					<a href="post.html" class="c-post">
-
-						<div class="c-post__image"><img class="img-responsive img-rounded" src="./images/dist/image-1.jpg" alt="#">
-						</div>
-
-						<span class="c-post__date">23.06.2021</span>
-
-						<div class="c-post__title h2">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
-
-						<p class="c-post__description">Соревнования проводятся 21 марта 2021 года (воскресенье), на базе
-							плавательного бассейна «Строитель» (Челябинская область, г. Челябинск, ул. 50 лет ВЛКСМ, 14)…</p>
-
-						<div class="c-post__link c-link">Читать полностью</div>
-
-					</a>
-
-				</div>
-				<!-- /.flex-item -->
-
-				<div class="flex-item">
-
-					<a href="post.html" class="c-post">
-
-						<div class="c-post__image"><img class="img-responsive img-rounded" src="./images/dist/image-1.jpg" alt="#">
-						</div>
-
-						<span class="c-post__date">23.06.2021</span>
-
-						<div class="c-post__title h2">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
-
-						<p class="c-post__description">Соревнования проводятся 21 марта 2021 года (воскресенье), на базе
-							плавательного бассейна «Строитель» (Челябинская область, г. Челябинск, ул. 50 лет ВЛКСМ, 14)…</p>
-
-						<div class="c-post__link c-link">Читать полностью</div>
-
-					</a>
-
-				</div>
-				<!-- /.flex-item -->
-
-				<div class="flex-item">
-
-					<a href="post.html" class="c-post">
-
-						<div class="c-post__image"><img class="img-responsive img-rounded" src="./images/dist/image-1.jpg" alt="#">
-						</div>
-
-						<span class="c-post__date">23.06.2021</span>
-
-						<div class="c-post__title h2">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
-
-						<p class="c-post__description">Соревнования проводятся 21 марта 2021 года (воскресенье), на базе
-							плавательного бассейна «Строитель» (Челябинская область, г. Челябинск, ул. 50 лет ВЛКСМ, 14)…</p>
-
-						<div class="c-post__link c-link">Читать полностью</div>
-
-					</a>
-
-				</div>
-				<!-- /.flex-item -->
-
-				<div class="flex-item">
-
-					<a href="post.html" class="c-post">
-
-						<div class="c-post__image"><img class="img-responsive img-rounded" src="./images/dist/image-1.jpg" alt="#">
-						</div>
-
-						<span class="c-post__date">23.06.2021</span>
-
-						<div class="c-post__title h2">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
-
-						<p class="c-post__description">Соревнования проводятся 21 марта 2021 года (воскресенье), на базе
-							плавательного бассейна «Строитель» (Челябинская область, г. Челябинск, ул. 50 лет ВЛКСМ, 14)…</p>
-
-						<div class="c-post__link c-link">Читать полностью</div>
-
-					</a>
-
-				</div>
-				<!-- /.flex-item -->
-
-				<div class="flex-item">
-
-					<a href="post.html" class="c-post">
-
-						<div class="c-post__image"><img class="img-responsive img-rounded" src="./images/dist/image-1.jpg" alt="#">
-						</div>
-
-						<span class="c-post__date">23.06.2021</span>
-
-						<div class="c-post__title h2">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
-
-						<p class="c-post__description">Соревнования проводятся 21 марта 2021 года (воскресенье), на базе
-							плавательного бассейна «Строитель» (Челябинская область, г. Челябинск, ул. 50 лет ВЛКСМ, 14)…</p>
-
-						<div class="c-post__link c-link">Читать полностью</div>
-
-					</a>
-
-				</div>
-				<!-- /.flex-item -->
-
-				<div class="flex-item">
-
-					<a href="post.html" class="c-post">
-
-						<div class="c-post__image"><img class="img-responsive img-rounded" src="./images/dist/image-1.jpg" alt="#">
-						</div>
-
-						<span class="c-post__date">23.06.2021</span>
-
-						<div class="c-post__title h2">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
-
-						<p class="c-post__description">Соревнования проводятся 21 марта 2021 года (воскресенье), на базе
-							плавательного бассейна «Строитель» (Челябинская область, г. Челябинск, ул. 50 лет ВЛКСМ, 14)…</p>
-
-						<div class="c-post__link c-link">Читать полностью</div>
-
-					</a>
-
-				</div>
-				<!-- /.flex-item -->
-
-				<div class="flex-item">
-
-					<a href="post.html" class="c-post">
-
-						<div class="c-post__image"><img class="img-responsive img-rounded" src="./images/dist/image-1.jpg" alt="#">
-						</div>
-
-						<span class="c-post__date">23.06.2021</span>
-
-						<div class="c-post__title h2">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
-
-						<p class="c-post__description">Соревнования проводятся 21 марта 2021 года (воскресенье), на базе
-							плавательного бассейна «Строитель» (Челябинская область, г. Челябинск, ул. 50 лет ВЛКСМ, 14)…</p>
-
-						<div class="c-post__link c-link">Читать полностью</div>
-
-					</a>
-
-				</div>
-				<!-- /.flex-item -->
-
-				<div class="flex-item">
-
-					<a href="post.html" class="c-post">
-
-						<div class="c-post__image"><img class="img-responsive img-rounded" src="./images/dist/image-1.jpg" alt="#">
-						</div>
-
-						<span class="c-post__date">23.06.2021</span>
-
-						<div class="c-post__title h2">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
-
-						<p class="c-post__description">Соревнования проводятся 21 марта 2021 года (воскресенье), на базе
-							плавательного бассейна «Строитель» (Челябинская область, г. Челябинск, ул. 50 лет ВЛКСМ, 14)…</p>
-
-						<div class="c-post__link c-link">Читать полностью</div>
-
-					</a>
-
-				</div>
-				<!-- /.flex-item -->
-
-			</div>
-			<!-- /.flex flex-33 -->
-
-			<div class="c-pagination">
-
-				<div class="c-pagination__left">
-
-					<a class="button button-gray c-pagination__item"><span>Назад</span></a>
-
-					<a href="#" class="button button-ghost button-square c-pagination__item">1</a>
-					<a href="#" class="button button-ghost button-square c-pagination__item">2</a>
-					<a href="#" class="button button-ghost button-square c-pagination__item">3</a>
-					<a href="#" class="button button-ghost button-square c-pagination__item">4</a>
-					<a href="#" class="button button-ghost button-square c-pagination__item">5</a>
-
-				</div>
-				<!-- /.c-pagination__left -->
-
-				<div class="c-pagination__center">
-
-					<div class="c-pagination__item">...</div>
-
-				</div>
-				<!-- /.c-pagination__center -->
-
-				<div class="c-pagination__right">
-
-					<a href="#" class="button button-ghost button-square c-pagination__item">14</a>
-					<a href="#" class="button button-ghost button-square c-pagination__item">15</a>
-					<a href="#" class="button button-ghost button-square c-pagination__item">16</a>
-					<a href="#" class="button button-ghost button-square c-pagination__item">17</a>
-					<a href="#" class="button button-ghost button-square c-pagination__item">18</a>
-
-					<a class="button button-secondary c-pagination__item"><span>Далее</span></a>
-
-				</div>
-				<!-- /.c-pagination-right -->
-
-			</div>
-			<!-- /.c-pagination -->
-
-		</div>
-		<!-- /.container -->
-
-	</section>
-	<!-- /.s-main -->
-
-	<footer class="footer">
-
-		<div class="container">
-
-			<div class="footer__flex">
-
-				<a href="index.html" class="footer__logo logo"><img src="./images/logo.svg" alt="Логотип"></a>
-				<!-- /.footer__logo -->
-
-				<nav class="footer__navigation">
-
-					<div class="footer__title h3">Навигация</div>
-
-					<ul>
-
-						<li class="footer__nav-item"><a href="rating.html">Рейтинги</a></li>
-						<li class="footer__nav-item"><a href="calendar.html">Календарь соревнований</a></li>
-						<li class="footer__nav-item"><a href="posts.html">Статьи</a></li>
-						<li class="footer__nav-item"><a href="gallery,html">Фотогалерея</a></li>
-						<li class="footer__nav-item"><a href="federation.html">Федерация</a></li>
-
-					</ul>
-
-				</nav>
-				<!-- /.footer__navigation -->
-
-				<nav class="footer__navigation">
-
-					<div class="footer__title h3">Ссылки</div>
-
-					<ul>
-
-						<li class="footer__nav-item"><a href="contacts.html">Наши контакты</a></li>
-						<li class="footer__nav-item"><a href="#">Ссылки на другие сайты</a></li>
-						<li class="footer__nav-item"><a href="posts.html">Статьи</a></li>
-						<li class="footer__nav-item"><a href="#">Политика конфиденциальности</a></li>
-						<li class="footer__nav-item"><a href="#">Помощь</a></li>
-
-					</ul>
-
-				</nav>
-				<!-- /.footer__navigation -->
-
-				<div class="footer__soc">
-
-					<div class="footer__title h3">Соц. сети</div>
-
-					<div class="footer__soc-wrapper">
-
-						<a class="footer__soc-item soc-icon" href="#"><img src="./images/icons/vk.svg" alt="icon-vk"></a>
-						<a class="footer__soc-item soc-icon" href="#"><img src="./images/icons/vk.svg" alt="icon-vk"></a>
-						<a class="footer__soc-item soc-icon" href="#"><img src="./images/icons/vk.svg" alt="icon-vk"></a>
-						<a class="footer__soc-item soc-icon" href="#"><img src="./images/icons/vk.svg" alt="icon-vk"></a>
-						<a class="footer__soc-item soc-icon" href="#"><img src="./images/icons/vk.svg" alt="icon-vk"></a>
+						<a href="#popupFilter" class="button-call-popup button button-gray button-icon button-icon-md button-icon-left"><img class="icon-blue" src="./images/icons/sliders.svg" alt="ic on"><span>Фильтры</span></a>
 
 					</div>
+					<!-- /.flex-item -->
 
 				</div>
-				<!-- /.footer__soc -->
+				<!-- /.flex flex-50 -->
+
+			</form>
+			<!-- /.c-form -->
+
+		</div>
+		<!-- /#popupFilter -->
+
+	</div>
+	<!-- /.container -->
+
+</section>
+<!-- /.s-main -->
+
+<section class="s-main">
+
+	<div class="container">
+
+		<div class="c-group-text c-group-text-caption mb1">
+
+			<div class="c-group-text__title h2">2021 год</div>
+
+			<span class="c-group-text__text">Все фотоотчеты соревнований за 2021 год</span>
+
+		</div>
+
+		<div class="flex flex-33">
+
+			<div class="flex-item">
+
+				<a href="post.html" class="c-post">
+
+					<div class="c-post__image"><img class="img-responsive img-rounded" src="./images/dist/image-1.jpg" alt="#">
+					</div>
+
+					<span class="c-post__date">23.06.2021</span>
+
+					<div class="c-post__title h2">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
+
+					<p class="c-post__description">Соревнования проводятся 21 марта 2021 года (воскресенье), на базе
+						плавательного бассейна «Строитель» (Челябинская область, г. Челябинск, ул. 50 лет ВЛКСМ, 14)…</p>
+
+					<div class="c-post__link c-link">Читать полностью</div>
+
+				</a>
 
 			</div>
-			<!-- /.footer__flex -->
+			<!-- /.flex-item -->
 
-			<hr class="footer__hr hr">
+			<div class="flex-item">
 
-			<p>Федерация плавания Челябинской области ©2010-2022.</p>
+				<a href="post.html" class="c-post">
+
+					<div class="c-post__image"><img class="img-responsive img-rounded" src="./images/dist/image-1.jpg" alt="#">
+					</div>
+
+					<span class="c-post__date">23.06.2021</span>
+
+					<div class="c-post__title h2">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
+
+					<p class="c-post__description">Соревнования проводятся 21 марта 2021 года (воскресенье), на базе
+						плавательного бассейна «Строитель» (Челябинская область, г. Челябинск, ул. 50 лет ВЛКСМ, 14)…</p>
+
+					<div class="c-post__link c-link">Читать полностью</div>
+
+				</a>
+
+			</div>
+			<!-- /.flex-item -->
+
+			<div class="flex-item">
+
+				<a href="post.html" class="c-post">
+
+					<div class="c-post__image"><img class="img-responsive img-rounded" src="./images/dist/image-1.jpg" alt="#">
+					</div>
+
+					<span class="c-post__date">23.06.2021</span>
+
+					<div class="c-post__title h2">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
+
+					<p class="c-post__description">Соревнования проводятся 21 марта 2021 года (воскресенье), на базе
+						плавательного бассейна «Строитель» (Челябинская область, г. Челябинск, ул. 50 лет ВЛКСМ, 14)…</p>
+
+					<div class="c-post__link c-link">Читать полностью</div>
+
+				</a>
+
+			</div>
+			<!-- /.flex-item -->
+
+			<div class="flex-item">
+
+				<a href="post.html" class="c-post">
+
+					<div class="c-post__image"><img class="img-responsive img-rounded" src="./images/dist/image-1.jpg" alt="#">
+					</div>
+
+					<span class="c-post__date">23.06.2021</span>
+
+					<div class="c-post__title h2">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
+
+					<p class="c-post__description">Соревнования проводятся 21 марта 2021 года (воскресенье), на базе
+						плавательного бассейна «Строитель» (Челябинская область, г. Челябинск, ул. 50 лет ВЛКСМ, 14)…</p>
+
+					<div class="c-post__link c-link">Читать полностью</div>
+
+				</a>
+
+			</div>
+			<!-- /.flex-item -->
+
+			<div class="flex-item">
+
+				<a href="post.html" class="c-post">
+
+					<div class="c-post__image"><img class="img-responsive img-rounded" src="./images/dist/image-1.jpg" alt="#">
+					</div>
+
+					<span class="c-post__date">23.06.2021</span>
+
+					<div class="c-post__title h2">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
+
+					<p class="c-post__description">Соревнования проводятся 21 марта 2021 года (воскресенье), на базе
+						плавательного бассейна «Строитель» (Челябинская область, г. Челябинск, ул. 50 лет ВЛКСМ, 14)…</p>
+
+					<div class="c-post__link c-link">Читать полностью</div>
+
+				</a>
+
+			</div>
+			<!-- /.flex-item -->
+
+			<div class="flex-item">
+
+				<a href="post.html" class="c-post">
+
+					<div class="c-post__image"><img class="img-responsive img-rounded" src="./images/dist/image-1.jpg" alt="#">
+					</div>
+
+					<span class="c-post__date">23.06.2021</span>
+
+					<div class="c-post__title h2">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
+
+					<p class="c-post__description">Соревнования проводятся 21 марта 2021 года (воскресенье), на базе
+						плавательного бассейна «Строитель» (Челябинская область, г. Челябинск, ул. 50 лет ВЛКСМ, 14)…</p>
+
+					<div class="c-post__link c-link">Читать полностью</div>
+
+				</a>
+
+			</div>
+			<!-- /.flex-item -->
+
+			<div class="flex-item">
+
+				<a href="post.html" class="c-post">
+
+					<div class="c-post__image"><img class="img-responsive img-rounded" src="./images/dist/image-1.jpg" alt="#">
+					</div>
+
+					<span class="c-post__date">23.06.2021</span>
+
+					<div class="c-post__title h2">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
+
+					<p class="c-post__description">Соревнования проводятся 21 марта 2021 года (воскресенье), на базе
+						плавательного бассейна «Строитель» (Челябинская область, г. Челябинск, ул. 50 лет ВЛКСМ, 14)…</p>
+
+					<div class="c-post__link c-link">Читать полностью</div>
+
+				</a>
+
+			</div>
+			<!-- /.flex-item -->
+
+			<div class="flex-item">
+
+				<a href="post.html" class="c-post">
+
+					<div class="c-post__image"><img class="img-responsive img-rounded" src="./images/dist/image-1.jpg" alt="#">
+					</div>
+
+					<span class="c-post__date">23.06.2021</span>
+
+					<div class="c-post__title h2">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
+
+					<p class="c-post__description">Соревнования проводятся 21 марта 2021 года (воскресенье), на базе
+						плавательного бассейна «Строитель» (Челябинская область, г. Челябинск, ул. 50 лет ВЛКСМ, 14)…</p>
+
+					<div class="c-post__link c-link">Читать полностью</div>
+
+				</a>
+
+			</div>
+			<!-- /.flex-item -->
+
+			<div class="flex-item">
+
+				<a href="post.html" class="c-post">
+
+					<div class="c-post__image"><img class="img-responsive img-rounded" src="./images/dist/image-1.jpg" alt="#">
+					</div>
+
+					<span class="c-post__date">23.06.2021</span>
+
+					<div class="c-post__title h2">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
+
+					<p class="c-post__description">Соревнования проводятся 21 марта 2021 года (воскресенье), на базе
+						плавательного бассейна «Строитель» (Челябинская область, г. Челябинск, ул. 50 лет ВЛКСМ, 14)…</p>
+
+					<div class="c-post__link c-link">Читать полностью</div>
+
+				</a>
+
+			</div>
+			<!-- /.flex-item -->
 
 		</div>
-		<!-- /.container -->
+		<!-- /.flex flex-33 -->
 
-		<div class="tabbar-menu">
+		<div class="c-pagination">
 
-			<a class="tabbar-menu__item tabbar-menu__active" href="#">
-				<img class="icon-blue-light" src="./images/icons/home.svg" alt="#">
-				<span>Главная</span>
-			</a>
-			<!-- /.tabbar-menu__item -->
+			<div class="c-pagination__left">
 
-			<a class="tabbar-menu__item" href="#">
-				<img class="icon-blue-light" src="./images/icons/award.svg" alt="#">
-				<span>Рейтинги</span>
-			</a>
-			<!-- /.tabbar-menu__item -->
+				<a class="button button-gray c-pagination__item"><span>Назад</span></a>
 
-			<a class="tabbar-menu__item" href="#">
-				<img class="icon-blue-light" src="./images/icons/calendar.svg" alt="#">
-				<span>Календарь</span>
-			</a>
-			<!-- /.tabbar-menu__item -->
+				<a href="#" class="button button-ghost button-square c-pagination__item">1</a>
+				<a href="#" class="button button-ghost button-square c-pagination__item">2</a>
+				<a href="#" class="button button-ghost button-square c-pagination__item">3</a>
+				<a href="#" class="button button-ghost button-square c-pagination__item">4</a>
+				<a href="#" class="button button-ghost button-square c-pagination__item">5</a>
 
-			<a class="tabbar-menu__item" href="#">
-				<img class="icon-blue-light" src="./images/icons/file-text.svg" alt="#">
-				<span>Статьи</span>
-			</a>
-			<!-- /.tabbar-menu__item -->
+			</div>
+			<!-- /.c-pagination__left -->
 
-			<a class="tabbar-menu__item" href="#">
-				<img class="tabbar-menu__avatar img-responsive" src="./images/dist/avatar.png" alt="#">
-				<span>Кабинет</span>
-			</a>
-			<!-- /.tabbar-menu -->
+			<div class="c-pagination__center">
+
+				<div class="c-pagination__item">...</div>
+
+			</div>
+			<!-- /.c-pagination__center -->
+
+			<div class="c-pagination__right">
+
+				<a href="#" class="button button-ghost button-square c-pagination__item">14</a>
+				<a href="#" class="button button-ghost button-square c-pagination__item">15</a>
+				<a href="#" class="button button-ghost button-square c-pagination__item">16</a>
+				<a href="#" class="button button-ghost button-square c-pagination__item">17</a>
+				<a href="#" class="button button-ghost button-square c-pagination__item">18</a>
+
+				<a class="button button-secondary c-pagination__item"><span>Далее</span></a>
+
+			</div>
+			<!-- /.c-pagination-right -->
 
 		</div>
-		<!-- /.footer__tabbar-menu -->
+		<!-- /.c-pagination -->
 
-	</footer>
+	</div>
+	<!-- /.container -->
 
-	<script src="./js/app.min.js"></script>
+</section>
+<!-- /.s-main -->
 
-</body>
-
-</html>
+<!--#include virtual="/parts/footer.html" -->

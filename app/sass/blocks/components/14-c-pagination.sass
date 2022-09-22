@@ -1,74 +1,112 @@
 .c-pagination
-	display: flex
-	align-items: center
-	flex-direction: row
-	justify-content: space-between
-	margin: $gutter * 2 0
+	margin: $gutter 0
 
-	&__left, &__center, &__right
+	&__wrapper
 		display: flex
+		justify-content: space-between
+		align-items: center
+		height: 56px
+		margin: 0 $gutter / -2
+		@media (max-width : $md)
+			height: 44px
+		@media (max-width : $sm)
+			margin: 0 $gutter / -4
 
-	&__left
-		.c-pagination__item
-			margin-right: $gutter
-	
-	&__right
-		.c-pagination__item
-			margin-left: $gutter
+	&__item
+		display: flex
+		align-items: center
+		justify-content: center
+		flex: 1
+		height: 100%
+		margin: 0 12px
+		@media (max-width : $sm)
+			margin: 0 $gutter / 4
+			flex: none
 
-.c-pagination-small
-		.c-pagination__left
-			.c-pagination__item:not(:nth-child(-n+4))
+	&__item-prev
+		@media (max-width : $md)
+			padding: 0
+			flex: none
+			width: 44px
+			span
 				display: none
-	
-		.c-pagination__right
-			.c-pagination__item:nth-child(-n+2)
-				display: none
-
-
-@media (max-width : $xl)
-	.c-pagination
-		&__left
-			.c-pagination__item
-				margin-right: $gutter / 2
-	
-		&__right
-			.c-pagination__item
-				margin-left: $gutter / 2
-
-
-@media (max-width : $lg)
-	.c-pagination
-
-		&__left
-
-			.c-pagination__item:not(:nth-child(-n+4))
-				display: none
-
-		&__right
-			
-			.c-pagination__item:nth-child(-n+2)
-				display: none
-
-@media (max-width : $md)
-	.c-pagination
-		margin: $gutter * 2 0
-		
-		&__left
-			
-			.c-pagination__item:not(:nth-child(-n+3))
-				display: none
-
-			.c-pagination__item:first-child:after
+			&:after
 				content: '<'
 
-		&__right
-			
-			.c-pagination__item:nth-child(-n+3)
+	&__item-next
+		@media (max-width : $md)
+			padding: 0
+			flex: none
+			width: 44px
+			span
 				display: none
-
-			.c-pagination__item:last-child:after
+			&:after
 				content: '>'
+	
 
-		&__item span
-			display: none
+
+// .c-pagination-small
+// 		.c-pagination__left
+// 			.c-pagination__item:not(:nth-child(-n+4))
+// 				display: none
+	
+// 		.c-pagination__right
+// 			.c-pagination__item:nth-child(-n+2)
+// 				display: none
+
+
+// @media (max-width : $xl)
+// 	.c-pagination
+// 		&__left
+// 			.c-pagination__item
+// 				margin-right: $gutter / 2
+	
+// 		&__right
+// 			.c-pagination__item
+// 				margin-left: $gutter / 2
+
+
+// @media (max-width : $lg)
+// 	.c-pagination
+
+// 		&__left
+
+// 			.c-pagination__item:not(:nth-child(-n+4))
+// 				display: none
+
+// 		&__right
+			
+// 			.c-pagination__item:nth-child(-n+2)
+// 				display: none
+
+// @media (max-width : $md)
+// 	.c-pagination
+// 		margin: $gutter * 2 0
+		
+// 		&__left
+			
+// 			.c-pagination__item:not(:nth-child(-n+3))
+// 				display: none
+
+// 			.c-pagination__item:first-child:after
+// 				content: '<'
+
+// 		&__right
+			
+// 			.c-pagination__item:nth-child(-n+3)
+// 				display: none
+
+// 			.c-pagination__item:last-child:after
+// 				content: '>'
+
+// 		&__item span
+// 			display: none
+
+// 		&__item-next
+// 			width: 44px
+// 			padding: 0
+// 			text-align: center
+// 		&__item-prev
+// 			width: 44px
+// 			padding: 0
+// 			text-align: center
