@@ -1,15 +1,19 @@
 .c-gallery-composition
 	display: grid
 	grid-template-columns: repeat(4, 1fr)
+	grid-auto-rows: 180px
 	column-gap: $gutter
 	row-gap: $gutter
 
 	&__item
 		display: block
+		border-radius: $gutter / 2
+		overflow: hidden
 		.img-responsive
-			border-radius: $gutter / 2
+			
 			height: 100%
 			width: 100%
+			object-fit: cover
 
 	&__item:nth-child(1)
 		grid-column: 1 / 3

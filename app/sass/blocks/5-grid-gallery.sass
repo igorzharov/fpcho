@@ -1,8 +1,12 @@
-@media screen and ( min-width: $md )
+
+	
+	
+@media ( min-width: $md )
 	.grid-gallery
 		display: grid
 		gap: $gutter / 2
 		grid-template-columns: repeat(4, 1fr)
+		grid-template-rows: repeat(2, 134px)
 
 		.grid-item
 			height: 100%
@@ -21,12 +25,7 @@
 		.grid-item:nth-child(5)
 			grid-column: 4 / 5
 
-@media screen and ( min-width: $lg )
+@media ( min-width: $lg )
 	.grid-gallery
+		grid-template-rows: repeat(2, 178px)
 		gap: $gutter
-
-@media screen and ( max-width: $lg )
-	.grid-gallery
-		.grid-item
-			height: auto
-	

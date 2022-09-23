@@ -1,6 +1,12 @@
 .hamburger
 	display: none
-	padding-right: $gutter / 4
+	padding: 0
+
+	.hamburger-box
+		width: 32px
+
+	.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
+		width: 100%
 
 @media screen and ( max-width: $lg )
 	.hamburger

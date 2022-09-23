@@ -308,6 +308,11 @@ document.addEventListener('DOMContentLoaded', () => {
 			type: "clone"
 		});
 
+		Fancybox.bind('.gallery-js .gallery-item-js', {
+			mainClass: 'gallery-fancybox',
+			groupAll : true
+		});
+
 	}
 
 	initPopup()
