@@ -1,4 +1,5 @@
 .c-post
+	position: relative
 	display: flex
 	flex-direction: column
 	text-decoration: none
@@ -36,7 +37,7 @@
 		@media ( max-width: $sm )
 			height: 280px
 		@media ( max-width: $xs )
-			height: 50vw
+			height: 55vw
 
 	&__image-middle
 		height: 250px
@@ -47,7 +48,7 @@
 		@media ( max-width: $sm )
 			height: 280px
 		@media ( max-width: $xs )
-			height: 50vw
+			height: 55vw
 
 	&__image-small
 		height: 180px
@@ -58,7 +59,7 @@
 		@media ( max-width: $sm )
 			height: 280px
 		@media ( max-width: $xs )
-			height: 50vw
+			height: 55vw
 
 	&__date
 		display: block
@@ -91,10 +92,10 @@
 		text-overflow: ellipsis
 
 	&-gallery
+		display: block
 		position: relative
 		border-radius: $gutter / 2
 		overflow: hidden
-			
 
 	&__gallery-overlay
 		position: absolute
@@ -107,6 +108,15 @@
 		align-items: center
 		color: #fff
 		margin: 0
+		border-radius: $gutter / 2
+
+	.c-post__overlay
+		position: absolute
+		width: 100%
+		height: 100%
+		background-color: rgba(#000, 10%)
+		border-radius: $gutter / 2
+
 
 	&:hover
 		.c-post__link

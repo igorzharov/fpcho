@@ -341,7 +341,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	}
 
-	if (document.querySelector('.c-form-control__birthday-mask')) initMaskDate();
+	if (document.querySelector('.c-form-control__birthday-mask')) {
+		initMaskDate();
+	}
 
 
 	if (window.location.href == 'http://localhost:3000/lk-federation-alert.html') {

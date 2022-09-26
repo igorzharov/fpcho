@@ -15,6 +15,10 @@
 		text-decoration: none
 		color: $text-light
 		&:hover
+			color: inherit
+			.c-news__date
+				color: $text-light
+
 			.c-news__title
 				text-decoration: underline
 
@@ -23,6 +27,5 @@
 			margin-bottom: $gutter / 2
 
 @media screen and ( max-width: $md )
-	.c-news
-		&__item
-			display: none
+	.c-last-news
+		display: none

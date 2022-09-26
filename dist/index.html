@@ -5,14 +5,16 @@
 
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, minimum-scale=1">
 	<title>Главная</title>
 
 	<link rel="stylesheet" href="././css/main.min.css">
 
 </head>
 
-<body class="p-home">
+<body>
+
+	<div class="page-wrapper">
 
 	<header class="header">
 
@@ -50,28 +52,29 @@
 					<ul>
 
 						<li class="main-menu__item main-menu__item-search">
-							<form action="">
-								<img class="icon-blue" src="./images/icons/search.svg" alt="icon-search">
+							<form class="d-flex d-flex--aic" action="">
+								<button class="button-submit"><img class="icon-blue" src="./images/icons/search.svg" alt="icon-search"></button>
 								<input class="main-menu__search" type="text" placeholder="Поиск...">
 							</form>
 						</li>
 
-						<li class="main-menu__item"><a href="index.html">Главная</a></li>
-						<li class="main-menu__item"><a href="rating.html">Рейтинги</a></li>
+						<li class="main-menu__item is-active"><a href="index.html">Главная</a></li>
+						<li class="main-menu__item"><a href="rating-types.html">Рейтинги</a></li>
 						<li class="main-menu__item"><a href="calendar.html">Календарь</a></li>
 						<li class="main-menu__item"><a href="posts.html">Статьи</a></li>
-						<li class="main-menu__item"><a href="gallery.html">Фотогалерея</a></li>
+						<li class="main-menu__item"><a href="news.html">Новости</a></li>
+						<li class="main-menu__item"><a href="gallery.html">Галерея</a></li>
 						<li class="main-menu__item main-menu__dropdown">
 
 							<ul class="dropdown-menu">
 
-								<li class="dropdown-menu__item"><a href="federation.html">Документы</a></li>
-								<li class="dropdown-menu__item"><a href="federation.html">Тренерский состав</a></li>
-								<li class="dropdown-menu__item is-active"><a href="federation2.html">Бассейны</a></li>
-								<li class="dropdown-menu__item"><a href="federation.html">Руководящий состав</a></li>
-								<li class="dropdown-menu__item"><a href="federation2.html">Спортивные организации</a></li>
-								<li class="dropdown-menu__item"><a href="federation.html">Члены Федерации</a></li>
-								<li class="dropdown-menu__item"><a href="federation4.html">Команда Челябинской области</a></li>
+								<li class="dropdown-menu__item"><a href="federation1.html">Документы</a></li>
+								<li class="dropdown-menu__item"><a href="federation6.html">Тренерский состав</a></li>
+								<li class="dropdown-menu__item"><a href="federation4.html">Бассейны</a></li>
+								<li class="dropdown-menu__item"><a href="federation2.html">Руководящий состав</a></li>
+								<li class="dropdown-menu__item"><a href="federation5.html">Спортивные организации</a></li>
+								<li class="dropdown-menu__item"><a href="federation3.html">Члены Федерации</a></li>
+								<li class="dropdown-menu__item"><a href="federation6.html">Команда Челябинской области</a></li>
 
 							</ul>
 
@@ -95,877 +98,884 @@
 	</header>
 	<!-- /.header -->
 
-	<section class="s-main s-last-news">
+	<div class="content-wrapper">
 
-		<div class="container">
+<section class="s-main s-last-news">
 
-			<div class="flex flex-50">
+	<div class="container">
 
-				<div class="c-last-post flex-item">
+		<div class="flex flex-50">
 
-					<div class="swiper swiper-last-news-slider">
+			<div class="c-last-post flex-item">
 
-						<div class="swiper-wrapper">
+				<div class="swiper swiper-last-news-slider">
 
-							<div class="swiper-slide">
+					<div class="swiper-wrapper">
 
-								<a href="post.html" class="c-post c-post-big">
+						<div class="swiper-slide">
 
-									<div class="c-post__image"><img class="img-responsive img-rounded" src="./images/dist/image-1.jpg"
-											alt="#"></div>
+							<a href="post.html" class="c-post c-post-big">
 
-									<span class="c-post__date">23.06.2021</span>
+								<div class="c-post__image c-post__image-large"><img src="./images/src/dummy.png" alt="123"></div>
 
-									<div class="c-post__title h2">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
+								<span class="c-post__date">23.06.2021</span>
 
-									<p class="c-post__description">Соревнования проводятся 21 марта 2021 года (воскресенье), на базе
-										плавательного бассейна «Строитель» (Челябинская область, г. Челябинск, ул. 50 лет ВЛКСМ, 14)…</p>
+								<div class="c-post__title h2">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
 
-									<div class="c-post__link c-link">Читать полностью</div>
+								<p class="c-post__description">Соревнования проводятся 21 марта 2021 года (воскресенье), на базе
+									плавательного бассейна «Строитель» (Челябинская область, г. Челябинск, ул. 50 лет ВЛКСМ, 14)…</p>
 
-								</a>
-								<!-- /.c-post -->
+								<div class="c-post__link c-link">Читать полностью</div>
 
-							</div>
-							<!-- /.swiper-slide -->
-
-							<div class="swiper-slide">
-
-								<a href="post.html" class="c-post c-post-big">
-
-									<div class="c-post__image"><img class="img-responsive img-rounded" src="./images/dist/image-1.jpg"
-											alt="#"></div>
-
-									<span class="c-post__date">23.06.2021</span>
-
-									<div class="c-post__title h2">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
-
-									<p class="c-post__description">Соревнования проводятся 21 марта 2021 года (воскресенье), на базе
-										плавательного бассейна «Строитель» (Челябинская область, г. Челябинск, ул. 50 лет ВЛКСМ, 14)…</p>
-
-									<div class="c-post__link c-link">Читать полностью</div>
-
-								</a>
-								<!-- /.c-post -->
-
-							</div>
-							<!-- /.swiper-slide -->
-
-							<div class="swiper-slide">
-
-								<a href="post.html" class="c-post c-post-big">
-
-									<div class="c-post__image"><img class="img-responsive img-rounded" src="./images/dist/image-1.jpg"
-											alt="#"></div>
-
-									<span class="c-post__date">23.06.2021</span>
-
-									<div class="c-post__title h2">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
-
-									<p class="c-post__description">Соревнования проводятся 21 марта 2021 года (воскресенье), на базе
-										плавательного бассейна «Строитель» (Челябинская область, г. Челябинск, ул. 50 лет ВЛКСМ, 14)…</p>
-
-									<div class="c-post__link c-link">Читать полностью</div>
-
-								</a>
-								<!-- /.c-post -->
-
-							</div>
-							<!-- /.swiper-slide -->
-
-							<div class="swiper-slide">
-
-								<a href="post.html" class="c-post c-post-big">
-
-									<div class="c-post__image"><img class="img-responsive img-rounded" src="./images/dist/image-1.jpg"
-											alt="#"></div>
-
-									<span class="c-post__date">23.06.2021</span>
-
-									<div class="c-post__title h2">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
-
-									<p class="c-post__description">Соревнования проводятся 21 марта 2021 года (воскресенье), на базе
-										плавательного бассейна «Строитель» (Челябинская область, г. Челябинск, ул. 50 лет ВЛКСМ, 14)…</p>
-
-									<div class="c-post__link c-link">Читать полностью</div>
-
-								</a>
-								<!-- /.c-post -->
-
-							</div>
-							<!-- /.swiper-slide -->
-
-							<div class="swiper-slide">
-
-								<a href="post.html" class="c-post c-post-big">
-
-									<div class="c-post__image"><img class="img-responsive img-rounded" src="./images/dist/image-1.jpg"
-											alt="#"></div>
-
-									<span class="c-post__date">23.06.2021</span>
-
-									<div class="c-post__title h2">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
-
-									<p class="c-post__description">Соревнования проводятся 21 марта 2021 года (воскресенье), на базе
-										плавательного бассейна «Строитель» (Челябинская область, г. Челябинск, ул. 50 лет ВЛКСМ, 14)…</p>
-
-									<div class="c-post__link c-link">Читать полностью</div>
-
-								</a>
-								<!-- /.c-post -->
-
-							</div>
-							<!-- /.swiper-slide -->
-
-							<div class="swiper-slide">
-
-								<a href="post.html" class="c-post c-post-big">
-
-									<div class="c-post__image"><img class="img-responsive img-rounded" src="./images/dist/image-1.jpg"
-											alt="#"></div>
-
-									<span class="c-post__date">23.06.2021</span>
-
-									<div class="c-post__title h2">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
-
-									<p class="c-post__description">Соревнования проводятся 21 марта 2021 года (воскресенье), на базе
-										плавательного бассейна «Строитель» (Челябинская область, г. Челябинск, ул. 50 лет ВЛКСМ, 14)…</p>
-
-									<div class="c-post__link c-link">Читать полностью</div>
-
-								</a>
-								<!-- /.c-post -->
-
-							</div>
-							<!-- /.swiper-slide -->
+							</a>
+							<!-- /.c-post -->
 
 						</div>
-						<!-- /.swiper-wrapper -->
+						<!-- /.swiper-slide -->
+
+						<div class="swiper-slide">
+
+							<a href="post.html" class="c-post c-post-big">
+
+								<div class="c-post__image c-post__image-large"><img src="./images/dist/image-1.jpg" alt="#"></div>
+
+								<span class="c-post__date">23.06.2021</span>
+
+								<div class="c-post__title h2">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
+
+								<p class="c-post__description">Соревнования проводятся 21 марта 2021 года (воскресенье), на базе
+									плавательного бассейна «Строитель» (Челябинская область, г. Челябинск, ул. 50 лет ВЛКСМ, 14)…</p>
+
+								<div class="c-post__link c-link">Читать полностью</div>
+
+							</a>
+							<!-- /.c-post -->
+
+						</div>
+						<!-- /.swiper-slide -->
+
+						<div class="swiper-slide">
+
+							<a href="post.html" class="c-post c-post-big">
+
+								<div class="c-post__image c-post__image-large"><img src="./images/src/dummy.png" alt="#"></div>
+
+								<span class="c-post__date">23.06.2021</span>
+
+								<div class="c-post__title h2">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
+
+								<p class="c-post__description">Соревнования проводятся 21 марта 2021 года (воскресенье), на базе
+									плавательного бассейна «Строитель» (Челябинская область, г. Челябинск, ул. 50 лет ВЛКСМ, 14)…</p>
+
+								<div class="c-post__link c-link">Читать полностью</div>
+
+							</a>
+							<!-- /.c-post -->
+
+						</div>
+						<!-- /.swiper-slide -->
+
+						<div class="swiper-slide">
+
+							<a href="post.html" class="c-post c-post-big">
+
+								<div class="c-post__image c-post__image-large"><img src="./images/dist/image-1.jpg" alt="#"></div>
+
+								<span class="c-post__date">23.06.2021</span>
+
+								<div class="c-post__title h2">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
+
+								<p class="c-post__description">Соревнования проводятся 21 марта 2021 года (воскресенье), на базе
+									плавательного бассейна «Строитель» (Челябинская область, г. Челябинск, ул. 50 лет ВЛКСМ, 14)…</p>
+
+								<div class="c-post__link c-link">Читать полностью</div>
+
+							</a>
+							<!-- /.c-post -->
+
+						</div>
+						<!-- /.swiper-slide -->
+
+						<div class="swiper-slide">
+
+							<a href="post.html" class="c-post c-post-big">
+
+								<div class="c-post__image c-post__image-large"><img src="./images/dist/image-1.jpg" alt="#"></div>
+
+								<span class="c-post__date">23.06.2021</span>
+
+								<div class="c-post__title h2">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
+
+								<p class="c-post__description">Соревнования проводятся 21 марта 2021 года (воскресенье), на базе
+									плавательного бассейна «Строитель» (Челябинская область, г. Челябинск, ул. 50 лет ВЛКСМ, 14)…</p>
+
+								<div class="c-post__link c-link">Читать полностью</div>
+
+							</a>
+							<!-- /.c-post -->
+
+						</div>
+						<!-- /.swiper-slide -->
+
+						<div class="swiper-slide">
+
+							<a href="post.html" class="c-post c-post-big">
+
+								<div class="c-post__image c-post__image-large"><img src="./images/dist/image-1.jpg" alt="#"></div>
+
+								<span class="c-post__date">23.06.2021</span>
+
+								<div class="c-post__title h2">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
+
+								<p class="c-post__description">Соревнования проводятся 21 марта 2021 года (воскресенье), на базе
+									плавательного бассейна «Строитель» (Челябинская область, г. Челябинск, ул. 50 лет ВЛКСМ, 14)…</p>
+
+								<div class="c-post__link c-link">Читать полностью</div>
+
+							</a>
+							<!-- /.c-post -->
+
+						</div>
+						<!-- /.swiper-slide -->
 
 					</div>
-					<!-- /.swiper-last-news -->
+					<!-- /.swiper-wrapper -->
 
-					<div class="swiper-pagination"></div>
+				</div>
+				<!-- /.swiper-last-news -->
+
+				<div class="swiper-pagination"></div>
+
+			</div>
+			<!-- /.flex-item -->
+
+			<div class="c-last-news flex-item">
+
+				<div class="c-news">
+
+					<div class="h3">Последние новости</div>
+
+					<a href="post.html" class="c-news__item">
+
+						<div class="c-news__date">23.06.2021</div>
+
+						<div class="c-news__title h3">Предложение для групп болельщиков чемпионата мира ФИНА по водным видам
+							спорта</div>
+
+					</a>
+					<!-- /.c-news__item -->
+
+					<a href="post.html" class="c-news__item">
+
+						<div class="c-news__date">23.06.2021</div>
+
+						<div class="c-news__title h3">ПВ России впервые пройдут международные соревнования «Кубок Чемпионов»</div>
+
+					</a>
+					<!-- /.c-news__item -->
+
+					<a href="post.html" class="c-news__item">
+
+						<div class="c-news__date">23.06.2021</div>
+
+						<div class="c-news__title h3">Спортивная жизнь Мастера спорта РФ — Лаврика Алексея</div>
+
+					</a>
+					<!-- /.c-news__item -->
+
+					<a href="post.html" class="c-news__item">
+
+						<div class="c-news__date">23.06.2021</div>
+
+						<div class="c-news__title h3">Есть ли спортивное плавание в Чебуркале?</div>
+
+					</a>
+					<!-- /.c-news__item -->
+
+					<a href="post.html" class="c-news__item">
+
+						<div class="c-news__date">23.06.2021</div>
+
+						<div class="c-news__title h3">День рождения Ольги Юрьевны (г. Челябинск ПБ «Строитель»)</div>
+
+					</a>
+					<!-- /.c-news__item -->
+
+				</div>
+				<!-- /.c-news -->
+
+			</div>
+			<!-- /.flex-item -->
+
+		</div>
+		<!-- /.flex flex-50 -->
+
+	</div>
+	<!-- /.container -->
+
+</section>
+<!-- /.s-last-news -->
+
+<section class="s-main">
+
+	<div class="container">
+
+		<div class="c-topline">
+
+			<div class="flex flex-between flex-center">
+
+				<div class="flex-item">
+
+					<div class="h1">Календарь соревнований</div>
 
 				</div>
 				<!-- /.flex-item -->
 
-				<div class="c-last-news flex-item">
+				<div class="flex-item">
 
-					<div class="c-news">
-
-						<div class="c-news__header h2">Последние новости</div>
-
-						<a href="post.html" class="c-news__item">
-
-							<div class="c-news__date">23.06.2021</div>
-
-							<div class="c-news__title h3">Предложение для групп болельщиков чемпионата мира ФИНА по водным видам
-								спорта</div>
-
-						</a>
-						<!-- /.c-news__item -->
-
-						<a href="post.html" class="c-news__item">
-
-							<div class="c-news__date">23.06.2021</div>
-
-							<div class="c-news__title h3">ПВ России впервые пройдут международные соревнования «Кубок Чемпионов»</div>
-
-						</a>
-						<!-- /.c-news__item -->
-
-						<a href="post.html" class="c-news__item">
-
-							<div class="c-news__date">23.06.2021</div>
-
-							<div class="c-news__title h3">Спортивная жизнь Мастера спорта РФ — Лаврика Алексея</div>
-
-						</a>
-						<!-- /.c-news__item -->
-
-						<a href="post.html" class="c-news__item">
-
-							<div class="c-news__date">23.06.2021</div>
-
-							<div class="c-news__title h3">Есть ли спортивное плавание в Чебуркале?</div>
-
-						</a>
-						<!-- /.c-news__item -->
-
-						<a href="post.html" class="c-news__item">
-
-							<div class="c-news__date">23.06.2021</div>
-
-							<div class="c-news__title h3">День рождения Ольги Юрьевны (г. Челябинск ПБ «Строитель»)</div>
-
-						</a>
-						<!-- /.c-news__item -->
-
-					</div>
-					<!-- /.c-news -->
+					<a class="button button-middle button-icon button-icon-right c-link" href="calendar.html"><span>Смотреть все</span> <img src="./images/icons/arrow-right.svg" alt="#"></a>
 
 				</div>
 				<!-- /.flex-item -->
 
 			</div>
-			<!-- /.flex flex-50 -->
+			<!-- /.flex flex-between flex-center -->
 
 		</div>
-		<!-- /.container -->
+		<!-- /.s-topline -->
 
-	</section>
-	<!-- /.s-last-news -->
+		<div class="swiper swiper-slider">
 
-	<section class="s-main">
+			<div class="swiper-wrapper flex flex-33 flex-justify-content-center">
 
-		<div class="container">
+				<div class="swiper-slide flex-item">
 
-			<div class="c-topline">
+					<a href="calendar-post.html" class="c-post">
 
-				<div class="flex flex-between flex-center">
+						<div class="c-post__image c-post__image-middle"><img src="./images/src/uqgt4qvc19koifoxr7id3xk5b98eyk40.jpg" alt="#"></div>
 
-					<div class="flex-item">
+						<span class="c-post__date c-link">23 Июля 2021 – 23 Августа 2021</span>
 
-						<div class="h1">Календарь соревнований</div>
+						<div class="c-post__title h2">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
 
-					</div>
-					<!-- /.flex-item -->
+						<div class="c-post__location">Челябинск, Россия</div>
 
-					<div class="flex-item">
-
-						<a class="button button-middle button-icon button-icon-right c-link" href="calendar.html"><span>Смотреть все</span> <img
-								src="./images/icons/arrow-right.svg" alt="#"></a>
-
-					</div>
-					<!-- /.flex-item -->
+					</a>
+					<!-- /.c-post -->
 
 				</div>
-				<!-- /.flex flex-between flex-center -->
+				<!-- /.swiper-slide -->
 
-			</div>
-			<!-- /.s-topline -->
+				<div class="swiper-slide flex-item">
 
-			<div class="swiper swiper-slider">
+					<a href="calendar-post.html" class="c-post">
 
-				<div class="swiper-wrapper flex flex-33 flex-justify-content-center">
+						<div class="c-post__image c-post__image-middle"><img src="./images/dist/image-1.jpg" alt="#"></div>
 
-					<div class="swiper-slide flex-item">
+						<span class="c-post__date c-link">23 Июля 2021 – 23 Августа 2021</span>
 
-						<a href="calendar-post.html" class="c-post">
+						<div class="c-post__title h2">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
 
-							<div class="c-post__image"><img class="img-responsive img-rounded" src="./images/dist/image-1.jpg"
-									alt="#"></div>
+						<div class="c-post__location">Челябинск, Россия</div>
 
-							<span class="c-post__date c-link">23 Июля 2021 – 23 Августа 2021</span>
-
-							<div class="c-post__title h2">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
-
-							<div class="c-post__location">Челябинск, Россия</div>
-
-						</a>
-						<!-- /.c-post -->
-
-					</div>
-					<!-- /.swiper-slide -->
-
-					<div class="swiper-slide flex-item">
-
-						<a href="calendar-post.html" class="c-post">
-
-							<div class="c-post__image"><img class="img-responsive img-rounded" src="./images/dist/image-1.jpg"
-									alt="#"></div>
-
-							<span class="c-post__date c-link">23 Июля 2021 – 23 Августа 2021</span>
-
-							<div class="c-post__title h2">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
-
-							<div class="c-post__location">Челябинск, Россия</div>
-
-						</a>
-						<!-- /.c-post -->
-
-					</div>
-					<!-- /.swiper-slide -->
-
-					<div class="swiper-slide flex-item">
-
-						<a href="calendar-post.html" class="c-post">
-
-							<div class="c-post__image"><img class="img-responsive img-rounded" src="./images/dist/image-1.jpg"
-									alt="#"></div>
-
-							<span class="c-post__date c-link">23 Июля 2021 – 23 Августа 2021</span>
-
-							<div class="c-post__title h2">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
-
-							<div class="c-post__location">Челябинск, Россия</div>
-
-						</a>
-						<!-- /.c-post -->
-
-					</div>
-					<!-- /.swiper-slide -->
-
-					<div class="swiper-slide flex-item">
-
-						<a href="calendar.html" class="c-post с-post-link">
-
-							<div class="c-link">Смотреть все</div>
-
-						</a>
-						<!-- /.c-post -->
-
-					</div>
-					<!-- /.swiper-slide -->
+					</a>
+					<!-- /.c-post -->
 
 				</div>
-				<!-- /.swiper-wrapper -->
+				<!-- /.swiper-slide -->
+
+				<div class="swiper-slide flex-item">
+
+					<a href="calendar-post.html" class="c-post">
+
+						<div class="c-post__image c-post__image-middle"><img src="./images/src/dummy.png" alt="#"></div>
+
+						<span class="c-post__date c-link">23 Июля 2021 – 23 Августа 2021</span>
+
+						<div class="c-post__title h2">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
+
+						<div class="c-post__location">Челябинск, Россия</div>
+
+					</a>
+					<!-- /.c-post -->
+
+				</div>
+				<!-- /.swiper-slide -->
+
+				<div class="swiper-slide flex-item">
+
+					<a href="calendar.html" class="c-post с-post-link">
+
+						<div class="c-link">Смотреть все</div>
+
+					</a>
+					<!-- /.c-post -->
+
+				</div>
+				<!-- /.swiper-slide -->
 
 			</div>
-			<!-- /swiper swiper-slider -->
+			<!-- /.swiper-wrapper -->
 
 		</div>
-		<!-- /.container -->
+		<!-- /swiper swiper-slider -->
 
-	</section>
-	<!-- /.s-main -->
+	</div>
+	<!-- /.container -->
 
-	<section class="s-main">
+</section>
+<!-- /.s-main -->
 
-		<div class="container">
+<section class="s-main">
 
-			<div class="c-topline">
+	<div class="container">
 
-				<div class="flex flex-between flex-center">
+		<div class="c-topline">
 
-					<div class="flex-item">
+			<div class="flex flex-between flex-center">
 
-						<div class="h1">Дни рождения</div>
+				<div class="flex-item">
 
-					</div>
-					<!-- /.flex-item -->
-
-				</div>
-				<!-- /.flex flex-between flex-center -->
-
-			</div>
-			<!-- /.s-topline -->
-
-			<div class="swiper swiper-slider">
-
-				<div class="swiper-wrapper flex flex-25 flex-justify-content-center">
-
-					<div class="swiper-slide flex-item">
-
-						<a href="post.html" class="c-post">
-
-							<div class="c-post__image"><img class="img-responsive img-rounded" src="./images/dist/image-1.jpg"
-									alt="#"></div>
-
-							<span class="c-post__date">23.06.2021</span>
-
-							<div class="c-post__title h3">День рождения Ольги Юрьевны</div>
-
-							<p class="c-post__description">С днем рождения тренера Ольгы Юрьевны (г.Челябинск ПБ «Строитель»)</p>
-
-						</a>
-						<!-- /.c-post -->
-
-					</div>
-					<!-- /.swiper-slide -->
-
-					<div class="swiper-slide flex-item">
-
-						<a href="post.html" class="c-post">
-
-							<div class="c-post__image"><img class="img-responsive img-rounded" src="./images/dist/image-1.jpg"
-									alt="#"></div>
-
-							<span class="c-post__date">23.06.2021</span>
-
-							<div class="c-post__title h3">День рождения Ивана Иванова</div>
-
-							<p class="c-post__description">Поздравляем директора СШОР № 7 Ивана Иванова (г.Челябинск)</p>
-
-						</a>
-						<!-- /.c-post -->
-
-					</div>
-					<!-- /.swiper-slide -->
-
-					<div class="swiper-slide flex-item">
-
-						<a href="post.html" class="c-post">
-
-							<div class="c-post__image"><img class="img-responsive img-rounded" src="./images/dist/image-1.jpg"
-									alt="#"></div>
-
-							<span class="c-post__date">23.06.2021</span>
-
-							<div class="c-post__title h3">День рождения Марии Сергеевной</div>
-
-							<p class="c-post__description">Поздравляем тренера Марии Сергеевной (г. Челябинск СШОР №7)</p>
-
-						</a>
-						<!-- /.c-post -->
-
-					</div>
-					<!-- /.swiper-slide -->
-
-					<div class="swiper-slide flex-item">
-
-						<a href="post.html" class="c-post">
-
-							<div class="c-post__image"><img class="img-responsive img-rounded" src="./images/dist/image-1.jpg"
-									alt="#"></div>
-
-							<span class="c-post__date">23.06.2021</span>
-
-							<div class="c-post__title h3">День рождения Юлии Артемовны</div>
-
-							<p class="c-post__description">Поздравляем тренера Юлию Артемовну (г. Златоуст СШОР №8)</p>
-
-						</a>
-						<!-- /.c-post -->
-
-					</div>
-					<!-- /.swiper-slide -->
-
-					<div class="swiper-slide flex-item">
-
-						<a href="posts.html" class="c-post с-post-link">
-
-							<div class="c-link">Смотреть все</div>
-
-						</a>
-						<!-- /.c-post -->
-
-					</div>
-					<!-- /.swiper-slide -->
+					<div class="h1">Поздравляем</div>
 
 				</div>
-				<!-- /.swiper-wrapper -->
+				<!-- /.flex-item -->
 
 			</div>
+			<!-- /.flex flex-between flex-center -->
 
 		</div>
-		<!-- /.container -->
+		<!-- /.s-topline -->
 
-	</section>
-	<!-- /.s-main -->
+		<div class="swiper swiper-slider">
 
-	<section class="s-main">
+			<div class="swiper-wrapper flex flex-25 flex-justify-content-center">
 
-		<div class="container">
+				<div class="swiper-slide flex-item">
 
-			<div class="c-topline">
+					<a href="post.html" class="c-post">
 
-				<div class="flex flex-between flex-center">
+						<div class="c-post__image c-post__image-small"><img src="./images/src/3jtr5xghwq7o93qdknfio62oide5lzc8.jpg" alt="#"></div>
 
-					<div class="flex-item">
+						<span class="c-post__date">23.06.2021</span>
 
-						<div class="h1">Последние статьи</div>
+						<div class="c-post__title h3">День рождения Ольги Юрьевны</div>
 
-					</div>
-					<!-- /.flex-item -->
+						<p class="c-post__description">С днем рождения тренера Ольгы Юрьевны (г.Челябинск ПБ «Строитель»)</p>
 
-					<div class="flex-item">
-
-						<a class="button button-middle button-icon button-icon-right c-link" href="posts.html"><span>Смотреть все</span> <img
-								src="./images/icons/arrow-right.svg" alt="#"></a>
-
-					</div>
-					<!-- /.flex-item -->
+					</a>
+					<!-- /.c-post -->
 
 				</div>
-				<!-- /.flex flex-between flex-center -->
+				<!-- /.swiper-slide -->
+
+				<div class="swiper-slide flex-item">
+
+					<a href="post.html" class="c-post">
+
+						<div class="c-post__image c-post__image-small"><img src="./images/src/uqgt4qvc19koifoxr7id3xk5b98eyk40.jpg" alt="#"></div>
+
+						<span class="c-post__date">23.06.2021</span>
+
+						<div class="c-post__title h3">День рождения Марии Сергеевной</div>
+
+						<p class="c-post__description">Поздравляем тренера Марии Сергеевной (г. Челябинск СШОР №7)</p>
+
+					</a>
+					<!-- /.c-post -->
+
+				</div>
+				<!-- /.swiper-slide -->
+
+				<div class="swiper-slide flex-item">
+
+					<a href="post.html" class="c-post">
+
+						<div class="c-post__image c-post__image-small"><img src="./images/src/w6vew4sf8115aqnv8r525au4zhybgs8u.webp" alt="#"></div>
+
+						<span class="c-post__date">23.06.2021</span>
+
+						<div class="c-post__title h3">День рождения Юлии Артемовны</div>
+
+						<p class="c-post__description">Поздравляем тренера Юлию Артемовну (г. Златоуст СШОР №8)</p>
+
+					</a>
+					<!-- /.c-post -->
+
+				</div>
+				<!-- /.swiper-slide -->
+
+				<div class="swiper-slide flex-item">
+
+					<a href="post.html" class="c-post">
+
+						<div class="c-post__image c-post__image-small"><img src="./images/src/wauhwijr7wt3nw7bn2myv5cfn6m6rvi7.png" alt="#"></div>
+
+						<span class="c-post__date">23.06.2021</span>
+
+						<div class="c-post__title h3">День рождения Юлии Артемовны</div>
+
+						<p class="c-post__description">Поздравляем тренера Юлию Артемовну (г. Златоуст СШОР №8)</p>
+
+					</a>
+					<!-- /.c-post -->
+
+				</div>
+				<!-- /.swiper-slide -->
+
+				<div class="swiper-slide flex-item">
+
+					<a href="posts.html" class="c-post с-post-link">
+
+						<div class="c-link">Смотреть все</div>
+
+					</a>
+					<!-- /.c-post -->
+
+				</div>
+				<!-- /.swiper-slide -->
 
 			</div>
-			<!-- /.s-topline -->
+			<!-- /.swiper-wrapper -->
 
-			<div class="swiper swiper-slider">
+		</div>
 
-				<div class="swiper-wrapper grid-posts">
+	</div>
+	<!-- /.container -->
 
-					<div class="swiper-slide grid-item">
+</section>
+<!-- /.s-main -->
 
-						<a href="post.html" class="c-post с-post-alt">
+<section class="s-main">
 
-							<div class="flex flex-100">
+	<div class="container">
 
-								<div class="flex-item">
+		<div class="c-topline">
 
-									<div class="c-post__image"><img class="img-responsive img-rounded" src="./images/dist/image-1.jpg"
-											alt="#"></div>
-								</div>
+			<div class="flex flex-between flex-center">
 
-								<div class="flex-item">
+				<div class="flex-item">
+
+					<div class="h1">Последние статьи</div>
+
+				</div>
+				<!-- /.flex-item -->
+
+				<div class="flex-item">
+
+					<a class="button button-middle button-icon button-icon-right c-link" href="posts.html"><span>Смотреть все</span> <img src="./images/icons/arrow-right.svg" alt="#"></a>
+
+				</div>
+				<!-- /.flex-item -->
+
+			</div>
+			<!-- /.flex flex-between flex-center -->
+
+		</div>
+		<!-- /.s-topline -->
+
+		<div class="swiper swiper-slider">
+
+			<div class="swiper-wrapper grid-posts">
+
+				<div class="swiper-slide grid-item">
+
+					<a href="post.html" class="c-post с-post-alt">
+
+						<div class="flex flex-100">
+
+							<div class="flex-item">
+
+								<div class="c-post__image c-post__image-big"><img src="./images/dist/image-1.jpg" alt="#"></div>
+							</div>
+
+							<div class="flex-item">
+
+								<span class="c-post__date">23.06.2021</span>
+
+								<div class="c-post__title h2">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
+
+								<p class="c-post__description">Наша команда выступила великолепно! В эстафетном плавании 4 х 50 м
+									вольным
+									стилем команда юношей в составе Н. Рыжкова, Д.Брекина, Д. Кармановича и Е. Гущина</p>
+
+								<div class="c-post__link c-link">Читать полностью</div>
+
+							</div>
+							<!-- /.flex-item -->
+
+						</div>
+						<!-- /.flex flex-100 -->
+
+					</a>
+					<!-- /.c-post -->
+
+					<!-- /.flex-item -->
+
+					<!-- /.flex -->
+
+				</div>
+				<!-- /.swiper-slide -->
+
+				<div class="swiper-slide grid-item">
+
+					<a href="post.html" class="c-post с-post-alt">
+
+						<div class="flex flex-50">
+
+							<div class="flex-item">
+								<div class="c-post__image c-post__image-small"><img src="./images/dist/image-1.jpg" alt="#"></div>
+							</div>
+							<!-- /.flex-item -->
+
+							<div class="flex-item">
+
+								<div class="post__wrapper">
 
 									<span class="c-post__date">23.06.2021</span>
 
-									<div class="c-post__title h2">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
-
-									<p class="c-post__description">Наша команда выступила великолепно! В эстафетном плавании 4 х 50 м
-										вольным
-										стилем команда юношей в составе Н. Рыжкова, Д.Брекина, Д. Кармановича и Е. Гущина</p>
+									<div class="c-post__title h3">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
 
 									<div class="c-post__link c-link">Читать полностью</div>
 
 								</div>
-								<!-- /.flex-item -->
+								<!-- /.post__wrapper -->
 
 							</div>
-							<!-- /.flex flex-100 -->
+							<!-- /.flex-item -->
 
-						</a>
-						<!-- /.c-post -->
-
-						<!-- /.flex-item -->
-
+						</div>
 						<!-- /.flex -->
 
-					</div>
-					<!-- /.swiper-slide -->
+					</a>
+					<!-- /.c-post -->
 
-					<div class="swiper-slide grid-item">
+				</div>
+				<!-- /.swiper-slide -->
 
-						<a href="post.html" class="c-post с-post-alt">
+				<div class="swiper-slide grid-item">
 
-							<div class="flex flex-50">
+					<a href="post.html" class="c-post с-post-alt">
 
-								<div class="flex-item">
-									<div class="c-post__image"><img class="img-responsive img-rounded" src="./images/dist/image-1.jpg"
-											alt="#"></div>
+						<div class="flex flex-50">
+
+							<div class="flex-item">
+								<div class="c-post__image c-post__image-small"><img src="./images/src/uqgt4qvc19koifoxr7id3xk5b98eyk40.jpg" alt="#"></div>
+							</div>
+							<!-- /.flex-item -->
+
+							<div class="flex-item">
+
+								<div class="post__wrapper">
+
+									<span class="c-post__date">23.06.2021</span>
+
+									<div class="c-post__title h3">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
+
+									<div class="c-post__link c-link">Читать полностью</div>
+
 								</div>
-								<!-- /.flex-item -->
-
-								<div class="flex-item">
-
-									<div class="post__wrapper">
-
-										<span class="c-post__date">23.06.2021</span>
-
-										<div class="c-post__title h3">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
-
-										<div class="c-post__link c-link">Читать полностью</div>
-
-									</div>
-									<!-- /.post__wrapper -->
-
-								</div>
-								<!-- /.flex-item -->
+								<!-- /.post__wrapper -->
 
 							</div>
-							<!-- /.flex -->
+							<!-- /.flex-item -->
 
-						</a>
-						<!-- /.c-post -->
+						</div>
+						<!-- /.flex -->
 
-					</div>
-					<!-- /.swiper-slide -->
+					</a>
+					<!-- /.c-post -->
 
-					<div class="swiper-slide grid-item">
+				</div>
+				<!-- /.swiper-slide -->
 
-						<a href="post.html" class="c-post с-post-alt">
+				<div class="swiper-slide grid-item">
 
-							<div class="flex flex-50">
+					<a href="post.html" class="c-post с-post-alt">
 
-								<div class="flex-item">
-									<div class="c-post__image"><img class="img-responsive img-rounded" src="./images/dist/image-1.jpg"
-											alt="#"></div>
+						<div class="flex flex-50">
+
+							<div class="flex-item">
+								<div class="c-post__image c-post__image-small"><img src="./images/src/w6vew4sf8115aqnv8r525au4zhybgs8u.webp" alt="#"></div>
+							</div>
+							<!-- /.flex-item -->
+
+							<div class="flex-item">
+
+								<div class="post__wrapper">
+
+									<span class="c-post__date">23.06.2021</span>
+
+									<div class="c-post__title h3">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
+
+									<div class="c-post__link c-link">Читать полностью</div>
+
 								</div>
-								<!-- /.flex-item -->
-
-								<div class="flex-item">
-
-									<div class="post__wrapper">
-
-										<span class="c-post__date">23.06.2021</span>
-
-										<div class="c-post__title h3">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
-
-										<div class="c-post__link c-link">Читать полностью</div>
-
-									</div>
-									<!-- /.post__wrapper -->
-
-								</div>
-								<!-- /.flex-item -->
+								<!-- /.post__wrapper -->
 
 							</div>
-							<!-- /.flex -->
+							<!-- /.flex-item -->
 
-						</a>
-						<!-- /.c-post -->
+						</div>
+						<!-- /.flex -->
 
-					</div>
-					<!-- /.swiper-slide -->
-
-					<div class="swiper-slide grid-item">
-
-						<a href="post.html" class="c-post с-post-alt">
-
-							<div class="flex flex-50">
-
-								<div class="flex-item">
-									<div class="c-post__image"><img class="img-responsive img-rounded" src="./images/dist/image-1.jpg"
-											alt="#"></div>
-								</div>
-								<!-- /.flex-item -->
-
-								<div class="flex-item">
-
-									<div class="post__wrapper">
-
-										<span class="c-post__date">23.06.2021</span>
-
-										<div class="c-post__title h3">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
-
-										<div class="c-post__link c-link">Читать полностью</div>
-
-									</div>
-									<!-- /.post__wrapper -->
-
-								</div>
-								<!-- /.flex-item -->
-
-							</div>
-							<!-- /.flex -->
-
-						</a>
-						<!-- /.c-post -->
-
-					</div>
-					<!-- /.swiper-slide -->
-
-					<div class="swiper-slide grid-item">
-
-						<a href="posts.html" class="c-post с-post-link">
-
-							<div class="c-link">Смотреть все</div>
-
-						</a>
-						<!-- /.c-post -->
-
-					</div>
-					<!-- /.swiper-slide -->
+					</a>
+					<!-- /.c-post -->
 
 				</div>
-				<!-- /.swiper-wrapper -->
+				<!-- /.swiper-slide -->
 
-			</div>
+				<div class="swiper-slide grid-item">
 
-		</div>
-		<!-- /.container -->
+					<a href="posts.html" class="c-post с-post-link">
 
-	</section>
-	<!-- /.s-main -->
+						<div class="c-link">Смотреть все</div>
 
-	<section class="s-main">
-
-		<div class="container">
-
-			<div class="c-topline">
-
-				<div class="flex flex-between flex-center">
-
-					<div class="flex-item">
-
-						<div class="h1">Фотогаллерея</div>
-
-					</div>
-					<!-- /.flex-item -->
+					</a>
+					<!-- /.c-post -->
 
 				</div>
-				<!-- /.flex flex-between flex-center -->
+				<!-- /.swiper-slide -->
 
 			</div>
-			<!-- /.s-topline -->
+			<!-- /.swiper-wrapper -->
 
-			<div class="swiper swiper-slider swiper-slider-gallery">
+		</div>
 
-				<div class="swiper-wrapper grid-gallery">
+	</div>
+	<!-- /.container -->
 
-					<div class="swiper-slide grid-item">
+</section>
+<!-- /.s-main -->
 
-						<a class="c-post mb0" data-fancybox="gallery" href="images/dist/image-1.jpg">
-							<img class="c-post__image img-responsive img-rounded" src="./images/dist/image-1.jpg" alt="#">
-						</a>
+<section class="s-main">
 
-					</div>
-					<!-- /.swiper-slide -->
+	<div class="container">
 
-					<div class="swiper-slide grid-item">
+		<div class="c-topline">
 
-						<a class="c-post mb0" data-fancybox="gallery" href="images/dist/image-1.jpg">
-							<img class="c-post__image img-responsive img-rounded" src="./images/dist/image-1.jpg" alt="#">
-						</a>
+			<div class="flex flex-between flex-center">
 
-					</div>
-					<!-- /.swiper-slide -->
+				<div class="flex-item">
 
-					<div class="swiper-slide grid-item">
-
-						<a class="c-post mb0" data-fancybox="gallery" href="images/dist/image-1.jpg">
-							<img class="c-post__image img-responsive img-rounded" src="./images/dist/image-1.jpg" alt="#">
-						</a>
-
-					</div>
-					<!-- /.swiper-slide -->
-
-					<div data-fancybox="gallery" href="images/dist/image-1.jpg" class="swiper-slide grid-item">
-
-						<a class="c-post mb0" data-fancybox="gallery" href="images/dist/image-1.jpg">
-							<img class="c-post__image img-responsive img-rounded" src="./images/dist/image-1.jpg" alt="#">
-						</a>
-
-					</div>
-					<!-- /.swiper-slide -->
-
-					<div data-fancybox="gallery" href="images/dist/image-1.jpg" class="swiper-slide grid-item">
-
-						<a class="c-post mb0" data-fancybox="gallery" href="images/dist/image-1.jpg">
-							<img class="c-post__image img-responsive img-rounded" src="./images/dist/image-1.jpg" alt="#">
-						</a>
-
-					</div>
-					<!-- /.swiper-slide -->
-
-					<div class="swiper-slide grid-item">
-
-						<a href="gallery.html" class="c-post с-post-link">
-
-							<div class="c-link">Смотреть все</div>
-
-						</a>
-						<!-- /.c-post -->
-
-					</div>
-					<!-- /.swiper-slide -->
+					<div class="h1">Фотогаллерея</div>
 
 				</div>
-				<!-- /.swiper-wrapper -->
+				<!-- /.flex-item -->
 
-			</div>
-			<!-- /.swiper-slider -->
+				<div class="flex-item">
 
-			<p>Выложили фотографии с турнира ФПЧО «Я стану Чемпионом» - I этап, проведенного на базе плавательного бассейна «Строитель» в городе Магнитороск… <a href="gallery.html" class="c-link">Смотреть все фотографии с турнира</a></p>
-
-		</div>
-		<!-- /.container -->
-
-	</section>
-	<!-- /.s-main -->
-
-	<footer class="footer">
-
-		<div class="container">
-
-			<div class="footer__flex">
-
-				<a href="" class="footer__logo logo"><img src="./images/logo.svg" alt="Логотип"></a>
-				<!-- /.footer__logo -->
-
-				<nav class="footer__navigation">
-
-					<div class="footer__title h3">Навигация</div>
-
-					<ul>
-
-						<li class="footer__nav-item"><a href="rating.html">Рейтинги</a></li>
-						<li class="footer__nav-item"><a href="calendar.html">Календарь соревнований</a></li>
-						<li class="footer__nav-item"><a href="posts.html">Статьи</a></li>
-						<li class="footer__nav-item"><a href="gallery,html">Фотогалерея</a></li>
-						<li class="footer__nav-item"><a href="federation.html">Федерация</a></li>
-
-					</ul>
-
-				</nav>
-				<!-- /.footer__navigation -->
-
-				<nav class="footer__navigation">
-
-					<div class="footer__title h3">Ссылки</div>
-
-					<ul>
-
-						<li class="footer__nav-item"><a href="contacts.html">Наши контакты</a></li>
-						<li class="footer__nav-item"><a href="#">Ссылки на другие сайты</a></li>
-						<li class="footer__nav-item"><a href="posts.html">Статьи</a></li>
-						<li class="footer__nav-item"><a href="#">Политика конфиденциальности</a></li>
-						<li class="footer__nav-item"><a href="#">Помощь</a></li>
-
-					</ul>
-
-				</nav>
-				<!-- /.footer__navigation -->
-
-				<div class="footer__soc">
-
-					<div class="footer__title h3">Соц. сети</div>
-
-					<div class="footer__soc-wrapper">
-
-						<a class="footer__soc-item soc-icon" href="#"><img src="./images/icons/vk.svg" alt="icon-vk"></a>
-						<a class="footer__soc-item soc-icon" href="#"><img src="./images/icons/vk.svg" alt="icon-vk"></a>
-						<a class="footer__soc-item soc-icon" href="#"><img src="./images/icons/vk.svg" alt="icon-vk"></a>
-						<a class="footer__soc-item soc-icon" href="#"><img src="./images/icons/vk.svg" alt="icon-vk"></a>
-						<a class="footer__soc-item soc-icon" href="#"><img src="./images/icons/vk.svg" alt="icon-vk"></a>
-
-					</div>
+					<a class="button button-middle button-icon button-icon-right c-link" href="gallery.html"><span>Смотреть все</span> <img src="./images/icons/arrow-right.svg" alt="#"></a>
 
 				</div>
-				<!-- /.footer__soc -->
+				<!-- /.flex-item -->
 
 			</div>
-			<!-- /.footer__flex -->
-
-			<hr class="footer__hr hr">
-
-			<p>Федерация плавания Челябинской области ©2010-2022.</p>
+			<!-- /.flex flex-between flex-center -->
 
 		</div>
-		<!-- /.container -->
+		<!-- /.s-topline -->
 
-		<div class="tabbar-menu">
+		<div class="swiper swiper-slider swiper-slider-gallery gallery-js">
 
-			<a class="tabbar-menu__item tabbar-menu__active" href="#">
-				<img class="icon-blue-light" src="./images/icons/home.svg" alt="#">
-				<span>Главная</span>
-			</a>
-			<!-- /.tabbar-menu__item -->
+			<div class="swiper-wrapper grid-gallery">
 
-			<a class="tabbar-menu__item" href="#">
-				<img class="icon-blue-light" src="./images/icons/award.svg" alt="#">
-				<span>Рейтинги</span>
-			</a>
-			<!-- /.tabbar-menu__item -->
+				<div class="swiper-slide grid-item">
 
-			<a class="tabbar-menu__item" href="#">
-				<img class="icon-blue-light" src="./images/icons/calendar.svg" alt="#">
-				<span>Календарь</span>
-			</a>
-			<!-- /.tabbar-menu__item -->
+					<a class="c-post c-post-gallery gallery-item-js" href="images/dist/image-1.jpg">
+						<div class="c-post__image c-post__image-big">
+							<img src="./images/src/uqgt4qvc19koifoxr7id3xk5b98eyk40.jpg" alt="#">
+						</div>
+					</a>
 
-			<a class="tabbar-menu__item" href="#">
-				<img class="icon-blue-light" src="./images/icons/file-text.svg" alt="#">
-				<span>Статьи</span>
-			</a>
-			<!-- /.tabbar-menu__item -->
+				</div>
+				<!-- /.swiper-slide -->
 
-			<a class="tabbar-menu__item" href="#">
-				<img class="tabbar-menu__avatar img-responsive" src="./images/dist/avatar.png" alt="#">
-				<span>Кабинет</span>
-			</a>
-			<!-- /.tabbar-menu -->
+				<div class="swiper-slide grid-item">
+
+					<a class="c-post c-post-gallery gallery-item-js" href="./images/src/uqgt4qvc19koifoxr7id3xk5b98eyk40.jpg">
+						<div class="c-post__image c-post__image-small">
+							<img src="./images/src/uqgt4qvc19koifoxr7id3xk5b98eyk40.jpg" alt="#">
+						</div>
+					</a>
+
+				</div>
+				<!-- /.swiper-slide -->
+
+				<div class="swiper-slide grid-item">
+
+					<a class="c-post c-post-gallery gallery-item-js" href="images/src/wauhwijr7wt3nw7bn2myv5cfn6m6rvi7.png">
+						<div class="c-post__image c-post__image-small">
+							<img src="./images/src/uqgt4qvc19koifoxr7id3xk5b98eyk40.jpg" alt="#">
+						</div>
+					</a>
+
+				</div>
+				<!-- /.swiper-slide -->
+
+				<div class="swiper-slide grid-item gallery-item-js" href="./images/src/uqgt4qvc19koifoxr7id3xk5b98eyk40.jpg">
+
+					<a class="c-post c-post-gallery" href="images/dist/image-1.jpg">
+						<div class="c-post__image c-post__image-small">
+							<img src="./images/src/uqgt4qvc19koifoxr7id3xk5b98eyk40.jpg" alt="#">
+						</div>
+					</a>
+
+				</div>
+				<!-- /.swiper-slide -->
+
+				<div class="swiper-slide grid-item md-d-none">
+
+					<a class="c-post gallery-js c-post-gallery" href="gallery.html">
+
+						<div class="c-post__gallery-overlay h1">9+</div>
+
+						<div class="c-post__image c-post__image-small">
+							<img src="./images/dist/image-1.jpg" alt="#">
+						</div>
+					</a>
+
+				</div>
+				<!-- /.swiper-slide -->
+
+				<div class="swiper-slide grid-item">
+
+					<a href="gallery.html" class="c-post с-post-link">
+
+						<div class="c-post__image c-post__image-small c-link d-flex d-flex--jcc d-flex--aic">Смотреть все</div>
+
+					</a>
+					<!-- /.c-post -->
+
+				</div>
+				<!-- /.swiper-slide -->
+
+			</div>
+			<!-- /.swiper-wrapper -->
 
 		</div>
-		<!-- /.footer__tabbar-menu -->
+		<!-- /.swiper-slider -->
 
-	</footer>
+		<p>Выложили фотографии с турнира ФПЧО «Я стану Чемпионом» - I этап, проведенного на базе плавательного бассейна «Строитель» в городе Магнитороск… <a href="gallery.html" class="c-link">Смотреть все фотографии с турнира</a></p>
 
-	<script src="./js/app.min.js"></script>
+	</div>
+	<!-- /.container -->
+
+</section>
+<!-- /.s-main -->
+
+</div>
+
+<footer class="footer">
+
+	<div class="container">
+
+		<div class="footer__flex">
+
+			<a href="index.html" class="footer__logo logo"><img src="./images/logo.svg" alt="Логотип"></a>
+			<!-- /.footer__logo -->
+
+			<nav class="footer__navigation">
+
+				<div class="footer__title h3">Навигация</div>
+
+				<ul>
+
+					<li class="footer__nav-item"><a href="rating.html">Рейтинги</a></li>
+					<li class="footer__nav-item"><a href="calendar.html">Календарь соревнований</a></li>
+					<li class="footer__nav-item"><a href="posts.html">Статьи</a></li>
+					<li class="footer__nav-item"><a href="posts.html">Новости</a></li>
+					<li class="footer__nav-item"><a href="gallery,html">Фотогалерея</a></li>
+					<li class="footer__nav-item"><a href="federation.html">Федерация</a></li>
+
+				</ul>
+
+			</nav>
+			<!-- /.footer__navigation -->
+
+			<nav class="footer__navigation">
+
+				<div class="footer__title h3">Ссылки</div>
+
+				<ul>
+
+					<li class="footer__nav-item"><a href="contacts.html">Наши контакты</a></li>
+					<li class="footer__nav-item"><a href="#">Ссылки на другие сайты</a></li>
+					<li class="footer__nav-item"><a href="#">Политика конфиденциальности</a></li>
+					<li class="footer__nav-item"><a href="#">Помощь</a></li>
+
+				</ul>
+
+			</nav>
+			<!-- /.footer__navigation -->
+
+			<div class="footer__soc">
+
+				<div class="footer__title h3">Соц. сети</div>
+
+				<div class="footer__soc-wrapper">
+
+					<a class="footer__soc-item soc-icon" href="#"><img src="./images/icons/vk.svg" alt="icon-vk"></a>
+					<a class="footer__soc-item soc-icon" href="#"><img src="./images/icons/vk.svg" alt="icon-vk"></a>
+					<a class="footer__soc-item soc-icon" href="#"><img src="./images/icons/vk.svg" alt="icon-vk"></a>
+					<a class="footer__soc-item soc-icon" href="#"><img src="./images/icons/vk.svg" alt="icon-vk"></a>
+					<a class="footer__soc-item soc-icon" href="#"><img src="./images/icons/vk.svg" alt="icon-vk"></a>
+
+				</div>
+
+			</div>
+			<!-- /.footer__soc -->
+
+		</div>
+		<!-- /.footer__flex -->
+
+		<hr class="footer__hr hr">
+
+		<p>Федерация плавания Челябинской области ©2010-2022.</p>
+
+	</div>
+	<!-- /.container -->
+
+	<div class="tabbar-menu">
+
+		<a class="tabbar-menu__item tabbar-menu__active" href="#">
+			<img class="icon-blue-light" src="./images/icons/home.svg" alt="#">
+			<span>Главная</span>
+		</a>
+		<!-- /.tabbar-menu__item -->
+
+		<a class="tabbar-menu__item" href="#">
+			<img class="icon-blue-light" src="./images/icons/award.svg" alt="#">
+			<span>Рейтинги</span>
+		</a>
+		<!-- /.tabbar-menu__item -->
+
+		<a class="tabbar-menu__item" href="#">
+			<img class="icon-blue-light" src="./images/icons/calendar.svg" alt="#">
+			<span>Календарь</span>
+		</a>
+		<!-- /.tabbar-menu__item -->
+
+		<a class="tabbar-menu__item" href="#">
+			<img class="icon-blue-light" src="./images/icons/file-text.svg" alt="#">
+			<span>Статьи</span>
+		</a>
+		<!-- /.tabbar-menu__item -->
+
+		<a class="tabbar-menu__item" href="#">
+			<img class="tabbar-menu__avatar img-responsive" src="./images/dist/avatar.png" alt="#">
+			<span>Кабинет</span>
+		</a>
+		<!-- /.tabbar-menu -->
+
+	</div>
+	<!-- /.footer__tabbar-menu -->
+
+</footer>
+
+</div>
+
+<script src="./js/app.min.js"></script>
 
 </body>
 

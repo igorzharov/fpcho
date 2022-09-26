@@ -5,14 +5,16 @@
 
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Статья</title>
+	<meta name="viewport" content="width=device-width, minimum-scale=1">
+	<title>Главная</title>
 
-	<link rel="stylesheet" href="./css/main.min.css">
+	<link rel="stylesheet" href="././css/main.min.css">
 
 </head>
 
-<body class="p-post">
+<body>
+
+	<div class="page-wrapper">
 
 	<header class="header">
 
@@ -27,7 +29,7 @@
 					<span class="hamburger-box">
 						<span class="hamburger-inner"></span>
 					</span>
-				</button>
+				</button>  
 
 				<div class="header__buttons">
 
@@ -43,24 +45,25 @@
 
 						<a href="login2.html" class="main-menu__signup button button-middle button-secondary">Регистрация</a>
 						<a href="login1.html" class="main-menu__signin button button-middle button-primary">Войти</a>
-
+	
 					</div>
 					<!-- /.header__buttons -->
 
 					<ul>
 
 						<li class="main-menu__item main-menu__item-search">
-							<form action="">
-								<img class="icon-blue" src="./images/icons/search.svg" alt="icon-search">
+							<form class="d-flex d-flex--aic" action="">
+								<button class="button-submit"><img class="icon-blue" src="./images/icons/search.svg" alt="icon-search"></button>
 								<input class="main-menu__search" type="text" placeholder="Поиск...">
 							</form>
 						</li>
 
-						<li class="main-menu__item"><a href="index.html">Главная</a></li>
-						<li class="main-menu__item"><a href="rating.html">Рейтинги</a></li>
+						<li class="main-menu__item is-active"><a href="index.html">Главная</a></li>
+						<li class="main-menu__item"><a href="rating-types.html">Рейтинги</a></li>
 						<li class="main-menu__item"><a href="calendar.html">Календарь</a></li>
 						<li class="main-menu__item"><a href="posts.html">Статьи</a></li>
-						<li class="main-menu__item"><a href="gallery.html">Фотогалерея</a></li>
+						<li class="main-menu__item"><a href="news.html">Новости</a></li>
+						<li class="main-menu__item"><a href="gallery.html">Галерея</a></li>
 						<li class="main-menu__item main-menu__dropdown">
 
 							<ul class="dropdown-menu">
@@ -79,7 +82,7 @@
 
 						</li>
 
-						<li class="main-menu__item is-active"><a href="contacts.html">Контакты</a></li>
+						<li class="main-menu__item"><a href="contacts.html">Контакты</a></li>
 
 					</ul>
 
@@ -95,211 +98,324 @@
 	</header>
 	<!-- /.header -->
 
-	<section class="s-main">
+	<div class="content-wrapper">
 
-		<div class="container container-lg">
+<section class="s-main">
 
-			<div class="c-note">23 Июля 2021</div>
+	<div class="container container-lg">
 
-			<div class="h1 mt0">Интервью с тренером СДЮСШОР № 7</div>
+		<div class="c-note">23 Июля 2021</div>
 
-			<img src="./images/dist/image-1.jpg" alt="#" class="img-responsive img-rounded mb1">
+		<div class="h1 mt0">Интервью с тренером СДЮСШОР № 7</div>
 
-			<div class="h2">Заголовок</div>
+		<img src="./images/dist/image-1.jpg" alt="#" class="img-responsive img-rounded mb1">
 
-			<p>I этап Турнира ФПЧО "Путь Чемпиона" проведен 27 октября 2018г в г.Сатка Челябинской области (Плавательный
-				бассейн МАУ «Дворец спорта «Магнезит» ул. Солнечная, 10).</p>
+		<div class="h2">Заголовок</div>
 
-			<p>I этап Турнира ФПЧО "Путь Чемпиона" проведен 27 октября 2018г в г.Сатка Челябинской области (Плавательный
-				бассейн МАУ «Дворец спорта «Магнезит» ул. Солнечная, 10).</p>
+		<p>I этап Турнира ФПЧО "Путь Чемпиона" проведен 27 октября 2018г в г.Сатка Челябинской области (Плавательный
+			бассейн МАУ «Дворец спорта «Магнезит» ул. Солнечная, 10).</p>
 
-			<p>Кандидатуры судей должны быть отправлены на электронный адрес swimevents@russwimming.ru не позднее 28 февраля
-				2021 года одновременно с технической заявкой.</p>
+		<p>I этап Турнира ФПЧО "Путь Чемпиона" проведен 27 октября 2018г в г.Сатка Челябинской области (Плавательный
+			бассейн МАУ «Дворец спорта «Магнезит» ул. Солнечная, 10).</p>
 
-			<div class="flex flex-50 mt1 mb1">
+		<p>Кандидатуры судей должны быть отправлены на электронный адрес swimevents@russwimming.ru не позднее 28 февраля
+			2021 года одновременно с технической заявкой.</p>
 
-				<div class="flex-item" style="width: 100%">
+		<div class="flex flex-50 mt1 mb1">
 
-					<img src="./images/dist/image-1.jpg" alt="#" class="img-responsive img-rounded">
+			<div class="flex-item" style="width: 100%">
+
+				<img src="./images/dist/image-1.jpg" alt="#" class="img-responsive img-rounded">
+
+			</div>
+			<!-- /.flex-item -->
+
+			<div class="flex-item">
+
+				<img src="./images/dist/image-1.jpg" alt="#" class="img-responsive img-rounded">
+
+			</div>
+			<!-- /.flex-item -->
+
+			<div class="flex-item">
+
+				<img src="./images/dist/image-1.jpg" alt="#" class="img-responsive img-rounded">
+
+			</div>
+			<!-- /.flex-item -->
+
+		</div>
+		<!-- /.flex flex-50 -->
+
+		<div class="h2">Заголовок</div>
+
+		<p>I этап Турнира ФПЧО "Путь Чемпиона" проведен 27 октября 2018г в г.Сатка Челябинской области (Плавательный
+			бассейн МАУ «Дворец спорта «Магнезит» ул. Солнечная, 10).</p>
+
+		<p>I этап Турнира ФПЧО "Путь Чемпиона" проведен 27 октября 2018г в г.Сатка Челябинской области (Плавательный
+			бассейн МАУ «Дворец спорта «Магнезит» ул. Солнечная, 10).</p>
+
+		<p>Кандидатуры судей должны быть отправлены на электронный адрес swimevents@russwimming.ru не позднее 28 февраля
+			2021 года одновременно с технической заявкой.</p>
+
+		<div class="h2">Поделиться в соц. сетях:</div>
+
+		<div class="flex">
+
+			<div class="flex-item"><a class="soc-icon" href="#"><img src="./images/icons/instagram.svg" alt="icon"></a></div>
+			<!-- /.flex-item -->
+
+			<div class="flex-item"><a class="soc-icon" href="#"><img src="./images/icons/telegram.svg" alt="icon"></a></div>
+			<!-- /.flex-item -->
+
+			<div class="flex-item"><a class="soc-icon" href="#"><img src="./images/icons/facebook.svg" alt="icon"></a></div>
+			<!-- /.flex-item -->
+
+			<div class="flex-item"><a class="soc-icon" href="#"><img src="./images/icons/vk.svg" alt="icon"></a></div>
+			<!-- /.flex-item -->
+
+			<div class="flex-item"><a class="soc-icon" href="#"><img src="./images/icons/whatsapp.svg" alt="icon"></a></div>
+			<!-- /.flex-item -->
+
+		</div>
+
+	</div>
+	<!-- /.container -->
+
+</section>
+<!-- /.s-main -->
+
+<section class="s-main">
+
+	<div class="container">
+
+		<div class="c-topline">
+
+			<div class="flex flex-between flex-center">
+
+				<div class="flex-item">
+
+					<div class="h1">Другие статьи</div>
 
 				</div>
 				<!-- /.flex-item -->
 
 				<div class="flex-item">
 
-					<img src="./images/dist/image-1.jpg" alt="#" class="img-responsive img-rounded">
-
-				</div>
-				<!-- /.flex-item -->
-
-				<div class="flex-item">
-
-					<img src="./images/dist/image-1.jpg" alt="#" class="img-responsive img-rounded">
+					<a class="button button-middle button-icon button-icon-right c-link" href="##"><span>Смотреть все</span> <img src="./images/icons/arrow-right.svg" alt="#"></a>
 
 				</div>
 				<!-- /.flex-item -->
 
 			</div>
-			<!-- /.flex flex-50 -->
-
-			<div class="h2">Заголовок</div>
-
-			<p>I этап Турнира ФПЧО "Путь Чемпиона" проведен 27 октября 2018г в г.Сатка Челябинской области (Плавательный
-				бассейн МАУ «Дворец спорта «Магнезит» ул. Солнечная, 10).</p>
-
-			<p>I этап Турнира ФПЧО "Путь Чемпиона" проведен 27 октября 2018г в г.Сатка Челябинской области (Плавательный
-				бассейн МАУ «Дворец спорта «Магнезит» ул. Солнечная, 10).</p>
-
-			<p>Кандидатуры судей должны быть отправлены на электронный адрес swimevents@russwimming.ru не позднее 28 февраля
-				2021 года одновременно с технической заявкой.</p>
-
-			<div class="h2">Поделиться в соц. сетях:</div>
-
-			<div class="flex">
-
-				<div class="flex-item"><a class="soc-icon" href="#"><img src="./images/icons/instagram.svg" alt="icon"></a></div>
-				<!-- /.flex-item -->
-
-				<div class="flex-item"><a class="soc-icon" href="#"><img src="./images/icons/telegram.svg" alt="icon"></a></div>
-				<!-- /.flex-item -->
-
-				<div class="flex-item"><a class="soc-icon" href="#"><img src="./images/icons/facebook.svg" alt="icon"></a></div>
-				<!-- /.flex-item -->
-
-				<div class="flex-item"><a class="soc-icon" href="#"><img src="./images/icons/vk.svg" alt="icon"></a></div>
-				<!-- /.flex-item -->
-
-				<div class="flex-item"><a class="soc-icon" href="#"><img src="./images/icons/whatsapp.svg" alt="icon"></a></div>
-				<!-- /.flex-item -->
-
-			</div>
+			<!-- /.flex flex-between flex-center -->
 
 		</div>
-		<!-- /.container -->
+		<!-- /.s-topline -->
 
-	</section>
-	<!-- /.s-main -->
+		<div class="swiper swiper-slider">
 
-	<section class="s-main">
+			<div class="swiper-wrapper flex flex-33 flex-justify-content-center">
 
-		<div class="container">
+				<div class="swiper-slide flex-item">
 
-			<div class="c-topline">
+					<a href="#" class="c-post">
 
-				<div class="flex flex-between flex-center">
+						<div class="c-post__image"><img class="img-responsive img-rounded" src="./images/dist/image-1.jpg" alt="#"></div>
 
-					<div class="flex-item">
+						<span class="c-post__date">23.06.2021</span>
 
-						<div class="h1">Другие статьи</div>
+						<div class="c-post__title h2">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
 
-					</div>
-					<!-- /.flex-item -->
+						<p class="c-post__description">Соревнования проводятся 21 марта 2021 года (воскресенье), на базе
+							плавательного</p>
 
-					<div class="flex-item">
+						<div class="c-post__link c-link">Читать полностью</div>
 
-						<a class="button button-middle button-icon button-icon-right c-link" href="##"><span>Смотреть все</span> <img
-								src="./images/icons/arrow-right.svg" alt="#"></a>
-
-					</div>
-					<!-- /.flex-item -->
+					</a>
+					<!-- /.c-post -->
 
 				</div>
-				<!-- /.flex flex-between flex-center -->
+				<!-- /.swiper-slide -->
 
-			</div>
-			<!-- /.s-topline -->
+				<div class="swiper-slide flex-item">
 
-			<div class="swiper swiper-slider">
+					<a href="#" class="c-post">
 
-				<div class="swiper-wrapper flex flex-33 flex-justify-content-center">
+						<div class="c-post__image"><img class="img-responsive img-rounded" src="./images/dist/image-1.jpg" alt="#"></div>
 
-					<div class="swiper-slide flex-item">
+						<span class="c-post__date">23.06.2021</span>
 
-						<a href="#" class="c-post">
+						<div class="c-post__title h2">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
 
-							<div class="c-post__image"><img class="img-responsive img-rounded" src="./images/dist/image-1.jpg"
-									alt="#"></div>
+						<p class="c-post__description">Соревнования проводятся 21 марта 2021 года (воскресенье), на базе
+							плавательного</p>
 
-							<span class="c-post__date">23.06.2021</span>
+						<div class="c-post__link c-link">Читать полностью</div>
 
-							<div class="c-post__title h2">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
-
-							<p class="c-post__description">Соревнования проводятся 21 марта 2021 года (воскресенье), на базе
-								плавательного</p>
-
-							<div class="c-post__link c-link">Читать полностью</div>
-
-						</a>
-						<!-- /.c-post -->
-
-					</div>
-					<!-- /.swiper-slide -->
-
-					<div class="swiper-slide flex-item">
-
-						<a href="#" class="c-post">
-
-							<div class="c-post__image"><img class="img-responsive img-rounded" src="./images/dist/image-1.jpg"
-									alt="#"></div>
-
-							<span class="c-post__date">23.06.2021</span>
-
-							<div class="c-post__title h2">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
-
-							<p class="c-post__description">Соревнования проводятся 21 марта 2021 года (воскресенье), на базе
-								плавательного</p>
-
-							<div class="c-post__link c-link">Читать полностью</div>
-
-						</a>
-						<!-- /.c-post -->
-
-					</div>
-					<!-- /.swiper-slide -->
-
-					<div class="swiper-slide flex-item">
-
-						<a href="#" class="c-post">
-
-							<div class="c-post__image"><img class="img-responsive img-rounded" src="./images/dist/image-1.jpg"
-									alt="#"></div>
-
-							<span class="c-post__date">23.06.2021</span>
-
-							<div class="c-post__title h2">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
-
-							<p class="c-post__description">Соревнования проводятся 21 марта 2021 года (воскресенье), на базе
-								плавательного</p>
-
-							<div class="c-post__link c-link">Читать полностью</div>
-
-						</a>
-						<!-- /.c-post -->
-
-					</div>
-					<!-- /.swiper-slide -->
-
-					<div class="swiper-slide flex-item">
-
-						<a href="#" class="c-post с-post-link">
-
-							<div class="c-link">Смотреть все</div>
-
-						</a>
-						<!-- /.c-post -->
-
-					</div>
-					<!-- /.swiper-slide -->
+					</a>
+					<!-- /.c-post -->
 
 				</div>
-				<!-- /.swiper-wrapper -->
+				<!-- /.swiper-slide -->
+
+				<div class="swiper-slide flex-item">
+
+					<a href="#" class="c-post">
+
+						<div class="c-post__image"><img class="img-responsive img-rounded" src="./images/dist/image-1.jpg" alt="#"></div>
+
+						<span class="c-post__date">23.06.2021</span>
+
+						<div class="c-post__title h2">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
+
+						<p class="c-post__description">Соревнования проводятся 21 марта 2021 года (воскресенье), на базе
+							плавательного</p>
+
+						<div class="c-post__link c-link">Читать полностью</div>
+
+					</a>
+					<!-- /.c-post -->
+
+				</div>
+				<!-- /.swiper-slide -->
+
+				<div class="swiper-slide flex-item">
+
+					<a href="#" class="c-post с-post-link">
+
+						<div class="c-link">Смотреть все</div>
+
+					</a>
+					<!-- /.c-post -->
+
+				</div>
+				<!-- /.swiper-slide -->
 
 			</div>
+			<!-- /.swiper-wrapper -->
 
 		</div>
-		<!-- /.container -->
 
-	</section>
-	<!-- /.s-main -->
+	</div>
+	<!-- /.container -->
 
-	<!--#include virtual="/parts/footer.html" -->
+</section>
+<!-- /.s-main -->
+
+</div>
+
+<footer class="footer">
+
+	<div class="container">
+
+		<div class="footer__flex">
+
+			<a href="index.html" class="footer__logo logo"><img src="./images/logo.svg" alt="Логотип"></a>
+			<!-- /.footer__logo -->
+
+			<nav class="footer__navigation">
+
+				<div class="footer__title h3">Навигация</div>
+
+				<ul>
+
+					<li class="footer__nav-item"><a href="rating.html">Рейтинги</a></li>
+					<li class="footer__nav-item"><a href="calendar.html">Календарь соревнований</a></li>
+					<li class="footer__nav-item"><a href="posts.html">Статьи</a></li>
+					<li class="footer__nav-item"><a href="posts.html">Новости</a></li>
+					<li class="footer__nav-item"><a href="gallery,html">Фотогалерея</a></li>
+					<li class="footer__nav-item"><a href="federation.html">Федерация</a></li>
+
+				</ul>
+
+			</nav>
+			<!-- /.footer__navigation -->
+
+			<nav class="footer__navigation">
+
+				<div class="footer__title h3">Ссылки</div>
+
+				<ul>
+
+					<li class="footer__nav-item"><a href="contacts.html">Наши контакты</a></li>
+					<li class="footer__nav-item"><a href="#">Ссылки на другие сайты</a></li>
+					<li class="footer__nav-item"><a href="#">Политика конфиденциальности</a></li>
+					<li class="footer__nav-item"><a href="#">Помощь</a></li>
+
+				</ul>
+
+			</nav>
+			<!-- /.footer__navigation -->
+
+			<div class="footer__soc">
+
+				<div class="footer__title h3">Соц. сети</div>
+
+				<div class="footer__soc-wrapper">
+
+					<a class="footer__soc-item soc-icon" href="#"><img src="./images/icons/vk.svg" alt="icon-vk"></a>
+					<a class="footer__soc-item soc-icon" href="#"><img src="./images/icons/vk.svg" alt="icon-vk"></a>
+					<a class="footer__soc-item soc-icon" href="#"><img src="./images/icons/vk.svg" alt="icon-vk"></a>
+					<a class="footer__soc-item soc-icon" href="#"><img src="./images/icons/vk.svg" alt="icon-vk"></a>
+					<a class="footer__soc-item soc-icon" href="#"><img src="./images/icons/vk.svg" alt="icon-vk"></a>
+
+				</div>
+
+			</div>
+			<!-- /.footer__soc -->
+
+		</div>
+		<!-- /.footer__flex -->
+
+		<hr class="footer__hr hr">
+
+		<p>Федерация плавания Челябинской области ©2010-2022.</p>
+
+	</div>
+	<!-- /.container -->
+
+	<div class="tabbar-menu">
+
+		<a class="tabbar-menu__item tabbar-menu__active" href="#">
+			<img class="icon-blue-light" src="./images/icons/home.svg" alt="#">
+			<span>Главная</span>
+		</a>
+		<!-- /.tabbar-menu__item -->
+
+		<a class="tabbar-menu__item" href="#">
+			<img class="icon-blue-light" src="./images/icons/award.svg" alt="#">
+			<span>Рейтинги</span>
+		</a>
+		<!-- /.tabbar-menu__item -->
+
+		<a class="tabbar-menu__item" href="#">
+			<img class="icon-blue-light" src="./images/icons/calendar.svg" alt="#">
+			<span>Календарь</span>
+		</a>
+		<!-- /.tabbar-menu__item -->
+
+		<a class="tabbar-menu__item" href="#">
+			<img class="icon-blue-light" src="./images/icons/file-text.svg" alt="#">
+			<span>Статьи</span>
+		</a>
+		<!-- /.tabbar-menu__item -->
+
+		<a class="tabbar-menu__item" href="#">
+			<img class="tabbar-menu__avatar img-responsive" src="./images/dist/avatar.png" alt="#">
+			<span>Кабинет</span>
+		</a>
+		<!-- /.tabbar-menu -->
+
+	</div>
+	<!-- /.footer__tabbar-menu -->
+
+</footer>
+
+</div>
+
+<script src="./js/app.min.js"></script>
+
+</body>
+
+</html>
