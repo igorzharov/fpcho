@@ -41,24 +41,29 @@
 			background-color: $note
 			box-sizing: content-box
 
-	&__avatar
+	&__user
 		position: relative
 		display: flex
 		align-items: center
 		text-decoration: none
 		transition: opacity .25s ease
-		span
-			display: block
-			margin-right: $gutter / 2
+	&__username
+		display: block
+		margin-right: $gutter / 2
+	&__avatar
+		width: 32px
+		height: 32px
+		border-radius: 50%
+		overflow: hidden
 		img
-			width: 32px
-			height: 32px
-			border-radius: 50%
+			height: 100%
+			object-fit: cover
+			width: 100%
 
 		&:hover
 			opacity: .9
 
-	&__avatar-notifications-on
+	&__user-notifications-on
 		&:after
 			content: ''
 			position: absolute

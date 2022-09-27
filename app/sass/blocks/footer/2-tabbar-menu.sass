@@ -17,11 +17,11 @@
 		align-items: center
 		text-decoration: none
 		img
-			height: $height / 2
+			height: 24px
 
 		span
 			color: $text-light
-			margin-top: $gutter / 4
+			margin-top: 4px
 			@media ( max-width: $sm )
 				display: none
 
@@ -29,13 +29,21 @@
 		span
 			color: $blue
 			font-weight: 700
-		img
+		.icon
 			filter: $blueF
 
+		.tabbar-menu__avatar
+			border: 2px solid $blue
+
 	&__avatar
-		width: 28px
-		height: 28px
+		width: 24px
+		height: 24px
 		border-radius: 50%
+		overflow: hidden
+		img
+			height: 100%
+			object-fit: cover
+			width: 100%
 
 @media screen and ( max-width: $md )
 	.tabbar-menu
