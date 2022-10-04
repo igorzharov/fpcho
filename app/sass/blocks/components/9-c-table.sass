@@ -5,8 +5,9 @@
 	&__head
 		display: table-row
 
-	&__header .h4
+	&__header .h4, &__header .h5
 		color: $note
+		font-weight: 400
 
 	&__body
 		display: table-footer-group
@@ -40,8 +41,17 @@
 	&__cell-width-10
 		width: 10%
 
+	&__cell-width-12
+		width: 12%
+
 	&__cell-width-20
 		width: 20%
+
+	&__cell-width-25
+		width: 25%
+
+	&__cell-width-30
+		width: 30%
 
 	&__cell-width-35
 		width: 35%
@@ -194,6 +204,12 @@
 			display: flex
 			justify-content: space-between
 			align-items: center
+
+		&__group--alt
+			flex-direction: column
+			align-items: flex-start
+			.c-table__text
+				margin-top: $gutter / 4
 
 	.c-table-card
 		.c-table__row

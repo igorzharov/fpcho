@@ -61,7 +61,7 @@
 
 								<div class="c-form-control">
 
-									<input class="c-form-control__input c-form-control__birthday-mask" type="text" placeholder="Иванов Иван Иванович" maxlength="54">
+									<input class="c-form-control__input" type="text" placeholder="Иванов Иван Иванович" maxlength="54">
 
 									<div class="c-form-control__caption">Обязательное поле</div>
 
@@ -86,16 +86,27 @@
 
 							<div class="flex-item">
 
+								<div class="c-form__label">Тренер</div>
+
+								<div class="c-form-control">
+
+									<select class="c-form-control__select">
+										<option value="Степанов Степан Иванович" class="c-form-control__select-item">Степанов Степан Иванович</option>
+										<option value="Иванов Иван Иванович" class="c-form-control__select-item">Иванов Иван Иванович</option>
+										<option value="Степанов Степан Степанович" class="c-form-control__select-item">Степанов Степан Степанович</option>
+									</select>
+
+								</div>
+								<!-- /.c-form-control -->
+
 								<div class="c-form__label">Бассейн</div>
 
 								<div class="c-form-control">
 
 									<select class="c-form-control__select">
-										<option value="Все виды" class="c-form-control__select-item">Все виды</option>
-										<option value="Строитель 1" class="c-form-control__select-item">Строитель 1</option>
-										<option value="Строитель 2" class="c-form-control__select-item">Строитель 2</option>
-										<option value="Строитель 3" class="c-form-control__select-item">Строитель 3</option>
-										<option value="Строитель 4" class="c-form-control__select-item">Строитель 4</option>
+										<option value="" data-placeholder="true">Длина бассейна</option>
+										<option value="25м" class="c-form-control__select-item">25м</option>
+										<option value="50м" class="c-form-control__select-item">50м</option>
 									</select>
 
 								</div>
@@ -109,19 +120,6 @@
 										<option value="1500 м вольный стиль" class="c-form-control__select-item">1500 м вольный стиль</option>
 										<option value="1000 м вольный стиль" class="c-form-control__select-item">1000 м вольный стиль</option>
 										<option value="500 м вольный стиль" class="c-form-control__select-item">500 м вольный стиль</option>
-									</select>
-
-								</div>
-								<!-- /.c-form-control -->
-
-								<div class="c-form__label">Тренер</div>
-
-								<div class="c-form-control">
-
-									<select class="c-form-control__select">
-										<option value="Степанов Степан Иванович" class="c-form-control__select-item">Степанов Степан Иванович</option>
-										<option value="Иванов Иван Иванович" class="c-form-control__select-item">Иванов Иван Иванович</option>
-										<option value="Степанов Степан Степанович" class="c-form-control__select-item">Степанов Степан Степанович</option>
 									</select>
 
 								</div>
@@ -205,7 +203,7 @@
 				</div>
 				<!-- /.c-table__cell -->
 
-				<div class="c-table__cell c-table__cell-width-10">
+				<div class="c-table__cell c-table__cell-width-15">
 					<div class="c-table__header">
 						<div class="h4">Бассейн</div>
 					</div>
@@ -273,7 +271,7 @@
 					<!-- /.c-table__cell -->
 
 					<div class="c-table__cell flex-lg-order2">
-						<div class="c-table__group">
+						<div class="c-table__group c-table__group--alt">
 							<div class="c-table__title">Дистанция:</div>
 							<div class="c-table__text">1500м вольный стиль</div>
 						</div>
@@ -334,7 +332,7 @@
 					<!-- /.c-table__cell -->
 
 					<div class="c-table__cell flex-lg-order2">
-						<div class="c-table__group">
+						<div class="c-table__group c-table__group--alt">
 							<div class="c-table__title">Дистанция:</div>
 							<div class="c-table__text">1500м вольный стиль</div>
 						</div>
@@ -395,7 +393,7 @@
 					<!-- /.c-table__cell -->
 
 					<div class="c-table__cell flex-lg-order2">
-						<div class="c-table__group">
+						<div class="c-table__group c-table__group--alt">
 							<div class="c-table__title">Дистанция:</div>
 							<div class="c-table__text">1500м вольный стиль</div>
 						</div>
@@ -456,7 +454,7 @@
 					<!-- /.c-table__cell -->
 
 					<div class="c-table__cell flex-lg-order2">
-						<div class="c-table__group">
+						<div class="c-table__group c-table__group--alt">
 							<div class="c-table__title">Дистанция:</div>
 							<div class="c-table__text">1500м вольный стиль</div>
 						</div>
@@ -517,7 +515,7 @@
 					<!-- /.c-table__cell -->
 
 					<div class="c-table__cell flex-lg-order2">
-						<div class="c-table__group">
+						<div class="c-table__group c-table__group--alt">
 							<div class="c-table__title">Дистанция:</div>
 							<div class="c-table__text">1500м вольный стиль</div>
 						</div>
@@ -586,13 +584,13 @@
 
 	<div class="container">
 
-		<div class="h2">Календарь соревнований на других сайтах</div>
+		<div class="h2">Рейтинг на других сайтахх</div>
 
-		<div>Вы также можете посмотреть календарь событий на сайте ВФП:</div>
+		<div>Вы также можете посмотреть рейтинги на сайте ВФП::</div>
 
 		<div class="c-group-text">
 
-			<a href="russwimming.ru/calendar" class="c-group-text__link">russwimming.ru/calendar</a>
+			<a href="russwimming.ru/calendar" class="c-group-text__link">russwimming.ru/rating</a>
 
 		</div>
 		<!-- /.group-text -->

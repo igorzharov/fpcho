@@ -26,9 +26,9 @@
 			display: block
 			text-align: center
 			text-decoration: none
-			height: $height
-			line-height: $height
+			padding: $gutter / 2 0
 			color: $text-dark
+			white-space: normal
 
 		form
 			display: flex
@@ -55,7 +55,7 @@
 	position: absolute
 	z-index: 100
 	top: $height + 3px
-	left: -1px
+	left: -40px
 	width: 300px
 	padding: 0
 	margin: 0
@@ -74,7 +74,7 @@
 				color: #fff
 		a
 			text-align: left
-			text-indent: $gutter / 4
+			padding-left: $gutter / 4
 			transition: color .25s ease
 	
 
@@ -145,7 +145,7 @@
 			transition: border-color .25s ease
 			a
 				position: relative
-				text-indent: $gutter
+				padding-left: $gutter
 			&:hover,&.is-active
 				border-color: $blue
 				a

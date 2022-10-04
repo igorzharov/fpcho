@@ -20,6 +20,7 @@
 
 		.fancybox__carousel.is-draggable .fancybox__slide, .fancybox__carousel.is-draggable .fancybox__slide .fancybox__content
 			overflow: hidden
+			cursor: default !important
 
 		.fancybox__content
 			padding: $gutter * 2.5 $gutter * 2.5
@@ -54,3 +55,6 @@
 				padding: $gutter
 				.c-form
 					margin: auto
+
+.fancybox__carousel.is-draggable .fancybox__slide .fancybox__content
+	cursor: default

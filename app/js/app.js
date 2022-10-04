@@ -260,6 +260,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	if (document.querySelector('.c-select-accordion')) new SAccordion('.c-select-accordion');
 
+	function initMaskDate() {
+
+		const inputs = document.querySelectorAll('.c-form-control__birthday-mask');
+
+		inputs.forEach(input => {
+			
+			IMask(input,
+			{
+				mask: Date,
+				pattern: 'd{.}`m{.}`Y',
+				autofix: true,
+				blocks: {
+					d: { mask: IMask.MaskedRange, from: 1, to: 31, maxLength: 2 },
+					m: { mask: IMask.MaskedRange, from: 1, to: 12, maxLength: 2 },
+					Y: { mask: IMask.MaskedRange, from: 1900, to: 2999, maxLength: 4 }
+				}
+			});
+
+		})
+
+	}
+
+	if (document.querySelector('.c-form-control__birthday-mask')) {
+		initMaskDate();
+	}
+
 	function initPopup() {
 
 		Fancybox.bind('.button-call-popup', {
@@ -297,6 +323,11 @@ document.addEventListener('DOMContentLoaded', () => {
 						});
 
 					});
+
+					if (document.querySelector('.c-form-control__birthday-mask')) {
+						initMaskDate();
+					}
+
 				},
 			},
 		});
@@ -324,27 +355,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	if (document.querySelector('.c-form-control__phone-mask')) initMaskPhone();
-
-	function initMaskDate() {
-
-		var lazyMask = IMask(document.querySelector('.c-form-control__birthday-mask'),
-			{
-				mask: Date,
-				pattern: 'd{.}`m{.}`Y',
-				autofix: true,
-				blocks: {
-					d: { mask: IMask.MaskedRange, from: 1, to: 31, maxLength: 2 },
-					m: { mask: IMask.MaskedRange, from: 1, to: 12, maxLength: 2 },
-					Y: { mask: IMask.MaskedRange, from: 1900, to: 2999, maxLength: 4 }
-				}
-			});
-
-	}
-
-	if (document.querySelector('.c-form-control__birthday-mask')) {
-		initMaskDate();
-	}
-
 
 	if (window.location.href == 'http://localhost:3000/lk-federation-alert.html') {
 
