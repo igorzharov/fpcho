@@ -166,29 +166,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		constructor(el) {
 
-			this.$el = document.querySelector(el);
+			this.$el = el;
 			this.recalculation();
 			this.addEventListener();
 		}
 		addEventListener() {
+			
 			this.$el.addEventListener('click', (e) => {
 
-				const $elHeader = e.target.closest('.c-select-accordion__header .c-select-accordion__text');
+				const $elHeaderCheckbox = e.target.closest('.c-select-accordion__header .c-form-control__radio');
+				const $elHeaderText = e.target.closest('.c-select-accordion__header .c-select-accordion__count');
 				const $elButton = e.target.closest('.c-select-accordion__button');
 				const $elItem = e.target.closest('.c-select-accordion__item');
 
 				if ($elButton) this.toggle();
+				if ($elHeaderText) this.toggle();
 
 				if ($elItem) {
 					this.recalculation();
 				}
 
-				if ($elHeader) {
+				if ($elHeaderCheckbox) {
 					this.selectAll();
-					if (e.pointerId == 1) this.toggle();
 				}
 
-			})
+			});
 		}
 
 		selectAll() {
@@ -208,28 +210,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			const $checkboxSelectAll = this.$el.querySelector('.c-select-accordion__header .c-form-control__radio');
 
-			const countCheck = Array.from(checkboxes).filter(checkbox => checkbox.checked == true).length;
+			const countActive = Array.from(checkboxes).filter(checkbox => checkbox.checked == true).length;
+
+			const countCheckbox = Array.from(checkboxes).length;
 
 			const $elCount = this.$el.querySelector('.c-select-accordion__text span');
 
-			if (countCheck) {
-				$elCount.innerHTML = `Выбрано (${countCheck})`;
+			$elCount.innerHTML = `Выбрано (${countActive})`;
 
-				$checkboxSelectAll.required = false;
-
-				checkboxes.forEach(checkbox => {
-					checkbox.required = false;
-				});
-
+			if (countCheckbox == countActive) {
+				$checkboxSelectAll.checked = true;
 			} else {
-				$elCount.innerHTML = `Выбрать всех (${checkboxes.length})`;
 				$checkboxSelectAll.checked = false;
-
-				$checkboxSelectAll.required = true;
-
-				checkboxes.forEach(checkbox => {
-					checkbox.required = true;
-				});
 			}
 		}
 		show() {
@@ -258,7 +250,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	}
 
-	if (document.querySelector('.c-select-accordion')) new SAccordion('.c-select-accordion');
+	function initSAccordion() {
+
+		if (document.querySelector('.c-select-accordion')) {
+		
+			const SA = document.querySelectorAll('.c-select-accordion');
+	
+			SA.forEach(item => {
+				new SAccordion(item);
+			})
+	
+		}
+
+	}
+
+	initSAccordion();
 
 	function initMaskDate() {
 
@@ -282,9 +288,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	}
 
-	if (document.querySelector('.c-form-control__birthday-mask')) {
-		initMaskDate();
+	function initMaskYear() {
+
+		const inputs = document.querySelectorAll('.c-form-control__year-mask');
+
+		inputs.forEach(input => {
+			
+			IMask(input, {
+					mask: IMask.MaskedRange,
+					from: 1900,
+					to: 2999,
+					maxLength: 4,
+					autofix: true
+			});
+
+		})
+
 	}
+
+	initMaskYear();
 
 	function initPopup() {
 
@@ -324,9 +346,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 					});
 
-					if (document.querySelector('.c-form-control__birthday-mask')) {
-						initMaskDate();
-					}
+					initSAccordion();
+					initMaskDate();
+					initMaskYear();
 
 				},
 			},

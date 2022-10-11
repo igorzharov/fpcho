@@ -86,12 +86,16 @@
 .flex-item-100
 	width: 100%
 
+@media screen and ( max-width: $xl )
+	.flex-xl-order1
+		order: -1
+
 @media screen and ( max-width: $lg )
 	.flex-50 > .flex-item, .flex-33 > .flex-item, .flex-25 > .flex-item
 		width: 50%
 
 	.flex-lg-order1
-		order: 1
+		order: -1
 	.flex-lg-order2
 		order: 2
 

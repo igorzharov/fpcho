@@ -149,11 +149,11 @@
 
 							<div class="flex-item">
 
-								<div class="c-form__label">Дата рождения</div>
+								<div class="c-form__label">Год рождения</div>
 
 								<div class="c-form-control">
 
-									<input class="c-form-control__input c-form-control__birthday-mask" type="text" placeholder="ДД.ММ.ГГГГ" maxlength="54">
+									<input class="c-form-control__input c-form-control__year-mask" type="text" placeholder="ГГГГ">
 
 									<div class="c-form-control__caption">Обязательное поле</div>
 
@@ -202,35 +202,137 @@
 								</div>
 								<!-- /.c-form-control -->
 
-								<div class="c-form__label">Бассейн</div>
+								<div class="c-form__label">Выберите стиль плавания</div>
 
 								<div class="c-form-control">
 
-									<select class="c-form-control__select">
-										<option value="" data-placeholder="true">Длина бассейна</option>
-										<option value="25м" class="c-form-control__select-item">25м</option>
-										<option value="50м" class="c-form-control__select-item">50м</option>
-									</select>
+									<div class="c-form-control__select-accordion c-select-accordion">
+
+										<div class="c-select-accordion__header">
+
+											<div class="c-select-accordion__text">
+
+												<input class="c-form-control__radio" name="selectAll" type="checkbox">
+												<label class="c-select-accordion__count c-form-control__radio-label"><span></span></label>
+
+											</div>
+											<!-- /.c-select-accordion__text -->
+
+											<div class="c-select-accordion__button"><span></span></div>
+
+										</div>
+										<!-- /.c-select-accordion__header -->
+
+										<div class="c-select-accordion__body">
+
+											<div class="c-select-accordion__item">
+
+												<label class="c-form-control__radio-label"><input class="c-form-control__radio" name="Вольный стиль" type="checkbox">Вольный стиль</label>
+
+											</div>
+
+											<div class="c-select-accordion__item">
+
+												<label class="c-form-control__radio-label"><input class="c-form-control__radio" name="Брасс" type="checkbox">Брасс</label>
+
+											</div>
+
+											<div class="c-select-accordion__item">
+
+												<label class="c-form-control__radio-label"><input class="c-form-control__radio" name="Баттерфляй" type="checkbox">Баттерфляй</label>
+
+											</div>
+
+											<div class="c-select-accordion__item">
+
+												<label class="c-form-control__radio-label"><input class="c-form-control__radio" name="Комплексное плавание" type="checkbox">Комплексное плавание</label>
+
+											</div>
+
+											<div class="c-select-accordion__item">
+
+												<label class="c-form-control__radio-label"><input class="c-form-control__radio" name="На спине" type="checkbox">На спине</label>
+
+											</div>
+
+										</div>
+										<!-- /.c-select-accordion__body -->
+
+									</div>
+									<!-- /.c-form-control__select-accordion -->
 
 								</div>
 								<!-- /.c-form-control -->
 
-								<div class="c-form__label">Дистанция</div>
+								<div class="c-form__label">Выберите дистанцию</div>
 
 								<div class="c-form-control">
 
-									<select class="c-form-control__select">
-										<option value="1500 м вольный стиль" class="c-form-control__select-item">1500 м вольный стиль</option>
-										<option value="1000 м вольный стиль" class="c-form-control__select-item">1000 м вольный стиль</option>
-										<option value="500 м вольный стиль" class="c-form-control__select-item">500 м вольный стиль</option>
-									</select>
+									<div class="c-form-control__select-accordion c-select-accordion">
+
+										<div class="c-select-accordion__header">
+
+											<div class="c-select-accordion__text">
+
+												<input class="c-form-control__radio" name="selectAll" type="checkbox">
+												<label class="c-select-accordion__count c-form-control__radio-label"><span></span></label>
+
+											</div>
+											<!-- /.c-select-accordion__text -->
+
+											<div class="c-select-accordion__button"><span></span></div>
+
+										</div>
+										<!-- /.c-select-accordion__header -->
+
+										<div class="c-select-accordion__body">
+
+											<div class="c-select-accordion__item">
+
+												<label class="c-form-control__radio-label"><input class="c-form-control__radio" name="50" type="checkbox">50м</label>
+
+											</div>
+
+											<div class="c-select-accordion__item">
+
+												<label class="c-form-control__radio-label"><input class="c-form-control__radio" name="100" type="checkbox">100м</label>
+
+											</div>
+
+											<div class="c-select-accordion__item">
+
+												<label class="c-form-control__radio-label"><input class="c-form-control__radio" name="200" type="checkbox">200м</label>
+
+											</div>
+
+											<div class="c-select-accordion__item">
+
+												<label class="c-form-control__radio-label"><input class="c-form-control__radio" name="400" type="checkbox">400м</label>
+
+											</div>
+
+											<div class="c-select-accordion__item">
+
+												<label class="c-form-control__radio-label"><input class="c-form-control__radio" name="800" type="checkbox">800м</label>
+
+											</div>
+
+											<div class="c-select-accordion__item">
+
+												<label class="c-form-control__radio-label"><input class="c-form-control__radio" name="1500" type="checkbox">1500м</label>
+
+											</div>
+
+										</div>
+										<!-- /.c-select-accordion__body -->
+
+									</div>
+									<!-- /.c-form-control__select-accordion -->
 
 								</div>
 								<!-- /.c-form-control -->
 
 								<div class="c-form-control">
-
-									<div class="c-form__label c-form__label-empty">⠀</div>
 
 									<button class="button button-primary button-full">Показать результаты</button>
 
@@ -285,51 +387,72 @@
 
 			<div class="c-table__head">
 
-				<div class="c-table__cell c-table__cell-width-8">
+				<div class="c-table__cell">
 					<div class="c-table__header">
-						<div class="h4">#</div>
+						<div class="h5">#</div>
 					</div>
 				</div>
 				<!-- /.c-table__cell -->
 
-				<div class="c-table__cell c-table__cell-width-35">
+				<div class="c-table__cell">
 					<div class="c-table__header">
-						<div class="h4">ФИО</div>
+						<div class="h5">ФИО</div>
 					</div>
 				</div>
 				<!-- /.c-table__cell -->
 
-				<div class="c-table__cell c-table__cell-width-15">
+				<div class="c-table__cell">
 					<div class="c-table__header">
-						<div class="h4">Дата рождения</div>
+						<div class="h5 text-center">Год рождения</div>
 					</div>
 				</div>
 				<!-- /.c-table__cell -->
 
-				<div class="c-table__cell c-table__cell-width-15">
+				<div class="c-table__cell">
 					<div class="c-table__header">
-						<div class="h4">Бассейн</div>
+						<div class="h5">Дистанция</div>
 					</div>
 				</div>
 				<!-- /.c-table__cell -->
 
-				<div class="c-table__cell c-table__cell-width-20">
+				<div class="c-table__cell">
 					<div class="c-table__header">
-						<div class="h4">Дистанция</div>
+						<div class="h5">Метры</div>
 					</div>
 				</div>
 				<!-- /.c-table__cell -->
 
-				<div class="c-table__cell c-table__cell-width-15">
+				<div class="c-table__cell">
 					<div class="c-table__header">
-						<div class="h4">Результат</div>
+						<div class="h5">Результат</div>
 					</div>
 				</div>
 				<!-- /.c-table__cell -->
 
-				<div class="c-table__cell c-table__cell-right c-table__cell-width-10">
+				<div class="c-table__cell">
 					<div class="c-table__header">
-						<div class="h4">FINA</div>
+						<div class="h5">FINA</div>
+					</div>
+				</div>
+				<!-- /.c-table__cell -->
+
+				<div class="c-table__cell">
+					<div class="c-table__header">
+						<div class="h5 text-center">Дата</div>
+					</div>
+				</div>
+				<!-- /.c-table__cell -->
+
+				<div class="c-table__cell">
+					<div class="c-table__header">
+						<div class="h5">Соревнования</div>
+					</div>
+				</div>
+				<!-- /.c-table__cell -->
+
+				<div class="c-table__cell c-table__cell-right">
+					<div class="c-table__header">
+						<div class="h5">Бассейн</div>
 					</div>
 				</div>
 				<!-- /.c-table__cell -->
@@ -341,15 +464,15 @@
 
 				<div class="c-table__row">
 
-					<div class="c-table__cell flex-lg-order2">
+					<div class="c-table__cell">
 						<div class="c-table__group">
 							<div class="c-table__title">Номер:</div>
-							<div class="c-table__text"># 1</div>
+							<div class="c-table__text">#1</div>
 						</div>
 					</div>
 					<!-- /.c-table__cell -->
 
-					<div class="c-table__cell flex-lg-order1">
+					<div class="c-table__cell flex-xl-order1">
 						<div class="c-table__group">
 							<div class="c-table__title h4 blue">Балахонова Марина Николаевна</div>
 							<div class="c-table__text nowrap lg-d-none">Балахонова Марина Николаевна</div>
@@ -357,42 +480,66 @@
 					</div>
 					<!-- /.c-table__cell -->
 
-					<div class="c-table__cell flex-lg-order2">
+					<div class="c-table__cell">
 						<div class="c-table__group">
-							<div class="c-table__title">Дата рождения:</div>
-							<div class="c-table__text">04.03.1999</div>
+							<div class="c-table__title">Год рождения:</div>
+							<div class="c-table__text text-center">1998</div>
 						</div>
 					</div>
 					<!-- /.c-table__cell -->
 
-					<div class="c-table__cell flex-lg-order2">
-						<div class="c-table__group">
-							<div class="c-table__title">Бассейн:</div>
-							<div class="c-table__text">25м</div>
-						</div>
-					</div>
-					<!-- /.c-table__cell -->
-
-					<div class="c-table__cell flex-lg-order2">
+					<div class="c-table__cell">
 						<div class="c-table__group c-table__group--alt">
 							<div class="c-table__title">Дистанция:</div>
-							<div class="c-table__text">1500м вольный стиль</div>
+							<div class="c-table__text">На спине 50м</div>
 						</div>
 					</div>
 					<!-- /.c-table__cell -->
 
-					<div class="c-table__cell flex-lg-order2">
+					<div class="c-table__cell">
+						<div class="c-table__group">
+							<div class="c-table__title">Метры:</div>
+							<div class="c-table__text text-center">25м</div>
+						</div>
+					</div>
+					<!-- /.c-table__cell -->
+
+					<div class="c-table__cell">
 						<div class="c-table__group">
 							<div class="c-table__title">Результат:</div>
-							<div class="c-table__text">14.57,53 мин</div>
+							<div class="c-table__text text-center">1:14,15</div>
 						</div>
 					</div>
 					<!-- /.c-table__cell -->
 
-					<div class="c-table__cell c-table__cell-right flex-lg-order2">
+					<div class="c-table__cell">
 						<div class="c-table__group">
 							<div class="c-table__title">FINA:</div>
-							<div class="c-table__text">250</div>
+							<div class="c-table__text text-center">250</div>
+						</div>
+					</div>
+					<!-- /.c-table__cell -->
+
+					<div class="c-table__cell">
+						<div class="c-table__group">
+							<div class="c-table__title">Дата:</div>
+							<div class="c-table__text">23.11.2018</div>
+						</div>
+					</div>
+					<!-- /.c-table__cell -->
+
+					<div class="c-table__cell">
+						<div class="c-table__group c-table__group--alt">
+							<div class="c-table__title">Соревнования:</div>
+							<div class="c-table__text text-center">Областные</div>
+						</div>
+					</div>
+					<!-- /.c-table__cell -->
+
+					<div class="c-table__cell c-table__cell-right">
+						<div class="c-table__group">
+							<div class="c-table__title">Бассейн:</div>
+							<div class="c-table__text">Строитель</div>
 						</div>
 					</div>
 					<!-- /.c-table__cell -->
@@ -402,15 +549,15 @@
 
 				<div class="c-table__row">
 
-					<div class="c-table__cell flex-lg-order2">
+					<div class="c-table__cell">
 						<div class="c-table__group">
 							<div class="c-table__title">Номер:</div>
-							<div class="c-table__text"># 1</div>
+							<div class="c-table__text">#100</div>
 						</div>
 					</div>
 					<!-- /.c-table__cell -->
 
-					<div class="c-table__cell flex-lg-order1">
+					<div class="c-table__cell flex-xl-order1">
 						<div class="c-table__group">
 							<div class="c-table__title h4 blue">Балахонова Марина Николаевна</div>
 							<div class="c-table__text nowrap lg-d-none">Балахонова Марина Николаевна</div>
@@ -418,42 +565,66 @@
 					</div>
 					<!-- /.c-table__cell -->
 
-					<div class="c-table__cell flex-lg-order2">
+					<div class="c-table__cell">
 						<div class="c-table__group">
-							<div class="c-table__title">Дата рождения:</div>
-							<div class="c-table__text">04.03.1999</div>
+							<div class="c-table__title">Год рождения:</div>
+							<div class="c-table__text text-center">1998</div>
 						</div>
 					</div>
 					<!-- /.c-table__cell -->
 
-					<div class="c-table__cell flex-lg-order2">
-						<div class="c-table__group">
-							<div class="c-table__title">Бассейн:</div>
-							<div class="c-table__text">25м</div>
-						</div>
-					</div>
-					<!-- /.c-table__cell -->
-
-					<div class="c-table__cell flex-lg-order2">
+					<div class="c-table__cell">
 						<div class="c-table__group c-table__group--alt">
 							<div class="c-table__title">Дистанция:</div>
-							<div class="c-table__text">1500м вольный стиль</div>
+							<div class="c-table__text">Вольный стиль 100м</div>
 						</div>
 					</div>
 					<!-- /.c-table__cell -->
 
-					<div class="c-table__cell flex-lg-order2">
+					<div class="c-table__cell">
+						<div class="c-table__group">
+							<div class="c-table__title">Метры:</div>
+							<div class="c-table__text text-center">50м</div>
+						</div>
+					</div>
+					<!-- /.c-table__cell -->
+
+					<div class="c-table__cell">
 						<div class="c-table__group">
 							<div class="c-table__title">Результат:</div>
-							<div class="c-table__text">14.57,53 мин</div>
+							<div class="c-table__text text-center">1:14,15</div>
 						</div>
 					</div>
 					<!-- /.c-table__cell -->
 
-					<div class="c-table__cell c-table__cell-right flex-lg-order2">
+					<div class="c-table__cell">
 						<div class="c-table__group">
 							<div class="c-table__title">FINA:</div>
-							<div class="c-table__text">250</div>
+							<div class="c-table__text text-center">250</div>
+						</div>
+					</div>
+					<!-- /.c-table__cell -->
+
+					<div class="c-table__cell">
+						<div class="c-table__group">
+							<div class="c-table__title">Дата:</div>
+							<div class="c-table__text">23.11.2018</div>
+						</div>
+					</div>
+					<!-- /.c-table__cell -->
+
+					<div class="c-table__cell">
+						<div class="c-table__group c-table__group--alt">
+							<div class="c-table__title">Соревнования:</div>
+							<div class="c-table__text text-center">Областные</div>
+						</div>
+					</div>
+					<!-- /.c-table__cell -->
+
+					<div class="c-table__cell c-table__cell-right">
+						<div class="c-table__group">
+							<div class="c-table__title">Бассейн:</div>
+							<div class="c-table__text">Строитель</div>
 						</div>
 					</div>
 					<!-- /.c-table__cell -->
@@ -463,15 +634,15 @@
 
 				<div class="c-table__row">
 
-					<div class="c-table__cell flex-lg-order2">
+					<div class="c-table__cell">
 						<div class="c-table__group">
 							<div class="c-table__title">Номер:</div>
-							<div class="c-table__text"># 1</div>
+							<div class="c-table__text">#1000</div>
 						</div>
 					</div>
 					<!-- /.c-table__cell -->
 
-					<div class="c-table__cell flex-lg-order1">
+					<div class="c-table__cell flex-xl-order1">
 						<div class="c-table__group">
 							<div class="c-table__title h4 blue">Балахонова Марина Николаевна</div>
 							<div class="c-table__text nowrap lg-d-none">Балахонова Марина Николаевна</div>
@@ -479,164 +650,66 @@
 					</div>
 					<!-- /.c-table__cell -->
 
-					<div class="c-table__cell flex-lg-order2">
+					<div class="c-table__cell">
 						<div class="c-table__group">
-							<div class="c-table__title">Дата рождения:</div>
-							<div class="c-table__text">04.03.1999</div>
+							<div class="c-table__title">Год рождения:</div>
+							<div class="c-table__text text-center">1998</div>
 						</div>
 					</div>
 					<!-- /.c-table__cell -->
 
-					<div class="c-table__cell flex-lg-order2">
-						<div class="c-table__group">
-							<div class="c-table__title">Бассейн:</div>
-							<div class="c-table__text">25м</div>
-						</div>
-					</div>
-					<!-- /.c-table__cell -->
-
-					<div class="c-table__cell flex-lg-order2">
+					<div class="c-table__cell">
 						<div class="c-table__group c-table__group--alt">
 							<div class="c-table__title">Дистанция:</div>
-							<div class="c-table__text">1500м вольный стиль</div>
+							<div class="c-table__text">Комплексный стиль 1500м</div>
 						</div>
 					</div>
 					<!-- /.c-table__cell -->
 
-					<div class="c-table__cell flex-lg-order2">
+					<div class="c-table__cell">
+						<div class="c-table__group">
+							<div class="c-table__title">Метры:</div>
+							<div class="c-table__text text-center">400м</div>
+						</div>
+					</div>
+					<!-- /.c-table__cell -->
+
+					<div class="c-table__cell">
 						<div class="c-table__group">
 							<div class="c-table__title">Результат:</div>
-							<div class="c-table__text">14.57,53 мин</div>
+							<div class="c-table__text text-center">1:14,15</div>
 						</div>
 					</div>
 					<!-- /.c-table__cell -->
 
-					<div class="c-table__cell c-table__cell-right flex-lg-order2">
+					<div class="c-table__cell">
 						<div class="c-table__group">
 							<div class="c-table__title">FINA:</div>
-							<div class="c-table__text">250</div>
+							<div class="c-table__text text-center">250</div>
 						</div>
 					</div>
 					<!-- /.c-table__cell -->
 
-				</div>
-				<!-- /.c-table__row -->
-
-				<div class="c-table__row">
-
-					<div class="c-table__cell flex-lg-order2">
+					<div class="c-table__cell">
 						<div class="c-table__group">
-							<div class="c-table__title">Номер:</div>
-							<div class="c-table__text"># 1</div>
+							<div class="c-table__title">Дата:</div>
+							<div class="c-table__text">23.11.2018</div>
 						</div>
 					</div>
 					<!-- /.c-table__cell -->
 
-					<div class="c-table__cell flex-lg-order1">
-						<div class="c-table__group">
-							<div class="c-table__title h4 blue">Балахонова Марина Николаевна</div>
-							<div class="c-table__text nowrap lg-d-none">Балахонова Марина Николаевна</div>
+					<div class="c-table__cell">
+						<div class="c-table__group c-table__group--alt">
+							<div class="c-table__title">Соревнования:</div>
+							<div class="c-table__text text-center">Областные</div>
 						</div>
 					</div>
 					<!-- /.c-table__cell -->
 
-					<div class="c-table__cell flex-lg-order2">
-						<div class="c-table__group">
-							<div class="c-table__title">Дата рождения:</div>
-							<div class="c-table__text">04.03.1999</div>
-						</div>
-					</div>
-					<!-- /.c-table__cell -->
-
-					<div class="c-table__cell flex-lg-order2">
+					<div class="c-table__cell c-table__cell-right">
 						<div class="c-table__group">
 							<div class="c-table__title">Бассейн:</div>
-							<div class="c-table__text">25м</div>
-						</div>
-					</div>
-					<!-- /.c-table__cell -->
-
-					<div class="c-table__cell flex-lg-order2">
-						<div class="c-table__group c-table__group--alt">
-							<div class="c-table__title">Дистанция:</div>
-							<div class="c-table__text">1500м вольный стиль</div>
-						</div>
-					</div>
-					<!-- /.c-table__cell -->
-
-					<div class="c-table__cell flex-lg-order2">
-						<div class="c-table__group">
-							<div class="c-table__title">Результат:</div>
-							<div class="c-table__text">14.57,53 мин</div>
-						</div>
-					</div>
-					<!-- /.c-table__cell -->
-
-					<div class="c-table__cell c-table__cell-right flex-lg-order2">
-						<div class="c-table__group">
-							<div class="c-table__title">FINA:</div>
-							<div class="c-table__text">250</div>
-						</div>
-					</div>
-					<!-- /.c-table__cell -->
-
-				</div>
-				<!-- /.c-table__row -->
-
-				<div class="c-table__row">
-
-					<div class="c-table__cell flex-lg-order2">
-						<div class="c-table__group">
-							<div class="c-table__title">Номер:</div>
-							<div class="c-table__text"># 1</div>
-						</div>
-					</div>
-					<!-- /.c-table__cell -->
-
-					<div class="c-table__cell flex-lg-order1">
-						<div class="c-table__group">
-							<div class="c-table__title h4 blue">Балахонова Марина Николаевна</div>
-							<div class="c-table__text nowrap lg-d-none">Балахонова Марина Николаевна</div>
-						</div>
-					</div>
-					<!-- /.c-table__cell -->
-
-					<div class="c-table__cell flex-lg-order2">
-						<div class="c-table__group">
-							<div class="c-table__title">Дата рождения:</div>
-							<div class="c-table__text">04.03.1999</div>
-						</div>
-					</div>
-					<!-- /.c-table__cell -->
-
-					<div class="c-table__cell flex-lg-order2">
-						<div class="c-table__group">
-							<div class="c-table__title">Бассейн:</div>
-							<div class="c-table__text">50м</div>
-						</div>
-					</div>
-					<!-- /.c-table__cell -->
-
-					<div class="c-table__cell flex-lg-order2">
-						<div class="c-table__group c-table__group--alt">
-							<div class="c-table__title">Дистанция:</div>
-							<div class="c-table__text">1500м вольный стиль</div>
-						</div>
-					</div>
-					<!-- /.c-table__cell -->
-
-					<div class="c-table__cell flex-lg-order2">
-						<div class="c-table__group">
-							<div class="c-table__title">Результат:</div>
-							<div class="c-table__text">14.57,53 мин</div>
-						</div>
-					</div>
-					<!-- /.c-table__cell -->
-
-					<div class="c-table__cell c-table__cell-right flex-lg-order2">
-						<div class="c-table__group">
-							<div class="c-table__title">FINA:</div>
-							<div class="c-table__text">250</div>
+							<div class="c-table__text">Строитель</div>
 						</div>
 					</div>
 					<!-- /.c-table__cell -->
