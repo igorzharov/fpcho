@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				select: select,
 				showSearch: false,
 				disabled: false,
-				allowDeselectOption: true
+				allowDeselectOption: false
 			}));
 
 		});
@@ -341,7 +341,7 @@ document.addEventListener('DOMContentLoaded', () => {
 							select: item,
 							showSearch: false,
 							disabled: false,
-							allowDeselectOption: true
+							allowDeselectOption: false
 						});
 
 					});

@@ -4,35 +4,24 @@
 
 	<div class="container">
 
-		<div id="popupFilter">
+		<div class="flex">
+
+			<div class="flex-item c-form__filter-button-wrapper">
+
+				<a href="#popupFilter" class="button-call-popup button button-gray button-icon button-icon-md button-icon-left"><img class="icon-blue" src="./images/icons/sliders.svg" alt="ic on"><span>Фильтры</span></a>
+	
+			</div>
+			<!-- /.flex-item -->
+
+		</div>
+
+		<div id="popupFilter" class="popup-fancybox" style="display: none;">
 
 			<form action="#" class="c-form">
 
 				<div class="flex">
 
-					<div class="flex-item lg-d-none min-lg-d-none">
-
-						<div class="h3 mb0 mt0">Поиск</div>
-
-					</div>
-					<!-- /.flex-item -->
-
-					<div class="flex-item flex-1">
-
-						<div class="c-form-control c-form-control-icon-left">
-
-							<input class="c-form-control__input" type="text" placeholder="Поиск">
-
-							<div class="c-form-control__icons">
-								<button class="button-submit"><img class="c-form-control__icon icon-blue" src="./images/icons/search.svg" alt="icon"></button>
-							</div>
-
-						</div>
-
-					</div>
-					<!-- /.flex-item -->
-
-					<div class="flex-item lg-d-none min-lg-d-none">
+					<div class="flex-item">
 
 						<div class="c-group-text c-group-text-caption mb1">
 
@@ -68,11 +57,45 @@
 								</div>
 								<!-- /.c-form-control -->
 
+								<div class="c-form__label">Выбрать пол</div>
+
+								<div class="c-form-control">
+
+									<select class="c-form-control__select">
+										<option value="Смотреть всех" class="c-form-control__select-item">Смотреть всех</option>
+										<option value="Мужчины" class="c-form-control__select-item">Мужчины</option>
+										<option value="Женщины" class="c-form-control__select-item">Женщины</option>
+									</select>
+
+								</div>
+								<!-- /.c-form-control -->
+
+								<div class="c-form__label">Разряд</div>
+
+								<div class="c-form-control">
+
+									<select class="c-form-control__select">
+										<option value="Выбрать все" class="c-form-control__select-item">Выбрать все</option>
+										<option value="3юн" class="c-form-control__select-item">3юн</option>
+										<option value="2юн" class="c-form-control__select-item">2юн</option>
+										<option value="1юн" class="c-form-control__select-item">1юн</option>
+										<option value="III" class="c-form-control__select-item">III</option>
+										<option value="II" class="c-form-control__select-item">II</option>
+										<option value="I" class="c-form-control__select-item">I</option>
+										<option value="КМС" class="c-form-control__select-item">КМС</option>
+										<option value="МС" class="c-form-control__select-item">МС</option>
+										<option value="МСМК" class="c-form-control__select-item">МСМК</option>
+									</select>
+
+								</div>
+								<!-- /.c-form-control -->
+
 								<div class="c-form__label">Спортивная школа</div>
 
 								<div class="c-form-control">
 
 									<select class="c-form-control__select">
+										<option value="Выбрать все" class="c-form-control__select-item">Выбрать все</option>
 										<option value="СДЮСШОР № 7" class="c-form-control__select-item">СДЮСШОР № 7</option>
 										<option value="СДЮСШОР № 3" class="c-form-control__select-item">СДЮСШОР № 3</option>
 										<option value="СДЮСШОР № 4" class="c-form-control__select-item">СДЮСШОР № 4</option>
@@ -91,6 +114,7 @@
 								<div class="c-form-control">
 
 									<select class="c-form-control__select">
+										<option value="Выбрать всех" class="c-form-control__select-item">Выбрать всех</option>
 										<option value="Степанов Степан Иванович" class="c-form-control__select-item">Степанов Степан Иванович</option>
 										<option value="Иванов Иван Иванович" class="c-form-control__select-item">Иванов Иван Иванович</option>
 										<option value="Степанов Степан Степанович" class="c-form-control__select-item">Степанов Степан Степанович</option>
@@ -245,13 +269,6 @@
 					</div>
 					<!-- /.flex-item xl-d-none -->
 
-					<div class="flex-item c-form__filter-button-wrapper">
-
-						<a href="#popupFilter" class="button-call-popup button button-gray button-icon button-icon-md button-icon-left"><img class="icon-blue" src="./images/icons/sliders.svg" alt="ic on"><span>Фильтры</span></a>
-
-					</div>
-					<!-- /.flex-item -->
-
 				</div>
 				<!-- /.flex flex-50 -->
 
@@ -301,6 +318,13 @@
 				<div class="c-table__cell">
 					<div class="c-table__header">
 						<div class="h5 text-center">Год рождения</div>
+					</div>
+				</div>
+				<!-- /.c-table__cell -->
+
+				<div class="c-table__cell">
+					<div class="c-table__header">
+						<div class="h5 text-center">Разряд</div>
 					</div>
 				</div>
 				<!-- /.c-table__cell -->
@@ -386,6 +410,14 @@
 					<!-- /.c-table__cell -->
 
 					<div class="c-table__cell">
+						<div class="c-table__group">
+							<div class="c-table__title">Разряд:</div>
+							<div class="c-table__text text-center">1юн</div>
+						</div>
+					</div>
+					<!-- /.c-table__cell -->
+
+					<div class="c-table__cell">
 						<div class="c-table__group c-table__group--alt">
 							<div class="c-table__title">Дистанция:</div>
 							<div class="c-table__text">На спине 50м</div>
@@ -396,7 +428,7 @@
 					<div class="c-table__cell">
 						<div class="c-table__group">
 							<div class="c-table__title">Метры:</div>
-							<div class="c-table__text text-center">25м</div>
+							<div class="c-table__text text-center">25</div>
 						</div>
 					</div>
 					<!-- /.c-table__cell -->
@@ -404,7 +436,7 @@
 					<div class="c-table__cell">
 						<div class="c-table__group">
 							<div class="c-table__title">Результат:</div>
-							<div class="c-table__text text-center">1:14,15</div>
+							<div class="c-table__text text-center">1:16.15</div>
 						</div>
 					</div>
 					<!-- /.c-table__cell -->
@@ -471,6 +503,14 @@
 					<!-- /.c-table__cell -->
 
 					<div class="c-table__cell">
+						<div class="c-table__group">
+							<div class="c-table__title">Разряд:</div>
+							<div class="c-table__text text-center">КМС</div>
+						</div>
+					</div>
+					<!-- /.c-table__cell -->
+
+					<div class="c-table__cell">
 						<div class="c-table__group c-table__group--alt">
 							<div class="c-table__title">Дистанция:</div>
 							<div class="c-table__text">Вольный стиль 100м</div>
@@ -481,7 +521,7 @@
 					<div class="c-table__cell">
 						<div class="c-table__group">
 							<div class="c-table__title">Метры:</div>
-							<div class="c-table__text text-center">50м</div>
+							<div class="c-table__text text-center">50</div>
 						</div>
 					</div>
 					<!-- /.c-table__cell -->
@@ -489,7 +529,7 @@
 					<div class="c-table__cell">
 						<div class="c-table__group">
 							<div class="c-table__title">Результат:</div>
-							<div class="c-table__text text-center">1:14,15</div>
+							<div class="c-table__text text-center">1:14.15</div>
 						</div>
 					</div>
 					<!-- /.c-table__cell -->
@@ -556,6 +596,14 @@
 					<!-- /.c-table__cell -->
 
 					<div class="c-table__cell">
+						<div class="c-table__group">
+							<div class="c-table__title">Разряд:</div>
+							<div class="c-table__text text-center">III</div>
+						</div>
+					</div>
+					<!-- /.c-table__cell -->
+
+					<div class="c-table__cell">
 						<div class="c-table__group c-table__group--alt">
 							<div class="c-table__title">Дистанция:</div>
 							<div class="c-table__text">Комплексный стиль 1500м</div>
@@ -566,7 +614,7 @@
 					<div class="c-table__cell">
 						<div class="c-table__group">
 							<div class="c-table__title">Метры:</div>
-							<div class="c-table__text text-center">400м</div>
+							<div class="c-table__text text-center">25</div>
 						</div>
 					</div>
 					<!-- /.c-table__cell -->
@@ -574,7 +622,7 @@
 					<div class="c-table__cell">
 						<div class="c-table__group">
 							<div class="c-table__title">Результат:</div>
-							<div class="c-table__text text-center">1:14,15</div>
+							<div class="c-table__text text-center">1:14.15</div>
 						</div>
 					</div>
 					<!-- /.c-table__cell -->
