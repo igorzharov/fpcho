@@ -227,20 +227,26 @@ document.addEventListener('DOMContentLoaded', () => {
 		show() {
 			const $elBody = this.$el.querySelector('.c-select-accordion__body');
 			$elBody.style['display'] = `block`;
-			const height = $elBody.clientHeight;
-			$elBody.style['height'] = `0`;
-			$elBody.style['transition'] = `height 250ms ease`;
+			const height = 264;
+			const elHeight = $elBody.clientHeight;
+
+			if (height < elHeight) {
+				$elBody.style['overflow-y'] = `scroll`;
+			}
+
+			$elBody.style['max-height'] = `0`;
+			$elBody.style['transition'] = `max-height 250ms ease`;
 			setTimeout(() => {
-				$elBody.style['height'] = `${height}px`;
+				$elBody.style['max-height'] = `${height}px`;
 			})
 		}
 		hide() {
 			const $elBody = this.$el.querySelector('.c-select-accordion__body');
-			$elBody.style['transition'] = `height 250ms ease`;
-			$elBody.style['height'] = `0`;
+			$elBody.style['transition'] = `max-height 250ms ease`;
+			$elBody.style['max-height'] = `0`;
 			setTimeout(() => {
 				$elBody.style['display'] = '';
-				$elBody.style['height'] = '';
+				$elBody.style['max-height'] = '';
 			}, 250);
 		}
 		toggle() {
@@ -296,8 +302,8 @@ document.addEventListener('DOMContentLoaded', () => {
 			
 			IMask(input, {
 					mask: IMask.MaskedRange,
-					from: 1900,
-					to: 2999,
+					from: 1990,
+					to: new Date().getFullYear() + 1,
 					maxLength: 4,
 					autofix: true
 			});
@@ -307,6 +313,26 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	initMaskYear();
+
+	function initMaskYearNoLimit() {
+
+		const inputs = document.querySelectorAll('.c-form-control__year-mask-no-limit');
+
+		inputs.forEach(input => {
+			
+			IMask(input, {
+					mask: IMask.MaskedRange,
+					from: 1960,
+					to: new Date().getFullYear() + 15,
+					maxLength: 4,
+					autofix: true
+			});
+
+		})
+
+	}
+
+	initMaskYearNoLimit();
 
 	function initPopup() {
 
@@ -349,6 +375,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					initSAccordion();
 					initMaskDate();
 					initMaskYear();
+					initMaskYearNoLimit();
 
 				},
 			},

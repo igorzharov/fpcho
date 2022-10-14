@@ -8,7 +8,7 @@
 
 			<div class="flex-item c-form__filter-button-wrapper">
 
-				<a href="#popupFilter" class="button-call-popup button button-gray button-icon button-icon-md button-icon-left"><img class="icon-blue" src="./images/icons/sliders.svg" alt="ic on"><span>Фильтры</span></a>
+				<a href="#popupFilter" class="button-call-popup button button-gray button-icon button-icon-left"><img class="icon-blue" src="./images/icons/sliders.svg" alt="ic on"><span>Фильтры</span></a>
 	
 			</div>
 			<!-- /.flex-item -->
@@ -35,16 +35,19 @@
 
 							<div class="flex-item">
 
-								<div class="c-form__label">Год рождения</div>
+								<div class="c-form__label">Год рождения (диапазон)</div>
 
-								<div class="c-form-control">
+								<div class="c-form-control c-form-control-items">
 
-									<input class="c-form-control__input c-form-control__year-mask" type="text" placeholder="ГГГГ">
+									<div class="c-form-control__item c-form-control__item-50">
+										<input class="c-form-control__input c-form-control__input- c-form-control__year-mask" type="text" placeholder="от ГГГГ">
+									</div>
 
-									<div class="c-form-control__caption">Обязательное поле</div>
+									<div class="c-form-control__item c-form-control__item-50">
+										<input class="c-form-control__input c-form-control__year-mask" type="text" placeholder="до ГГГГ">
+									</div>
 
 								</div>
-								<!-- /.c-form-control -->
 
 								<div class="c-form__label">ФИО</div>
 
@@ -74,54 +77,177 @@
 
 								<div class="c-form-control">
 
-									<select class="c-form-control__select">
-										<option value="Выбрать все" class="c-form-control__select-item">Выбрать все</option>
-										<option value="3юн" class="c-form-control__select-item">3юн</option>
-										<option value="2юн" class="c-form-control__select-item">2юн</option>
-										<option value="1юн" class="c-form-control__select-item">1юн</option>
-										<option value="III" class="c-form-control__select-item">III</option>
-										<option value="II" class="c-form-control__select-item">II</option>
-										<option value="I" class="c-form-control__select-item">I</option>
-										<option value="КМС" class="c-form-control__select-item">КМС</option>
-										<option value="МС" class="c-form-control__select-item">МС</option>
-										<option value="МСМК" class="c-form-control__select-item">МСМК</option>
-									</select>
+									<div class="c-form-control__select-accordion c-select-accordion">
+
+										<div class="c-select-accordion__header">
+
+											<div class="c-select-accordion__text">
+
+												<input class="c-form-control__radio" name="selectAll" type="checkbox">
+												<label class="c-select-accordion__count c-form-control__radio-label"><span></span></label>
+
+											</div>
+
+											<div class="c-select-accordion__button"><span></span></div>
+
+										</div>
+
+										<div class="c-select-accordion__body">
+
+											<div class="c-select-accordion__item">
+
+												<label class="c-form-control__radio-label"><input class="c-form-control__radio" name="3юн" type="checkbox">3юн</label>
+
+											</div>
+
+											<div class="c-select-accordion__item">
+
+												<label class="c-form-control__radio-label"><input class="c-form-control__radio" name="2юн" type="checkbox">2юн</label>
+
+											</div>
+
+											<div class="c-select-accordion__item">
+
+												<label class="c-form-control__radio-label"><input class="c-form-control__radio" name="1юн" type="checkbox">1юн</label>
+
+											</div>
+
+											<div class="c-select-accordion__item">
+
+												<label class="c-form-control__radio-label"><input class="c-form-control__radio" name="III" type="checkbox">III</label>
+
+											</div>
+
+											<div class="c-select-accordion__item">
+
+												<label class="c-form-control__radio-label"><input class="c-form-control__radio" name="II" type="checkbox">II</label>
+
+											</div>
+
+											<div class="c-select-accordion__item">
+
+												<label class="c-form-control__radio-label"><input class="c-form-control__radio" name="I" type="checkbox">I</label>
+
+											</div>
+
+											<div class="c-select-accordion__item">
+
+												<label class="c-form-control__radio-label"><input class="c-form-control__radio" name="КМС" type="checkbox">КМС</label>
+
+											</div>
+
+											<div class="c-select-accordion__item">
+
+												<label class="c-form-control__radio-label"><input class="c-form-control__radio" name="МС" type="checkbox">МС</label>
+
+											</div>
+
+											<div class="c-select-accordion__item">
+
+												<label class="c-form-control__radio-label"><input class="c-form-control__radio" name="МСМК" type="checkbox">МСМК</label>
+
+											</div>
+
+										</div>
+
+									</div>
 
 								</div>
-								<!-- /.c-form-control -->
-
-								<div class="c-form__label">Спортивная школа</div>
-
-								<div class="c-form-control">
-
-									<select class="c-form-control__select">
-										<option value="Выбрать все" class="c-form-control__select-item">Выбрать все</option>
-										<option value="СДЮСШОР № 7" class="c-form-control__select-item">СДЮСШОР № 7</option>
-										<option value="СДЮСШОР № 3" class="c-form-control__select-item">СДЮСШОР № 3</option>
-										<option value="СДЮСШОР № 4" class="c-form-control__select-item">СДЮСШОР № 4</option>
-									</select>
-
-								</div>
-								<!-- /.c-form-control -->
 
 							</div>
 							<!-- /.flex-item -->
 
 							<div class="flex-item">
 
+								<div class="c-form__label">Спортивная школа</div>
+
+								<div class="c-form-control">
+
+									<div class="c-form-control__select-accordion c-select-accordion">
+
+										<div class="c-select-accordion__header">
+
+											<div class="c-select-accordion__text">
+
+												<input class="c-form-control__radio" name="selectAll" type="checkbox">
+												<label class="c-select-accordion__count c-form-control__radio-label"><span></span></label>
+
+											</div>
+
+											<div class="c-select-accordion__button"><span></span></div>
+
+										</div>
+
+										<div class="c-select-accordion__body">
+
+											<div class="c-select-accordion__item">
+
+												<label class="c-form-control__radio-label"><input class="c-form-control__radio" name="СДЮСШОР № 7" type="checkbox" checked="checked">СДЮСШОР № 7</label>
+
+											</div>
+
+											<div class="c-select-accordion__item">
+
+												<label class="c-form-control__radio-label"><input class="c-form-control__radio" name="СДЮСШОР № 3" type="checkbox">СДЮСШОР № 3</label>
+
+											</div>
+
+											<div class="c-select-accordion__item">
+
+												<label class="c-form-control__radio-label"><input class="c-form-control__radio" name="СДЮСШОР № 4" type="checkbox">СДЮСШОР № 4</label>
+
+											</div>
+
+										</div>
+
+									</div>
+
+								</div>
+
 								<div class="c-form__label">Тренер</div>
 
 								<div class="c-form-control">
 
-									<select class="c-form-control__select">
-										<option value="Выбрать всех" class="c-form-control__select-item">Выбрать всех</option>
-										<option value="Степанов Степан Иванович" class="c-form-control__select-item">Степанов Степан Иванович</option>
-										<option value="Иванов Иван Иванович" class="c-form-control__select-item">Иванов Иван Иванович</option>
-										<option value="Степанов Степан Степанович" class="c-form-control__select-item">Степанов Степан Степанович</option>
-									</select>
+									<div class="c-form-control__select-accordion c-select-accordion">
+
+										<div class="c-select-accordion__header">
+
+											<div class="c-select-accordion__text">
+
+												<input class="c-form-control__radio" name="selectAll" type="checkbox">
+												<label class="c-select-accordion__count c-form-control__radio-label"><span></span></label>
+
+											</div>
+
+											<div class="c-select-accordion__button"><span></span></div>
+
+										</div>
+
+										<div class="c-select-accordion__body">
+
+											<div class="c-select-accordion__item">
+
+												<label class="c-form-control__radio-label"><input class="c-form-control__radio" name="Степанов Степан Степанович" type="checkbox">Степанов Степан Степанович</label>
+
+											</div>
+
+											<div class="c-select-accordion__item">
+
+												<label class="c-form-control__radio-label"><input class="c-form-control__radio" name="Степанов Степан Степанович" type="checkbox">Степанов Степан Степанович</label>
+
+											</div>
+
+											<div class="c-select-accordion__item">
+
+												<label class="c-form-control__radio-label"><input class="c-form-control__radio" name="Степанов Степан Степанович" type="checkbox">Степанов Степан Степанович</label>
+
+											</div>
+
+										</div>
+
+									</div>
 
 								</div>
-								<!-- /.c-form-control -->
 
 								<div class="c-form__label">Выберите стиль плавания</div>
 
@@ -137,12 +263,10 @@
 												<label class="c-select-accordion__count c-form-control__radio-label"><span></span></label>
 
 											</div>
-											<!-- /.c-select-accordion__text -->
 
 											<div class="c-select-accordion__button"><span></span></div>
 
 										</div>
-										<!-- /.c-select-accordion__header -->
 
 										<div class="c-select-accordion__body">
 
@@ -177,13 +301,10 @@
 											</div>
 
 										</div>
-										<!-- /.c-select-accordion__body -->
 
 									</div>
-									<!-- /.c-form-control__select-accordion -->
 
 								</div>
-								<!-- /.c-form-control -->
 
 								<div class="c-form__label">Выберите дистанцию</div>
 
@@ -199,12 +320,10 @@
 												<label class="c-select-accordion__count c-form-control__radio-label"><span></span></label>
 
 											</div>
-											<!-- /.c-select-accordion__text -->
 
 											<div class="c-select-accordion__button"><span></span></div>
 
 										</div>
-										<!-- /.c-select-accordion__header -->
 
 										<div class="c-select-accordion__body">
 
@@ -245,13 +364,10 @@
 											</div>
 
 										</div>
-										<!-- /.c-select-accordion__body -->
 
 									</div>
-									<!-- /.c-form-control__select-accordion -->
 
 								</div>
-								<!-- /.c-form-control -->
 
 								<div class="c-form-control">
 
