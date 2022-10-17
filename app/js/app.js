@@ -376,6 +376,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					initMaskDate();
 					initMaskYear();
 					initMaskYearNoLimit();
+					initMaskPhone();
 
 				},
 			},
@@ -398,9 +399,17 @@ document.addEventListener('DOMContentLoaded', () => {
 	initPopup()
 
 	function initMaskPhone() {
-		const phoneMask = IMask(document.querySelector('.c-form-control__phone-mask'), {
-			mask: '+{7} (000) 000-00-00'
-		});
+
+		const inputs = document.querySelectorAll('.c-form-control__phone-mask');
+
+		inputs.forEach(input => {
+			
+			IMask(input, {
+				mask: '+{7} (000) 000-00-00'
+			});
+
+		})
+
 	}
 
 	if (document.querySelector('.c-form-control__phone-mask')) initMaskPhone();

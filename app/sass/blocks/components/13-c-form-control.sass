@@ -43,11 +43,42 @@
 		&:required:valid
 			box-shadow: 0px 0px 0px 2px $success
 
+	&__textarea
+		width: 100%
+		height: 56px
+		box-sizing: border-box
+		text-indent: $gutter / 2
+		padding: $gutter / 2
+		background-color: $blue-ghost
+		border-radius: $gutter / 4
+		outline: none !important
+		border: 0
+		min-height: 100px
+		max-height: 500px
+		resize: vertical
+		box-shadow: 0px 0px 0px 4px transparent
+		transition: box-shadow .25s ease
+		&:hover,&:focus
+			box-shadow: 0px 0px 0px 4px #BFE5FB
+		&:focus:required:invalid
+			box-shadow: 0px 0px 0px 2px $danger
+			+ .c-form-control__caption
+				display: block
+				color: $danger
+		&:required:valid
+			box-shadow: 0px 0px 0px 2px $success
+
 	&__caption
 		display: none
 		width: 100%
 		font-size: 14px
 		margin-top: $gutter / 4
+
+	&__caption-error
+		color: $danger
+
+	&__caption-show
+		display: block
 
 	&__icons
 		position: absolute

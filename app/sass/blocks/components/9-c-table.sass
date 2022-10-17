@@ -78,15 +78,14 @@
 		color: $text-light
 		transition: background-color .25s ease
 		@media screen and ( min-width: $lg )
-			.h4
-				font-weight: 400
+			.c-table__title
 				color: $text-light
-				font-family: $roboto
-		&:hover
-			background-color: darken($blue-ghost, 2%)
-			color: $note
-			.h4,.c-table__text
-				color: $note
+				// font-family: $roboto
+		// &:hover
+		// 	background-color: darken($blue-ghost, 2%)
+		// 	color: $note
+		// 	.h4,.c-table__text
+		// 		color: $note
 
 .c-table-card
 	display: flex
@@ -100,6 +99,7 @@
 	.c-table__body
 		display: flex
 		flex-wrap: wrap
+		width: 100%
 
 	.c-table__row
 		display: flex
@@ -112,6 +112,10 @@
 		border-radius: $gutter
 		box-sizing: border-box
 		box-shadow: inset 0px 0px 0 3px $blue-light
+		transition: box-shadow .25s ease
+
+	.c-table__row-link:hover
+		box-shadow: inset 0px 0px 0 3px $note
 
 	.c-table__title
 		display: block
@@ -137,6 +141,10 @@
 		display: flex
 		justify-content: space-between
 		align-items: center
+
+	&-100
+		.c-table__row
+			width: 100%
 
 @media screen and ( max-width: $xl )
 	.c-table
@@ -216,6 +224,10 @@
 	.c-table-card
 		.c-table__row
 			width: 50%
+
+	.c-table-card-100
+		.c-table__row
+			width: 100%
 
 @media screen and ( max-width: $md )
 	.c-table
