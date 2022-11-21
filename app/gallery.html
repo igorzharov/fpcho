@@ -8,9 +8,9 @@
 
 			<form action="#" class="c-form">
 
-				<div class="flex flex-lg-50">
+				<div class="flex">
 
-					<div class="flex-item lg-d-none xl-d-none">
+					<div class="flex-item flex-item-100 lg-d-none xl-d-none">
 
 						<div class="h3 mb0 mt0">Поиск</div>
 
@@ -32,52 +32,57 @@
 					</div>
 					<!-- /.flex-item -->
 
-					<div class="flex-item lg-d-none xl-d-none">
+					<div class="flex-item md-d-none flex-item-100">
 
-						<div class="c-group-text c-group-text-caption">
+						<div class="c-group-text c-group-text-caption mb1">
 
 							<div class="c-group-text__title h3">Фильтры</div>
 
-							<p class="c-group-text__text">Используйте фильтр, чтобы посмотреть соревнования за определенный год</p>
+							<p class="c-group-text__text">Используйте фильтр, чтобы посмотреть соревнования за определенное время</p>
 
 						</div>
 
-					</div>
-
-					<div class="flex-item lg-d-none">
-
-						<div class="flex flex-lg-50 flex-md-100">
+						<div class="flex flex-100">
 
 							<div class="flex-item">
 
-								<select class="c-form-control__select">
-									<option value="" data-placeholder="true">Год соревнования</option>
-									<option value="2022" class="c-form-control__select-item">2022</option>
-									<option value="2021" class="c-form-control__select-item">2021</option>
-									<option value="2020" class="c-form-control__select-item">2020</option>
-									<option value="2019" class="c-form-control__select-item">2019</option>
-									<option value="2018" class="c-form-control__select-item">2018</option>
-									<option value="2017" class="c-form-control__select-item">2017</option>
-									<option value="2016" class="c-form-control__select-item">2016</option>
-								</select>
+								<div class="c-form__label">Выберите год</div>
+
+								<div class="c-form-control">
+
+									<select class="c-form-control__select">
+										<option value="2022" class="c-form-control__select-item">2022 год</option>
+										<option value="2021" class="c-form-control__select-item">2021 год</option>
+										<option value="2020" class="c-form-control__select-item">2020 год</option>
+										<option value="2019" class="c-form-control__select-item">2013 год</option>
+										<option value="2018" class="c-form-control__select-item">2019 год</option>
+										<option value="2017" class="c-form-control__select-item">2018 год</option>
+										<option value="2016" class="c-form-control__select-item">2017 год</option>
+										<option value="2015" class="c-form-control__select-item">2016 год</option>
+										<option value="2014" class="c-form-control__select-item">2015 год</option>
+										<option value="2013" class="c-form-control__select-item">2014 год</option>
+									</select>
+
+								</div>
+								<!-- /.c-form-control -->
+
+								<div class="c-form-control">
+
+									<button class="button button-primary button-full">Применить</button>
+
+								</div>
+								<!-- /.c-form-control -->
 
 							</div>
 							<!-- /.flex-item -->
 
-							<div class="flex-item">
-
-								<button class="button button-primary button-full">Применить фильтр</button>
-
-							</div>
-							<!-- /.flex-item -->
-
 						</div>
-						<!-- /.flex flex-50 -->
+						<!-- /.flex flex-100 -->
 
 					</div>
-					<!-- /.flex-item -->
+					<!-- /.flex-item xl-d-none -->
 
-					<div class="flex-item xl-d-none c-form__filter-button-wrapper">
+					<div class="flex-item min-md-d-none c-form__filter-button-wrapper">
 
 						<a href="#popupFilter" class="button-call-popup button button-gray button-icon button-icon-md button-icon-left"><img class="icon-blue" src="./images/icons/sliders.svg" alt="ic on"><span>Фильтры</span></a>
 
@@ -112,9 +117,9 @@
 					<div class="c-group-text c-group-text-caption">
 
 						<div class="c-group-text__title h2">2021 год</div>
-			
+
 						<span class="c-group-text__text">Все фотоотчеты соревнований за 2021 год</span>
-			
+
 					</div>
 
 				</div>
@@ -122,7 +127,8 @@
 
 				<div class="flex-item md-d-none">
 
-					<a class="button button-middle button-icon button-icon-right c-link" href="#"><span>Смотреть все</span> <img src="./images/icons/arrow-right.svg" alt="#"></a>
+					<a class="button button-middle button-icon button-icon-right c-link" href="#"><span>Смотреть все</span> <img
+							src="./images/icons/arrow-right.svg" alt="#"></a>
 
 				</div>
 				<!-- /.flex-item -->
@@ -140,13 +146,13 @@
 				<a href="gallery-post.html" class="c-post">
 
 					<div class="c-post__image c-post__image-middle"><img src="./images/dist/image-6.jpg" alt="#"></div>
-	
+
 					<span class="c-post__date c-note">2021</span>
-	
+
 					<div class="c-post__title h3">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
-	
+
 					<div class="c-post__location">Челябинск, Россия</div>
-	
+
 				</a>
 				<!-- /.c-post -->
 
@@ -157,14 +163,15 @@
 
 				<a href="gallery-post.html" class="c-post">
 
-					<div class="c-post__image c-post__image-middle"><img src="./images/src/uqgt4qvc19koifoxr7id3xk5b98eyk40.jpg" alt="#"></div>
-	
+					<div class="c-post__image c-post__image-middle"><img src="./images/src/uqgt4qvc19koifoxr7id3xk5b98eyk40.jpg"
+							alt="#"></div>
+
 					<span class="c-post__date c-note">2021</span>
-	
+
 					<div class="c-post__title h3">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
-	
+
 					<div class="c-post__location">Челябинск, Россия</div>
-	
+
 				</a>
 				<!-- /.c-post -->
 
@@ -176,13 +183,13 @@
 				<a href="gallery-post.html" class="c-post">
 
 					<div class="c-post__image c-post__image-middle"><img src="./images/dist/image-10.jpg" alt="#"></div>
-	
+
 					<span class="c-post__date c-note">2021</span>
-	
+
 					<div class="c-post__title h3">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
-	
+
 					<div class="c-post__location">Челябинск, Россия</div>
-	
+
 				</a>
 				<!-- /.c-post -->
 
@@ -194,13 +201,13 @@
 				<a href="gallery-post.html" class="c-post">
 
 					<div class="c-post__image c-post__image-middle"><img src="./images/dist/image-1.jpg" alt="#"></div>
-	
+
 					<span class="c-post__date c-note">2021</span>
-	
+
 					<div class="c-post__title h3">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
-	
+
 					<div class="c-post__location">Челябинск, Россия</div>
-	
+
 				</a>
 				<!-- /.c-post -->
 
@@ -212,13 +219,13 @@
 				<a href="gallery-post.html" class="c-post">
 
 					<div class="c-post__image c-post__image-middle"><img src="./images/dist/image-1.jpg" alt="#"></div>
-	
+
 					<span class="c-post__date c-note">2021</span>
-	
+
 					<div class="c-post__title h3">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
-	
+
 					<div class="c-post__location">Челябинск, Россия</div>
-	
+
 				</a>
 				<!-- /.c-post -->
 
@@ -230,13 +237,13 @@
 				<a href="gallery-post.html" class="c-post">
 
 					<div class="c-post__image c-post__image-middle"><img src="./images/dist/image-1.jpg" alt="#"></div>
-	
+
 					<span class="c-post__date c-note">2021</span>
-	
+
 					<div class="c-post__title h3">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
-	
+
 					<div class="c-post__location">Челябинск, Россия</div>
-	
+
 				</a>
 				<!-- /.c-post -->
 
@@ -264,9 +271,9 @@
 					<div class="c-group-text c-group-text-caption mb0 mt0">
 
 						<div class="c-group-text__title h2">2021 год</div>
-			
+
 						<span class="c-group-text__text">Все фотоотчеты соревнований за 2021 год</span>
-			
+
 					</div>
 
 				</div>
@@ -274,7 +281,8 @@
 
 				<div class="flex-item md-d-none">
 
-					<a class="button button-middle button-icon button-icon-right c-link" href="#"><span>Смотреть все</span> <img src="./images/icons/arrow-right.svg" alt="#"></a>
+					<a class="button button-middle button-icon button-icon-right c-link" href="#"><span>Смотреть все</span> <img
+							src="./images/icons/arrow-right.svg" alt="#"></a>
 
 				</div>
 				<!-- /.flex-item -->
@@ -292,13 +300,13 @@
 				<a href="gallery-post.html" class="c-post">
 
 					<div class="c-post__image c-post__image-middle"><img src="./images/dist/image-1.jpg" alt="#"></div>
-	
+
 					<span class="c-post__date c-note">2021</span>
-	
+
 					<div class="c-post__title h3">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
-	
+
 					<div class="c-post__location">Челябинск, Россия</div>
-	
+
 				</a>
 				<!-- /.c-post -->
 
@@ -310,13 +318,13 @@
 				<a href="gallery-post.html" class="c-post">
 
 					<div class="c-post__image c-post__image-middle"><img src="./images/dist/image-1.jpg" alt="#"></div>
-	
+
 					<span class="c-post__date c-note">2021</span>
-	
+
 					<div class="c-post__title h3">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
-	
+
 					<div class="c-post__location">Челябинск, Россия</div>
-	
+
 				</a>
 				<!-- /.c-post -->
 
@@ -328,13 +336,13 @@
 				<a href="gallery-post.html" class="c-post">
 
 					<div class="c-post__image c-post__image-middle"><img src="./images/dist/image-1.jpg" alt="#"></div>
-	
+
 					<span class="c-post__date c-note">2021</span>
-	
+
 					<div class="c-post__title h3">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
-	
+
 					<div class="c-post__location">Челябинск, Россия</div>
-	
+
 				</a>
 				<!-- /.c-post -->
 
@@ -346,13 +354,13 @@
 				<a href="gallery-post.html" class="c-post">
 
 					<div class="c-post__image c-post__image-middle"><img src="./images/dist/image-1.jpg" alt="#"></div>
-	
+
 					<span class="c-post__date c-note">2021</span>
-	
+
 					<div class="c-post__title h3">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
-	
+
 					<div class="c-post__location">Челябинск, Россия</div>
-	
+
 				</a>
 				<!-- /.c-post -->
 
@@ -364,13 +372,13 @@
 				<a href="gallery-post.html" class="c-post">
 
 					<div class="c-post__image c-post__image-middle"><img src="./images/dist/image-1.jpg" alt="#"></div>
-	
+
 					<span class="c-post__date c-note">2021</span>
-	
+
 					<div class="c-post__title h3">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
-	
+
 					<div class="c-post__location">Челябинск, Россия</div>
-	
+
 				</a>
 				<!-- /.c-post -->
 
@@ -382,13 +390,13 @@
 				<a href="gallery-post.html" class="c-post">
 
 					<div class="c-post__image c-post__image-middle"><img src="./images/dist/image-1.jpg" alt="#"></div>
-	
+
 					<span class="c-post__date c-note">2021</span>
-	
+
 					<div class="c-post__title h3">Турнир ФПЧО «Я стану Чемпионом» — третий этап</div>
-	
+
 					<div class="c-post__location">Челябинск, Россия</div>
-	
+
 				</a>
 				<!-- /.c-post -->
 
