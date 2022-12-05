@@ -2,6 +2,7 @@ import { Fancybox } from "@fancyapps/ui"
 import Swiper, { Pagination } from 'swiper'
 import SlimSelect from 'slim-select'
 import IMask from 'imask'
+import AirDatepicker from 'air-datepicker';
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -159,6 +160,24 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 
 	}
+
+	function initDatepickerCompetition() {
+		
+		const datepickers = document.querySelectorAll('.js--datepicker-competition');
+
+		datepickers.forEach(datepicker => {
+
+			new AirDatepicker(datepicker, {
+				range: true,
+				multipleDatesSeparator: ' - '
+			});
+
+		})
+
+	}
+
+	if (document.querySelectorAll('.js--datepicker-competition')) 
+	initDatepickerCompetition();
 
 	if (document.querySelectorAll('.c-form-control__select')) initSelect();
 
@@ -377,6 +396,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					initMaskYear();
 					initMaskYearNoLimit();
 					initMaskPhone();
+					initDatepickerCompetition();
 
 				},
 			},
