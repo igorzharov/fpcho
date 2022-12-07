@@ -507,17 +507,62 @@
 
 <section class="s-main mb3">
 
-	<div class="container">
+	<div class="container container-xxl">
 
-		<div class="c-group-text">
+		<div class="d-flex d-flex--aic d-flex--jcsb mb1">
 
-			<div class="h2">Тренерский состав</div>
+			<div class="flex-item">
+
+				<div class="h2 mb0 mt0">Тренерский состав</div>
+
+			</div>
+
+			<div class="flex-item lg-d-none">
+
+				<div class="flex">
+
+					<div class="flex-item">
+
+						<form action="" class="c-form">
+
+							<div class="c-form-control c-form-control--width-150">
+
+								<select class="c-form-control__select">
+									<option data-placeholder="true" class="c-form-control__select-item">Показать:</option>
+									<option value="Турнир ФПЧО 1" class="c-form-control__select-item">15</option>
+									<option value="Турнир ФПЧО 2" class="c-form-control__select-item">25</option>
+									<option value="Турнир ФПЧО 3" class="c-form-control__select-item">50</option>
+								</select>
+
+							</div>
+							<!-- /.c-form-control -->
+
+						</form>
+
+					</div>
+
+					<div class="flex-item">
+
+						<a download href="#" class="button button-secondary button-icon button-icon button-icon-left"><img class="icon-blue" src="./images/icons/file-download-03.svg" alt="ic on"><span>Выгрузка в Excel</span></a>
+
+					</div>
+
+				</div>
+
+			</div>
 
 		</div>
 
 		<div class="c-table">
 
 			<div class="c-table__head">
+
+				<div class="c-table__cell">
+					<div class="c-table__header d-flex d-flex--jcc d-flex--aic">
+						<input class="c-form-control__radio" type="checkbox" tabindex="-1" onclick="document.querySelectorAll('input[name*=\'selected\']').forEach(e => {e.checked = this.checked})">
+					</div>
+				</div>
+				<!-- /.c-table__cell -->
 
 				<div class="c-table__cell">
 					<div class="c-table__header">
@@ -589,12 +634,20 @@
 
 			<div class="c-table__body">
 
-				<a href="federation7.html" class="c-table__row c-table__row-link">
+				<div class="c-table__row c-table__row-link">
+
+					<div class="c-table__cell xl-d-none">
+						<div class="c-table__group d-flex d-flex--jcc d-flex--aic">
+							<input class="c-form-control__radio" type="checkbox" name="selected[]" tabindex="-1">
+						</div>
+					</div>
+					<!-- /.c-table__cell -->
 
 					<div class="c-table__cell flex-xl-order1">
 						<div class="c-table__group">
 							<div class="c-table__title h4 blue">Длинное имя фамилия и отчество, длинное фио и отчество</div>
 							<div class="c-table__text xl-d-none">Длинное имя фамилия и отчество, длинное фио и отчество</div>
+							<a class="c-table__link-overlay" href="user-info-trener.html" target="_blank"></a>
 						</div>
 					</div>
 					<!-- /.c-table__cell -->
@@ -603,6 +656,7 @@
 						<div class="c-table__group c-table__group--alt">
 							<div class="c-table__title">Тренерская категория:</div>
 							<div class="c-table__text">Заслуженный тренер</div>
+							<a class="c-table__link-overlay" href="user-info-trener.html" target="_blank"></a>
 						</div>
 					</div>
 					<!-- /.c-table__cell -->
@@ -611,6 +665,7 @@
 						<div class="c-table__group c-table__cell-center">
 							<div class="c-table__title">Образование:</div>
 							<div class="c-table__text">Высшее</div>
+							<a class="c-table__link-overlay" href="user-info-trener.html" target="_blank"></a>
 						</div>
 					</div>
 					<!-- /.c-table__cell -->
@@ -619,6 +674,7 @@
 						<div class="c-table__group">
 							<div class="c-table__title">Город:</div>
 							<div class="c-table__text text-center">Челябинск</div>
+							<a class="c-table__link-overlay" href="user-info-trener.html" target="_blank"></a>
 						</div>
 					</div>
 					<!-- /.c-table__cell -->
@@ -627,6 +683,7 @@
 						<div class="c-table__group">
 							<div class="c-table__title">Спортивная организация:</div>
 							<div class="c-table__text text-center">СШОР №7</div>
+							<a class="c-table__link-overlay" href="user-info-trener.html" target="_blank"></a>
 						</div>
 					</div>
 					<!-- /.c-table__cell -->
@@ -635,6 +692,7 @@
 						<div class="c-table__group">
 							<div class="c-table__title">Бассейн:</div>
 							<div class="c-table__text">Строитель</div>
+							<a class="c-table__link-overlay" href="user-info-trener.html" target="_blank"></a>
 						</div>
 					</div>
 					<!-- /.c-table__cell -->
@@ -643,6 +701,7 @@
 						<div class="c-table__group">
 							<div class="c-table__title">Метры:</div>
 							<div class="c-table__text text-center">10</div>
+							<a class="c-table__link-overlay" href="user-info-trener.html" target="_blank"></a>
 						</div>
 					</div>
 					<!-- /.c-table__cell -->
@@ -651,6 +710,7 @@
 						<div class="c-table__group c-table__group--alt">
 							<div class="c-table__title">Начало работы (тренером):</div>
 							<div class="c-table__text text-center">1992</div>
+							<a class="c-table__link-overlay" href="user-info-trener.html" target="_blank"></a>
 						</div>
 					</div>
 					<!-- /.c-table__cell -->
@@ -658,20 +718,36 @@
 					<div class="c-table__cell c-table__cell-right">
 						<div class="c-table__group c-table__group--alt">
 							<div class="c-table__title">Судейская категория:</div>
-							<div class="c-table__text">Всероссийская</div>
+							<div class="c-table__text text-right">Всероссийская</div>
+							<a class="c-table__link-overlay" href="user-info-trener.html" target="_blank"></a>
 						</div>
 					</div>
 					<!-- /.c-table__cell -->
 
-				</a>
+					<div class="c-table__cell min-xl-d-none">
+						<div class="c-table__group">
+							<a class="button button-small button-secondary button-full" href="user-info-trener.html" target="_blank">Смотреть карточку тренера</a>
+						</div>
+					</div>
+					<!-- /.c-table__cell -->
+
+				</div>
 				<!-- /.c-table__row -->
 
-				<a href="federation7.html" class="c-table__row c-table__row-link">
+				<div class="c-table__row c-table__row-link">
+
+					<div class="c-table__cell xl-d-none">
+						<div class="c-table__group d-flex d-flex--jcc d-flex--aic">
+							<input class="c-form-control__radio" type="checkbox" name="selected[]" tabindex="-1">
+						</div>
+					</div>
+					<!-- /.c-table__cell -->
 
 					<div class="c-table__cell flex-xl-order1">
 						<div class="c-table__group">
 							<div class="c-table__title h4 blue">Длинное имя фамилия и отчество, длинное фио и отчество</div>
 							<div class="c-table__text xl-d-none">Длинное имя фамилия и отчество, длинное фио и отчество</div>
+							<a class="c-table__link-overlay" href="user-info-trener.html" target="_blank"></a>
 						</div>
 					</div>
 					<!-- /.c-table__cell -->
@@ -680,6 +756,7 @@
 						<div class="c-table__group c-table__group--alt">
 							<div class="c-table__title">Тренерская категория:</div>
 							<div class="c-table__text">Заслуженный тренер</div>
+							<a class="c-table__link-overlay" href="user-info-trener.html" target="_blank"></a>
 						</div>
 					</div>
 					<!-- /.c-table__cell -->
@@ -688,6 +765,7 @@
 						<div class="c-table__group c-table__cell-center">
 							<div class="c-table__title">Образование:</div>
 							<div class="c-table__text">Высшее</div>
+							<a class="c-table__link-overlay" href="user-info-trener.html" target="_blank"></a>
 						</div>
 					</div>
 					<!-- /.c-table__cell -->
@@ -696,6 +774,7 @@
 						<div class="c-table__group">
 							<div class="c-table__title">Город:</div>
 							<div class="c-table__text text-center">Челябинск</div>
+							<a class="c-table__link-overlay" href="user-info-trener.html" target="_blank"></a>
 						</div>
 					</div>
 					<!-- /.c-table__cell -->
@@ -704,6 +783,7 @@
 						<div class="c-table__group">
 							<div class="c-table__title">Спортивная организация:</div>
 							<div class="c-table__text text-center">СШОР №7</div>
+							<a class="c-table__link-overlay" href="user-info-trener.html" target="_blank"></a>
 						</div>
 					</div>
 					<!-- /.c-table__cell -->
@@ -712,6 +792,7 @@
 						<div class="c-table__group">
 							<div class="c-table__title">Бассейн:</div>
 							<div class="c-table__text">Строитель</div>
+							<a class="c-table__link-overlay" href="user-info-trener.html" target="_blank"></a>
 						</div>
 					</div>
 					<!-- /.c-table__cell -->
@@ -720,6 +801,7 @@
 						<div class="c-table__group">
 							<div class="c-table__title">Метры:</div>
 							<div class="c-table__text text-center">10</div>
+							<a class="c-table__link-overlay" href="user-info-trener.html" target="_blank"></a>
 						</div>
 					</div>
 					<!-- /.c-table__cell -->
@@ -728,6 +810,7 @@
 						<div class="c-table__group c-table__group--alt">
 							<div class="c-table__title">Начало работы (тренером):</div>
 							<div class="c-table__text text-center">1992</div>
+							<a class="c-table__link-overlay" href="user-info-trener.html" target="_blank"></a>
 						</div>
 					</div>
 					<!-- /.c-table__cell -->
@@ -735,12 +818,20 @@
 					<div class="c-table__cell c-table__cell-right">
 						<div class="c-table__group c-table__group--alt">
 							<div class="c-table__title">Судейская категория:</div>
-							<div class="c-table__text">Всероссийская Длинный текст</div>
+							<div class="c-table__text text-right">Всероссийская</div>
+							<a class="c-table__link-overlay" href="user-info-trener.html" target="_blank"></a>
 						</div>
 					</div>
 					<!-- /.c-table__cell -->
 
-				</a>
+					<div class="c-table__cell min-xl-d-none">
+						<div class="c-table__group">
+							<a class="button button-small button-secondary button-full" href="user-info-trener.html" target="_blank">Смотреть карточку тренера</a>
+						</div>
+					</div>
+					<!-- /.c-table__cell -->
+
+				</div>
 				<!-- /.c-table__row -->
 
 			</div>

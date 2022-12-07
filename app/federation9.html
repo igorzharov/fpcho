@@ -9,7 +9,7 @@
 			<div class="flex-item c-form__filter-button-wrapper">
 
 				<a href="#popupFilter" class="button-call-popup button button-gray button-icon button-icon button-icon-left"><img class="icon-blue" src="./images/icons/sliders.svg" alt="ic on"><span>Фильтры</span></a>
-	
+
 			</div>
 			<!-- /.flex-item -->
 
@@ -470,322 +470,272 @@
 
 <section class="s-main mb3">
 
-	<div class="container">
+	<div class="container container-xxl">
 
-		<div class="c-group-text">
+		<div class="d-flex d-flex--aic d-flex--jcsb mb1">
 
-			<div class="h2">Судейский корпус</div>
+			<div class="flex-item">
+
+				<div class="h2 mb0 mt0">Судейский корпус</div>
+
+			</div>
+
+			<div class="flex-item lg-d-none">
+
+				<div class="flex">
+
+					<div class="flex-item">
+
+						<form action="" class="c-form">
+
+							<div class="c-form-control c-form-control--width-150">
+
+								<select class="c-form-control__select">
+									<option data-placeholder="true" class="c-form-control__select-item">Показать:</option>
+									<option value="Турнир ФПЧО 1" class="c-form-control__select-item">15</option>
+									<option value="Турнир ФПЧО 2" class="c-form-control__select-item">25</option>
+									<option value="Турнир ФПЧО 3" class="c-form-control__select-item">50</option>
+								</select>
+
+							</div>
+							<!-- /.c-form-control -->
+
+						</form>
+
+					</div>
+
+					<div class="flex-item">
+
+						<a download href="#" class="button button-secondary button-icon button-icon button-icon-left"><img class="icon-blue" src="./images/icons/file-download-03.svg" alt="ic on"><span>Выгрузка в Excel</span></a>
+
+					</div>
+
+				</div>
+
+			</div>
 
 		</div>
 
-		<div class="c-table">
+		<form action="">
 
-			<div class="c-table__head">
+			<div class="c-table c-table-small">
 
-				<div class="c-table__cell">
-					<div class="c-table__header">
-						<div class="h5">ФИО</div>
+				<div class="c-table__head">
+
+					<div class="c-table__cell">
+						<div class="c-table__header d-flex d-flex--jcc d-flex--aic">
+							<input class="c-form-control__radio" type="checkbox" tabindex="-1" onclick="document.querySelectorAll('input[name*=\'selected\']').forEach(e => {e.checked = this.checked})">
+						</div>
 					</div>
-				</div>
-				<!-- /.c-table__cell -->
+					<!-- /.c-table__cell -->
 
-				<div class="c-table__cell c-table__cell-center">
-					<div class="c-table__header">
-						<div class="h5">Судейская категория</div>
+					<div class="c-table__cell c-table__cell-center">
+						<div class="c-table__header">
+							<div class="h5">ФИО</div>
+						</div>
 					</div>
-				</div>
-				<!-- /.c-table__cell -->
+					<!-- /.c-table__cell -->
 
-				<div class="c-table__cell c-table__cell-center">
-					<div class="c-table__header">
-						<div class="h5">Дата присвоения категории</div>
+					<div class="c-table__cell c-table__cell-center">
+						<div class="c-table__header">
+							<div class="h5">Образование</div>
+						</div>
 					</div>
-				</div>
-				<!-- /.c-table__cell -->
+					<!-- /.c-table__cell -->
 
-				<div class="c-table__cell c-table__cell-center">
-					<div class="c-table__header">
-						<div class="h5">Дата окончания</div>
+					<div class="c-table__cell c-table__cell-center">
+						<div class="c-table__header">
+							<div class="h5">Город</div>
+						</div>
 					</div>
-				</div>
-				<!-- /.c-table__cell -->
+					<!-- /.c-table__cell -->
 
-				<div class="c-table__cell c-table__cell-center">
-					<div class="c-table__header">
-						<div class="h5">Образование</div>
+					<div class="c-table__cell c-table__cell-center">
+						<div class="c-table__header">
+							<div class="h5">Спортивная организация</div>
+						</div>
 					</div>
-				</div>
-				<!-- /.c-table__cell -->
+					<!-- /.c-table__cell -->
 
-				<div class="c-table__cell c-table__cell-center">
-					<div class="c-table__header">
-						<div class="h5">Город</div>
+					<div class="c-table__cell">
+						<div class="c-table__header">
+							<div class="h5">Бассейн</div>
+						</div>
 					</div>
-				</div>
-				<!-- /.c-table__cell -->
+					<!-- /.c-table__cell -->
 
-				<div class="c-table__cell c-table__cell-center">
-					<div class="c-table__header">
-						<div class="h5">Спортивная организация</div>
+					<div class="c-table__cell c-table__cell-center">
+						<div class="c-table__header">
+							<div class="h5">Метры</div>
+						</div>
 					</div>
-				</div>
-				<!-- /.c-table__cell -->
+					<!-- /.c-table__cell -->
 
-				<div class="c-table__cell">
-					<div class="c-table__header">
-						<div class="h5">Бассейн</div>
+					<div class="c-table__cell c-table__cell-center">
+						<div class="c-table__header">
+							<div class="h5">Судейская категория</div>
+						</div>
 					</div>
-				</div>
-				<!-- /.c-table__cell -->
+					<!-- /.c-table__cell -->
 
-				<div class="c-table__cell c-table__cell-center">
-					<div class="c-table__header">
-						<div class="h5">Метры</div>
+					<div class="c-table__cell c-table__cell-center">
+						<div class="c-table__header">
+							<div class="h5">Дата присвоения категории</div>
+						</div>
 					</div>
+					<!-- /.c-table__cell -->
+
+					<div class="c-table__cell c-table__cell-center">
+						<div class="c-table__header">
+							<div class="h5">Дата окончания категории</div>
+						</div>
+					</div>
+					<!-- /.c-table__cell -->
+
+					<div class="c-table__cell c-table__cell-center">
+						<div class="c-table__header">
+							<div class="h5">Дата приказа</div>
+						</div>
+					</div>
+					<!-- /.c-table__cell -->
+					
+					<div class="c-table__cell c-table__cell-center">
+						<div class="c-table__header">
+							<div class="h5">Номер приказа</div>
+						</div>
+					</div>
+					<!-- /.c-table__cell -->
+
 				</div>
-				<!-- /.c-table__cell -->
+				<!-- /.c-table__header -->
+
+				<div class="c-table__body">
+
+					<div class="c-table__row c-table__row-link">
+
+						<div class="c-table__cell xl-d-none">
+							<div class="c-table__group d-flex d-flex--jcc d-flex--aic">
+								<input class="c-form-control__radio" type="checkbox" name="selected[]" tabindex="-1">
+							</div>
+						</div>
+						<!-- /.c-table__cell -->
+
+						<div class="c-table__cell flex-xl-order1">
+							<div class="c-table__group">
+								<div class="c-table__title h4 blue">Длинное имя фамилия и отчество, длинное фио и отчество</div>
+								<div class="c-table__text xl-d-none">Длинное имя фамилия и отчество, длинное фио и отчество</div>
+								<a class="c-table__link-overlay" href="user-info-sudya.html" target="_blank"></a>
+							</div>
+						</div>
+						<!-- /.c-table__cell -->
+
+						<div class="c-table__cell c-table__cell-center">
+							<div class="c-table__group">
+								<div class="c-table__title">Образование:</div>
+								<div class="c-table__text">Высшее</div>
+								<a class="c-table__link-overlay" href="user-info-sudya.html" target="_blank"></a>
+							</div>
+						</div>
+						<!-- /.c-table__cell -->
+
+						<div class="c-table__cell c-table__cell-center">
+							<div class="c-table__group">
+								<div class="c-table__title">Город:</div>
+								<div class="c-table__text text-center">Челябинск</div>
+								<a class="c-table__link-overlay" href="user-info-sudya.html" target="_blank"></a>
+							</div>
+						</div>
+						<!-- /.c-table__cell -->
+
+						<div class="c-table__cell c-table__cell-center">
+							<div class="c-table__group">
+								<div class="c-table__title">Спортивная организация:</div>
+								<div class="c-table__text text-center">СШОР №7</div>
+								<a class="c-table__link-overlay" href="user-info-sudya.html" target="_blank"></a>
+							</div>
+						</div>
+						<!-- /.c-table__cell -->
+
+						<div class="c-table__cell c-table__cell-center">
+							<div class="c-table__group">
+								<div class="c-table__title">Бассейн:</div>
+								<div class="c-table__text text-center">Строитель</div>
+								<a class="c-table__link-overlay" href="user-info-sudya.html" target="_blank"></a>
+							</div>
+						</div>
+						<!-- /.c-table__cell -->
+
+						<div class="c-table__cell c-table__cell-center">
+							<div class="c-table__group">
+								<div class="c-table__title">Метры:</div>
+								<div class="c-table__text text-center">50м</div>
+								<a class="c-table__link-overlay" href="user-info-sudya.html" target="_blank"></a>
+							</div>
+						</div>
+						<!-- /.c-table__cell -->
+
+						<div class="c-table__cell">
+							<div class="c-table__group c-table__cell-center c-table__group--alt">
+								<div class="c-table__title">Судейская категория:</div>
+								<div class="c-table__text">Всероссийская</div>
+								<a class="c-table__link-overlay" href="user-info-sudya.html" target="_blank"></a>
+							</div>
+						</div>
+						<!-- /.c-table__cell -->
+
+						<div class="c-table__cell">
+							<div class="c-table__group c-table__cell-center">
+								<div class="c-table__title">Дата присвоения категории:</div>
+								<div class="c-table__text">10.11.2010</div>
+								<a class="c-table__link-overlay" href="user-info-sudya.html" target="_blank"></a>
+							</div>
+						</div>
+						<!-- /.c-table__cell -->
+
+						<div class="c-table__cell">
+							<div class="c-table__group">
+								<div class="c-table__title">Дата окончания:</div>
+								<div class="c-table__text text-center">25.10.2025</div>
+								<a class="c-table__link-overlay" href="user-info-sudya.html" target="_blank"></a>
+							</div>
+						</div>
+						<!-- /.c-table__cell -->
+
+						<div class="c-table__cell c-table__cell-center">
+							<div class="c-table__group">
+								<div class="c-table__title">Дата приказа:</div>
+								<div class="c-table__text text-center">14.11.2022</div>
+								<a class="c-table__link-overlay" href="user-info-sudya.html" target="_blank"></a>
+							</div>
+						</div>
+						<!-- /.c-table__cell -->
+
+						<div class="c-table__cell c-table__cell-center">
+							<div class="c-table__group">
+								<div class="c-table__title">Номер приказа:</div>
+								<div class="c-table__text text-center">1</div>
+								<a class="c-table__link-overlay" href="user-info-sudya.html" target="_blank"></a>
+							</div>
+						</div>
+						<!-- /.c-table__cell -->
+
+						<div class="c-table__cell min-xl-d-none">
+							<div class="c-table__group">
+								<a class="button button-small button-secondary button-full" href="user-info-trener.html" target="_blank">Смотреть карточку судьи</a>
+							</div>
+						</div>
+						<!-- /.c-table__cell -->
+
+					</div>
+					<!-- /.c-table__row -->
+
+				</div>
+				<!-- /.c-table__body -->
 
 			</div>
-			<!-- /.c-table__header -->
+			<!-- /.c-table -->
 
-			<div class="c-table__body">
-
-				<a href="federation7.html" class="c-table__row c-table__row-link">
-
-					<div class="c-table__cell flex-xl-order1">
-						<div class="c-table__group">
-							<div class="c-table__title h4 blue">Длинное имя фамилия и отчество, длинное фио и отчество</div>
-							<div class="c-table__text xl-d-none">Длинное имя фамилия и отчество, длинное фио и отчество</div>
-						</div>
-					</div>
-					<!-- /.c-table__cell -->
-
-					<div class="c-table__cell">
-						<div class="c-table__group c-table__cell-center c-table__group--alt">
-							<div class="c-table__title">Судейская категория:</div>
-							<div class="c-table__text">Всероссийская</div>
-						</div>
-					</div>
-					<!-- /.c-table__cell -->
-
-					<div class="c-table__cell">
-						<div class="c-table__group c-table__cell-center">
-							<div class="c-table__title">Дата присвоения категории:</div>
-							<div class="c-table__text">10.11.2010</div>
-						</div>
-					</div>
-					<!-- /.c-table__cell -->
-
-					<div class="c-table__cell">
-						<div class="c-table__group">
-							<div class="c-table__title">Дата окончания:</div>
-							<div class="c-table__text text-center">25.10.2025</div>
-						</div>
-					</div>
-					<!-- /.c-table__cell -->
-
-					<div class="c-table__cell c-table__cell-center">
-						<div class="c-table__group">
-							<div class="c-table__title">Образование:</div>
-							<div class="c-table__text">Высшее</div>
-						</div>
-					</div>
-					<!-- /.c-table__cell -->
-
-					<div class="c-table__cell c-table__cell-center">
-						<div class="c-table__group">
-							<div class="c-table__title">Город:</div>
-							<div class="c-table__text text-center">Челябинск</div>
-						</div>
-					</div>
-					<!-- /.c-table__cell -->
-
-					<div class="c-table__cell c-table__cell-center">
-						<div class="c-table__group">
-							<div class="c-table__title">Спортивная организация:</div>
-							<div class="c-table__text text-center">СШОР №7</div>
-						</div>
-					</div>
-					<!-- /.c-table__cell -->
-
-					<div class="c-table__cell c-table__cell-center">
-						<div class="c-table__group">
-							<div class="c-table__title">Бассейн:</div>
-							<div class="c-table__text text-center">Строитель</div>
-						</div>
-					</div>
-					<!-- /.c-table__cell -->
-
-					<div class="c-table__cell c-table__cell-center">
-						<div class="c-table__group">
-							<div class="c-table__title">Метры:</div>
-							<div class="c-table__text text-center">50м</div>
-						</div>
-					</div>
-					<!-- /.c-table__cell -->
-
-				</a>
-				<!-- /.c-table__row -->
-
-				<a href="federation7.html" class="c-table__row c-table__row-link">
-
-					<div class="c-table__cell flex-xl-order1">
-						<div class="c-table__group">
-							<div class="c-table__title h4 blue">Длинное имя фамилия и отчество, длинное фио и отчество</div>
-							<div class="c-table__text xl-d-none">Длинное имя фамилия и отчество, длинное фио и отчество</div>
-						</div>
-					</div>
-					<!-- /.c-table__cell -->
-
-					<div class="c-table__cell">
-						<div class="c-table__group c-table__cell-center c-table__group--alt">
-							<div class="c-table__title">Судейская категория:</div>
-							<div class="c-table__text">Всероссийская</div>
-						</div>
-					</div>
-					<!-- /.c-table__cell -->
-
-					<div class="c-table__cell">
-						<div class="c-table__group c-table__cell-center">
-							<div class="c-table__title">Дата присвоения категории:</div>
-							<div class="c-table__text">10.11.2010</div>
-						</div>
-					</div>
-					<!-- /.c-table__cell -->
-
-					<div class="c-table__cell">
-						<div class="c-table__group">
-							<div class="c-table__title">Дата окончания:</div>
-							<div class="c-table__text text-center">25.10.2025</div>
-						</div>
-					</div>
-					<!-- /.c-table__cell -->
-
-					<div class="c-table__cell c-table__cell-center">
-						<div class="c-table__group">
-							<div class="c-table__title">Образование:</div>
-							<div class="c-table__text">Высшее</div>
-						</div>
-					</div>
-					<!-- /.c-table__cell -->
-
-					<div class="c-table__cell c-table__cell-center">
-						<div class="c-table__group">
-							<div class="c-table__title">Город:</div>
-							<div class="c-table__text text-center">Челябинск</div>
-						</div>
-					</div>
-					<!-- /.c-table__cell -->
-
-					<div class="c-table__cell c-table__cell-center">
-						<div class="c-table__group">
-							<div class="c-table__title">Спортивная организация:</div>
-							<div class="c-table__text text-center">СШОР №7</div>
-						</div>
-					</div>
-					<!-- /.c-table__cell -->
-
-					<div class="c-table__cell c-table__cell-center">
-						<div class="c-table__group">
-							<div class="c-table__title">Бассейн:</div>
-							<div class="c-table__text text-center">Строитель</div>
-						</div>
-					</div>
-					<!-- /.c-table__cell -->
-
-					<div class="c-table__cell c-table__cell-center">
-						<div class="c-table__group">
-							<div class="c-table__title">Метры:</div>
-							<div class="c-table__text text-center">50м</div>
-						</div>
-					</div>
-					<!-- /.c-table__cell -->
-
-				</a>
-				<!-- /.c-table__row -->
-
-				<a href="federation7.html" class="c-table__row c-table__row-link">
-
-					<div class="c-table__cell flex-xl-order1">
-						<div class="c-table__group">
-							<div class="c-table__title h4 blue">Длинное имя фамилия и отчество, длинное фио и отчество</div>
-							<div class="c-table__text xl-d-none">Длинное имя фамилия и отчество, длинное фио и отчество</div>
-						</div>
-					</div>
-					<!-- /.c-table__cell -->
-
-					<div class="c-table__cell">
-						<div class="c-table__group c-table__cell-center c-table__group--alt">
-							<div class="c-table__title">Судейская категория:</div>
-							<div class="c-table__text">Всероссийская</div>
-						</div>
-					</div>
-					<!-- /.c-table__cell -->
-
-					<div class="c-table__cell">
-						<div class="c-table__group c-table__cell-center">
-							<div class="c-table__title">Дата присвоения категории:</div>
-							<div class="c-table__text">10.11.2010</div>
-						</div>
-					</div>
-					<!-- /.c-table__cell -->
-
-					<div class="c-table__cell">
-						<div class="c-table__group">
-							<div class="c-table__title">Дата окончания:</div>
-							<div class="c-table__text text-center">25.10.2025</div>
-						</div>
-					</div>
-					<!-- /.c-table__cell -->
-
-					<div class="c-table__cell c-table__cell-center">
-						<div class="c-table__group">
-							<div class="c-table__title">Образование:</div>
-							<div class="c-table__text">Высшее</div>
-						</div>
-					</div>
-					<!-- /.c-table__cell -->
-
-					<div class="c-table__cell c-table__cell-center">
-						<div class="c-table__group">
-							<div class="c-table__title">Город:</div>
-							<div class="c-table__text text-center">Челябинск</div>
-						</div>
-					</div>
-					<!-- /.c-table__cell -->
-
-					<div class="c-table__cell c-table__cell-center">
-						<div class="c-table__group">
-							<div class="c-table__title">Спортивная организация:</div>
-							<div class="c-table__text text-center">СШОР №7</div>
-						</div>
-					</div>
-					<!-- /.c-table__cell -->
-
-					<div class="c-table__cell c-table__cell-center">
-						<div class="c-table__group">
-							<div class="c-table__title">Бассейн:</div>
-							<div class="c-table__text text-center">Строитель</div>
-						</div>
-					</div>
-					<!-- /.c-table__cell -->
-
-					<div class="c-table__cell c-table__cell-center">
-						<div class="c-table__group">
-							<div class="c-table__title">Метры:</div>
-							<div class="c-table__text text-center">25м</div>
-						</div>
-					</div>
-					<!-- /.c-table__cell -->
-
-				</a>
-				<!-- /.c-table__row -->
-
-			</div>
-			<!-- /.c-table__body -->
-
-		</div>
-		<!-- /.c-table -->
+		</form>
 
 		<div class="c-pagination">
 
