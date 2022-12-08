@@ -4,59 +4,22 @@
 	grid-auto-rows: 180px
 	column-gap: $gutter
 	row-gap: $gutter
+	@media (max-width: $lg)
+		grid-template-columns: repeat(3, 1fr)
+	@media (max-width: $md)
+		grid-template-columns: repeat(2, 1fr)
+	@media (max-width: $sm)
+		grid-auto-rows: 140px
+		column-gap: $gutter / 2
+		row-gap: $gutter / 2
+	@media (max-width: $xs)
+		grid-auto-rows: 110px
 
 	&__item
 		display: block
 		border-radius: $gutter / 2
 		overflow: hidden
 		.img-responsive
-			
 			height: 100%
 			width: 100%
 			object-fit: cover
-
-	&__item:nth-child(1)
-		grid-column: 1 / 3
-		grid-row: 1 / 3
-
-	&__item:nth-child(6)
-		grid-column: 1 / 5
-		grid-row: 3 / 7
-
-	&__item:nth-child(9)
-		grid-column: 3 / 5
-		grid-row: 7 / 9
-
-	&__item:nth-child(20)
-		grid-column: 1 / 3
-		grid-row: 11 / 13
-
-	&__item:nth-child(21)
-		grid-column: 3 / 5
-		grid-row: 11 / 13
-
-	@media (max-width: $lg)
-		column-gap: $gutter / 2
-		row-gap: $gutter / 2
-
-	@media (max-width: $md)
-		grid-template-columns: repeat(2, 1fr)
-
-	&__item:nth-child(1),
-	&__item:nth-child(6),
-	&__item:nth-child(9),
-	&__item:nth-child(20),
-	&__item:nth-child(21)
-		@media (max-width: $md)
-			grid-column: inherit
-			grid-row: inherit
-
-	&__item:nth-child(5)
-		@media (max-width: $md)
-			grid-column: 1 / 3
-			grid-row: 3 / 5
-
-	&__item:nth-child(12)
-		@media (max-width: $md)
-			grid-column: 1 / 3
-			grid-row: 8 / 10
