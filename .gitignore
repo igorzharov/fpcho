@@ -1,4 +1,5 @@
 /node_modules/
+/.idea
 /.git/
 /**/Thumbs.db
 /**/*.DS_Store
@@ -6,3 +7,7 @@
 /**/debug.log
 /Правки верстки-1.pdf
 /Правки Верстка-2.pdf
+/dist/
+/app/images/dist/
+/app/css/main.min.css
+/app/js/app.min.js

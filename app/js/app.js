@@ -414,6 +414,14 @@ document.addEventListener('DOMContentLoaded', () => {
 			groupAll : true
 		});
 
+		Fancybox.bind('.button-call-popup-calendar', {
+			hideScrollbar: false,
+			autoFocus: false,
+			mainClass: 'c-popup-filter__container',
+			parentEl: document.querySelector('.js--modal-parent-el'),
+			type: 'inline',
+		});
+
 	}
 
 	initPopup()
