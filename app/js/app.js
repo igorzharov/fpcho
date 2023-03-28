@@ -116,23 +116,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	}
 
+	function closeAlert() {
+
+		document.querySelector('body').addEventListener('click', (e) => {
+
+			if (e.target.classList.contains('js--alert-close-button')) {
+				e.target.parentElement.remove()
+			}
+
+		})
+
+	}
+
+	closeAlert();
+
 	if (document.querySelector('.main-menu')) toggleMainMenu()
 
 	function togglePassword() {
 
 		document.querySelector('body').addEventListener('click', (e) => {
 
-			if (e.target.classList.contains('c-form-control__toggle-visibility')) {
-				const input = e.target.offsetParent.children[0];
+			if (e.target.classList.contains('js--password-toggle')) {
+
+				e.target.classList.toggle('active');
+
+				const input = e.target.offsetParent.querySelector('.js--input-password');
 
 				if (input.type === 'password') {
 					input.type = "text";
-					e.target.children[0].classList.add('c-form-control__toggle-on');
-					e.target.children[1].classList.remove('c-form-control__toggle-on');
 				} else {
 					input.type = "password";
-					e.target.children[0].classList.remove('c-form-control__toggle-on');
-					e.target.children[1].classList.add('c-form-control__toggle-on');
 				}
 			}
 
@@ -293,7 +306,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	function initMaskDate() {
 
-		const inputs = document.querySelectorAll('.c-form-control__birthday-mask');
+		const inputs = document.querySelectorAll('.js--birthday-mask');
 
 		inputs.forEach(input => {
 			
@@ -312,6 +325,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		})
 
 	}
+
+	initMaskDate();
 
 	function initMaskYear() {
 
@@ -428,7 +443,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	function initMaskPhone() {
 
-		const inputs = document.querySelectorAll('.c-form-control__phone-mask');
+		const inputs = document.querySelectorAll('.js--phone-mask');
 
 		inputs.forEach(input => {
 			
@@ -440,7 +455,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	}
 
-	if (document.querySelector('.c-form-control__phone-mask')) initMaskPhone();
+	if (document.querySelector('.js--phone-mask')) initMaskPhone();
 
 	if (window.location.href == 'http://localhost:3000/lk-federation-alert.html') {
 
@@ -453,5 +468,24 @@ document.addEventListener('DOMContentLoaded', () => {
 		]);
 
 	}
+
+	function formValidation() {
+
+		const forms = document.getElementsByClassName('js--need-validation');
+		// Loop over them and prevent submission
+		Array.prototype.filter.call(forms, function(form) {
+			form.addEventListener('submit', function(event) {
+
+				if (form.checkValidity() === false) {
+					event.preventDefault();
+					event.stopPropagation();
+				}
+				form.classList.add('was-validated');
+			}, false);
+		});
+
+	}
+
+	formValidation();
 
 })

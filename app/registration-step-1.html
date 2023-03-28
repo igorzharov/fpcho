@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Регистрация</title>
+
+	<link rel="stylesheet" href="./css/main.min.css">
+
+</head>
+
+<body class="p-login">
+
+<section class="s-main mt1">
+
+	<div class="container container-sm">
+
+		<div class="flex flex-center flex-between">
+
+			<div class="flex-item">
+
+				<div class="c-group-text">
+
+					<a href="index.html" class="c-group-text__link c-group-text__link-light"><img src="./images/icons/arrow-left.svg" alt="icon"> Вернуться назад</a>
+
+				</div>
+
+			</div>
+
+			<div class="flex-item">
+
+				<a class="logo logo-small" href="index.html"><img src="./images/logo.svg" alt="Логотип"></a>
+
+			</div>
+
+		</div>
+
+		<div class="c-card">
+
+			<div class="c-group-text mb1">
+
+				<div class="c-group-text__title h2">Регистрация</div>
+
+				<span class="c-group-text__text">Чтобы зарегистрироваться, введите следующие данные</span>
+
+			</div>
+
+			<form action="#" class="c-form js--need-validation" novalidate>
+
+				<div class="c-form-control">
+
+					<div class="c-form-control__label">ФИО полностью</div>
+
+					<input class="c-form-control__input" type="text" placeholder="Алиса Иванова Ивановна" required minlength="2" maxlength="42">
+
+					<div class="c-form-control__caption c-form-control__caption--danger">Обязательное поле</div>
+
+				</div>
+
+				<div class="c-form-control">
+
+					<div class="c-form-control__label">Почта</div>
+
+					<input class="c-form-control__input" type="email" placeholder="username@gmail.com" required maxlength="42">
+
+					<div class="c-form-control__caption c-form-control__caption--danger">Обязательное поле</div>
+
+				</div>
+
+				<div class="c-form-control">
+
+					<div class="c-form-control__label">Телефон</div>
+
+					<input class="c-form-control__input js--phone-mask" type="text" placeholder="+7 (351) 264-11-89" required>
+
+					<div class="c-form-control__caption c-form-control__caption--danger">Обязательное поле</div>
+
+				</div>
+
+				<div class="c-form-control">
+
+					<div class="c-form-control__label">День рождения</div>
+
+					<input class="c-form-control__input error js--birthday-mask" type="text" placeholder="ДД.ММ.ГГГГ" required>
+
+					<div class="c-form-control__caption c-form-control__caption--danger">Обязательное поле</div>
+
+				</div>
+
+				<div class="c-form-control">
+
+					<div class="c-form-control__label">Город</div>
+
+					<input class="c-form-control__input" type="text" placeholder="Челябинск" required maxlength="42">
+
+					<div class="c-form-control__caption c-form-control__caption--danger">Обязательное поле</div>
+
+				</div>
+
+				<div class="c-form-control">
+
+					<div class="c-form-control__label">Спортивная школа/Организация</div>
+
+					<select class="c-form-control__select">
+						<option value="СШОР №7" class="c-form-control__select-item">СШОР №7</option>
+						<option value="СШОР №12" class="c-form-control__select-item">СШОР №12</option>
+						<option value="СШОР №15" class="c-form-control__select-item">СШОР №15</option>
+					</select>
+
+				</div>
+
+				<div class="c-group-text c-group-text-caption mb1">
+
+					<div class="c-group-text__title h2">Кем вы являетесь?</div>
+
+					<span class="c-group-text__text">Выберите из списка</span>
+
+				</div>
+
+				<div class="flex flex-50">
+
+					<div class="flex-item">
+
+						<div class="c-form-control">
+
+							<input class="c-form-control__radio" name="checkbox" type="checkbox" value="" id="checkbox1" required>
+							<label class="c-form-control__label c-form-control__label--pointer" for="checkbox1"> Член Федерации </label>
+
+						</div>
+
+					</div>
+
+					<div class="flex-item">
+
+						<div class="c-form-control">
+
+							<input class="c-form-control__radio" name="user_role" type="checkbox" value="" id="checkbox2" required>
+							<label class="c-form-control__label c-form-control__label--pointer" for="checkbox2"> Тренер </label>
+
+						</div>
+
+					</div>
+
+					<div class="flex-item">
+
+						<div class="c-form-control">
+
+							<input class="c-form-control__radio" name="user_role" type="checkbox" value="" id="checkbox3" required>
+							<label class="c-form-control__label c-form-control__label--pointer" for="checkbox3"> Спортсмен </label>
+
+						</div>
+
+					</div>
+
+					<div class="flex-item">
+
+						<div class="c-form-control">
+
+							<input class="c-form-control__radio" name="user_role" type="checkbox" value="" id="checkbox4" required>
+							<label class="c-form-control__label c-form-control__label--pointer" for="checkbox4"> Судья </label>
+
+						</div>
+
+					</div>
+
+					<div class="flex-item">
+
+						<div class="c-form-control">
+
+							<input class="c-form-control__radio" name="user_role" type="checkbox" value="" id="checkbox5" required>
+							<label class="c-form-control__label c-form-control__label--pointer" for="checkbox5"> Секретарь </label>
+						</div>
+
+					</div>
+
+					<div class="flex-item">
+
+						<div class="c-form-control">
+
+							<input class="c-form-control__radio" name="user_role" type="checkbox" value="" id="checkbox6" required>
+							<label class="c-form-control__label c-form-control__label--pointer" for="checkbox6"> Директор дивизиона </label>
+
+						</div>
+
+					</div>
+
+					<div class="flex-item flex-item-100-important">
+
+						<div class="c-form-control">
+
+							<input class="c-form-control__radio" name="user_role" type="checkbox" value="" id="checkbox7" required>
+							<label class="c-form-control__label c-form-control__label--pointer" for="checkbox7"> Инструктор </label>
+
+							<div class="c-form-control__caption c-form-control__caption--danger mt05">Обязательно должна быть выбрана роль</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="h2 mt1">Соглашение на обработку</div>
+
+				<div class="c-form-control flex-nowrap">
+
+					<input class="c-form-control__radio" name="agree" type="checkbox" required><span class="c-form-control__label">
+							Я принимаю условия <a class="c-link" target="_blank" href="#">Политики конфиденциальности</a> и даю согласие на обработку моих персональных данных
+						</span>
+
+					<div class="c-form-control__caption c-form-control__caption--danger">Обязательное поле</div>
+
+				</div>
+
+				<div class="c-form-control">
+
+					<button class="button button-full button-primary" type="submit">Зарегистрироваться</button>
+
+				</div>
+
+				<div class="c-form-control">
+
+					<a href="login1.html" class="button button-full button-ghost button-middle">Уже есть аккаунт? Войти</a>
+
+				</div>
+
+			</form>
+
+		</div>
+
+	</div>
+
+</section>
+
+<script src="./js/app.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!--#include virtual="/parts/header-login.html" -->
+
+<section class="s-main--small">
+
+	<div class="container">
+
+		<div class="alert-container js--alert-container">
+
+		</div>
+
+		<div class="flex flex-wrap">
+
+			<div class="flex-item flex-item-33 flex-1">
+
+				<!--#include virtual="/lk/sport-profile-card.html" -->
+
+			</div>
+			<!-- /.flex-item flex-item-33 -->
+
+			<div class="flex-item flex-item-66">
+
+				<div class="h3 mt0">Физиологический профиль</div>
+
+				<p>Страница защищена авторизацией по СМС коду</p>
+
+				<form action="#">
+
+					<button class="button button-secondary" type="submit">Получить СМС-Код</button>
+
+				</form>
+
+				<form class="c-form js--need-validation" action="#" novalidate>
+
+					<div class="c-form-control mt1">
+
+						<div class="c-form-control__label">Введите смс код</div>
+
+						<input class="c-form-control__input" type="text" minlength="6" maxlength="6" placeholder="XXXXXX" required>
+
+						<div class="c-form-control__caption c-form-control__caption--danger">Обязательное поле. Должно содержать 6 символов</div>
+
+					</div>
+
+					<button class="button button-primary" type="submit">Войти</button>
+
+				</form>
+
+			</div>
+			<!-- /.flex -->
+
+		</div>
+		<!-- /.flex-item.flex-item-66 -->
+
+	</div>
+	<!-- /.container -->
+
+</section>  <!-- /.s-main -->
+
+<!--#include virtual="/parts/footer-login.html" -->

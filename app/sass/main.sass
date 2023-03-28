@@ -6,6 +6,10 @@
 	@media screen and ( max-width: $lg )
 		margin: $gutter * 2 0
 
+.s-main--small
+	margin-top: $gutter * 1
+	margin-bottom: $gutter * 2
+
 .img-responsive
 	display: block
 	max-width: 100%
@@ -62,22 +66,22 @@ a
 @import 'blocks/**/*'
 
 .m0
-	margin: 0
+	margin: 0 !important
 
 .mb0
-	margin-bottom: 0
+	margin-bottom: 0 !important
 
 .mb05
-	margin-bottom: $gutter / 2
+	margin-bottom: $gutter / 2 !important
 
 .mb1
-	margin-bottom: $gutter
+	margin-bottom: $gutter !important
 
 .mb2
-	margin-bottom: $gutter * 2
+	margin-bottom: $gutter * 2 !important
 
 .mb3
-	margin-bottom: $gutter * 3
+	margin-bottom: $gutter * 3 !important
 
 .mt0
 	margin-top: 0
@@ -96,6 +100,12 @@ a
 
 .mt3
 	margin-top: $gutter * 3
+
+.mt30p
+	margin-top: 30%
+
+.m-auto
+	margin: auto
 
 .c1
 	font-size: 14px
@@ -137,6 +147,9 @@ a
 
 .nowrap
 	white-space: nowrap
+
+.flex-nowrap
+	flex-wrap: nowrap
 
 .d-none
 	display: none
@@ -191,3 +204,9 @@ a
 
 .text-right
 	text-align: right
+
+.height-100
+	height: 100%
+
+.width-100
+	width: 100%

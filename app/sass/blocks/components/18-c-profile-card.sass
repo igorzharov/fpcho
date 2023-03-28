@@ -8,7 +8,7 @@
 		background-color: $blue-ghost
 		margin: $gutter / 2 0
 
-	.c-profile-card__avatar
+	&__avatar
 		margin: 0 auto $gutter / 2 auto
 		width: 96px
 		height: 96px
@@ -19,11 +19,12 @@
 			object-fit: cover
 			width: 100%
 
-	.c-profile-card__profile-info
-		margin-bottom: $gutter
+	&__profile-info
+		margin-bottom: $gutter !important
 
-	.button
-		margin: $gutter / 4 0
+	&__control
+		@media (max-width: $md)
+			padding: 0 $gutter / 3
 
 .c-profile-card-button
 	display: none

@@ -1,265 +1,265 @@
-.c-form-control
-	position: relative
-	display: flex
-	flex-wrap: wrap
-	align-items: center
-	&:not(:last-child)
-		margin-bottom: $gutter
-
-	&--width-150
-		width: 150px
-
-	&-icon-left
-		.c-form-control__icons
-			left: 0
-		.c-form-control__input
-			text-indent: $gutter * 2.2
-
-	&-items
-		margin: 0 $gutter / -2
-
-	&__item
-		padding: 0 $gutter / 2
-
-	&__item-50
-		width: 50%
-
-	&__input
-		width: 100%
-		height: 56px
-		box-sizing: border-box
-		text-indent: $gutter
-		background-color: $blue-ghost
-		border-radius: $gutter / 4
-		outline: none !important
-		padding: 0
-		border: 0
-		box-shadow: 0px 0px 0px 4px transparent
-		transition: box-shadow .25s ease
-		&:hover,&:focus
-			box-shadow: 0px 0px 0px 4px #BFE5FB !important
-		&:focus:required:invalid
-			box-shadow: 0px 0px 0px 2px $danger
-			+ .c-form-control__caption
-				display: block
-				color: $danger
-		&:required:valid
-			box-shadow: 0px 0px 0px 2px $success
-
-	&__textarea
-		width: 100%
-		height: 56px
-		box-sizing: border-box
-		text-indent: $gutter / 2
-		padding: $gutter / 2
-		background-color: $blue-ghost
-		border-radius: $gutter / 4
-		outline: none !important
-		border: 0
-		min-height: 100px
-		max-height: 500px
-		resize: vertical
-		box-shadow: 0px 0px 0px 4px transparent
-		transition: box-shadow .25s ease
-		&:hover,&:focus,&:active
-			box-shadow: 0px 0px 0px 4px #BFE5FB !important
-		&:focus:required:invalid
-			box-shadow: 0px 0px 0px 2px $danger
-			+ .c-form-control__caption
-				display: block
-				color: $danger
-		&:required:valid
-			box-shadow: 0px 0px 0px 2px $success
-
-	&__caption
-		display: none
-		width: 100%
-		font-size: 14px
-		margin-top: $gutter / 4
-
-	&__caption-error
-		color: $danger
-
-	&__caption-show
-		display: block
-
-	&__icons
-		position: absolute
-		display: flex
-		align-items: center
-		top: 0
-		right: 0
-		justify-content: center
-		width: 56px
-		height: 56px
-
-	&__toggle-visibility
-		cursor: pointer
-		.c-form-control__icon
-			pointer-events: none
-			position: absolute
-			filter: invert(66%) sepia(11%) saturate(699%) hue-rotate(199deg) brightness(94%) contrast(88%)
-			opacity: 0
-			transition: opacity .25s ease
-		.c-form-control__toggle-on
-			opacity: 1
-
-	&__radio
-		position: relative
-		cursor: pointer
-		appearance: none
-		width: 20px
-		height: 20px
-		border: 2px solid $blue-light
-		border-radius: $gutter / 6
-		transition: border-color .25s ease
-		outline: none !important
-		&:after
-			position: absolute
-			content: ''
-			display: block
-			width: 10px
-			height: 10px
-			top: 50%
-			left: 50%
-			transform: translate(-50%, -50%)
-			background-color: transparent
-			border-radius: 2px
-			transition: background-color .25s ease
-		&:checked
-			border-color: $blue
-			&:after
-				background-color: $blue
-
-	&__radio-label
-		cursor: pointer
-		flex: auto
-		display: flex
-		align-items: center
-		height: 100%
-		padding-left: $gutter / 4
-
-	// Фикс SLIM SELECT для Required
-
-	select.c-form-control__select
-		display: block !important
-		position: absolute
-		height: $height
-		top: 0
-		opacity: 0
-
-	&__select
-		.ss-single-selected
-			position: relative
-			height: 56px
-			padding: 0
-			text-indent: $gutter
-			background-color: $blue-ghost
-			border: 0
-			box-shadow: 0px 0px 0px 4px transparent
-			transition: box-shadow .25s ease
-			justify-content: space-between
-			&:hover,&:focus
-				box-shadow: 0px 0px 0px 4px #BFE5FB
-			.placeholder
-				color: $text-light
-				max-width: 89%
-				white-space: nowrap
-				display: block
-				align-items: center
-				overflow: hidden
-				text-overflow: ellipsis
-				line-height: $height
-				text-indent: 0
-				padding-left: 20px
-				.ss-disabled
-					color: $text-light
-
-			.ss-arrow
-				margin-left: 12px !important
-				margin-right: 12px !important
-				span
-					border-color: $text-dark !important
-					padding: 4px !important
-
-		.ss-content
-			border: 0
-
-		.ss-list
-			border: 0
-			max-height: 285px
-			.ss-option
-				padding: 0
-				&:hover
-					background-color: $blue
-					color: #fff 
-			.ss-option-selected
-				background-color: darken($blue, 5%) !important
-				color: #fff !important
-
-	&__select-item
-		height: 56px
-		line-height: 56px
-		padding: 0
-		border-left: 1px solid $blue-ghost
-		border-right: 1px solid $blue-ghost
-		border-bottom: 1px solid $blue-ghost
-		text-indent: $gutter
-		transition: background-color .25s ease
-		cursor: pointer
-
-	&__select-item:hover
-		background-color: $blue
-		color: #fff
-
-	&__multiple-select
-		.ss-multi-selected
-			position: relative
-			height: 56px
-			padding: 0
-			text-indent: $gutter
-			background-color: $blue-ghost
-			border: 0
-			box-shadow: 0px 0px 0px 4px transparent
-			transition: box-shadow .25s ease
-			&:hover,&:focus
-				box-shadow: 0px 0px 0px 4px #BFE5FB
-			.placeholder
-				color: $text-light
-
-			.ss-values
-				height: 30px
-
-			.ss-add
-				padding-right: $gutter / 2
-				flex: 0 1 auto
-				margin: 0 6px
-				align-items: center
-				.ss-plus
-					border: solid $text-dark
-					border-width: 0 2px 2px 0
-					display: inline-block
-					padding: 4px
-					transition: margin .2s,-webkit-transform .2s
-					transition: transform .2s,margin .2s
-					transition: transform .2s,margin .2s,-webkit-transform .2s
-					height: inherit
-					width: inherit
-					background: transparent
-					transform: rotate(45deg)
-					&:after
-						display: none
-
-		// .ss-optgroup-label
-		// 	padding: $gutter / 2 !important
-
-		// .ss-list
-		// 	max-height: 100% !important
-
-		.ss-open-below
-			.ss-add
-				.ss-plus
-					transform: translateY(2px) rotate(-134deg) !important
-
-.ss-content .ss-list .ss-option.ss-disabled
-	cursor: default
+//.c-form-control
+//	position: relative
+//	display: flex
+//	flex-wrap: wrap
+//	align-items: center
+//	&:not(:last-child)
+//		margin-bottom: $gutter
+//
+//	&--width-150
+//		width: 150px
+//
+//	&-icon-left
+//		.c-form-control__icons
+//			left: 0
+//		.c-form-control__input
+//			text-indent: $gutter * 2.2
+//
+//	&-items
+//		margin: 0 $gutter / -2
+//
+//	&__item
+//		padding: 0 $gutter / 2
+//
+//	&__item-50
+//		width: 50%
+//
+//	&__input
+//		width: 100%
+//		height: 56px
+//		box-sizing: border-box
+//		text-indent: $gutter
+//		background-color: $blue-ghost
+//		border-radius: $gutter / 4
+//		outline: none !important
+//		padding: 0
+//		border: 0
+//		box-shadow: 0px 0px 0px 4px transparent
+//		transition: box-shadow .25s ease
+//		&:hover,&:focus
+//			box-shadow: 0px 0px 0px 4px #BFE5FB !important
+//		&:focus:required:invalid
+//			box-shadow: 0px 0px 0px 2px $danger
+//			+ .c-form-control__caption
+//				display: block
+//				color: $danger
+//		&:required:valid
+//			box-shadow: 0px 0px 0px 2px $success
+//
+//	&__textarea
+//		width: 100%
+//		height: 56px
+//		box-sizing: border-box
+//		text-indent: $gutter / 2
+//		padding: $gutter / 2
+//		background-color: $blue-ghost
+//		border-radius: $gutter / 4
+//		outline: none !important
+//		border: 0
+//		min-height: 100px
+//		max-height: 500px
+//		resize: vertical
+//		box-shadow: 0px 0px 0px 4px transparent
+//		transition: box-shadow .25s ease
+//		&:hover,&:focus,&:active
+//			box-shadow: 0px 0px 0px 4px #BFE5FB !important
+//		&:focus:required:invalid
+//			box-shadow: 0px 0px 0px 2px $danger
+//			+ .c-form-control__caption
+//				display: block
+//				color: $danger
+//		&:required:valid
+//			box-shadow: 0px 0px 0px 2px $success
+//
+//	&__caption
+//		display: none
+//		width: 100%
+//		font-size: 14px
+//		margin-top: $gutter / 4
+//
+//	&__caption-error
+//		color: $danger
+//
+//	&__caption-show
+//		display: block
+//
+//	&__icons
+//		position: absolute
+//		display: flex
+//		align-items: center
+//		top: 0
+//		right: 0
+//		justify-content: center
+//		width: 56px
+//		height: 56px
+//
+//	&__toggle-visibility
+//		cursor: pointer
+//		.c-form-control__icon
+//			pointer-events: none
+//			position: absolute
+//			filter: invert(66%) sepia(11%) saturate(699%) hue-rotate(199deg) brightness(94%) contrast(88%)
+//			opacity: 0
+//			transition: opacity .25s ease
+//		.c-form-control__toggle-on
+//			opacity: 1
+//
+//	&__radio
+//		position: relative
+//		cursor: pointer
+//		appearance: none
+//		width: 20px
+//		height: 20px
+//		border: 2px solid $blue-light
+//		border-radius: $gutter / 6
+//		transition: border-color .25s ease
+//		outline: none !important
+//		&:after
+//			position: absolute
+//			content: ''
+//			display: block
+//			width: 10px
+//			height: 10px
+//			top: 50%
+//			left: 50%
+//			transform: translate(-50%, -50%)
+//			background-color: transparent
+//			border-radius: 2px
+//			transition: background-color .25s ease
+//		&:checked
+//			border-color: $blue
+//			&:after
+//				background-color: $blue
+//
+//	&__radio-label
+//		cursor: pointer
+//		flex: auto
+//		display: flex
+//		align-items: center
+//		height: 100%
+//		padding-left: $gutter / 4
+//
+//	// Фикс SLIM SELECT для Required
+//
+//	select.c-form-control__select
+//		display: block !important
+//		position: absolute
+//		height: $height
+//		top: 0
+//		opacity: 0
+//
+//	&__select
+//		.ss-single-selected
+//			position: relative
+//			height: 56px
+//			padding: 0
+//			text-indent: $gutter
+//			background-color: $blue-ghost
+//			border: 0
+//			box-shadow: 0px 0px 0px 4px transparent
+//			transition: box-shadow .25s ease
+//			justify-content: space-between
+//			&:hover,&:focus
+//				box-shadow: 0px 0px 0px 4px #BFE5FB
+//			.placeholder
+//				color: $text-light
+//				max-width: 89%
+//				white-space: nowrap
+//				display: block
+//				align-items: center
+//				overflow: hidden
+//				text-overflow: ellipsis
+//				line-height: $height
+//				text-indent: 0
+//				padding-left: 20px
+//				.ss-disabled
+//					color: $text-light
+//
+//			.ss-arrow
+//				margin-left: 12px !important
+//				margin-right: 12px !important
+//				span
+//					border-color: $text-dark !important
+//					padding: 4px !important
+//
+//		.ss-content
+//			border: 0
+//
+//		.ss-list
+//			border: 0
+//			max-height: 285px
+//			.ss-option
+//				padding: 0
+//				&:hover
+//					background-color: $blue
+//					color: #fff
+//			.ss-option-selected
+//				background-color: darken($blue, 5%) !important
+//				color: #fff !important
+//
+//	&__select-item
+//		height: 56px
+//		line-height: 56px
+//		padding: 0
+//		border-left: 1px solid $blue-ghost
+//		border-right: 1px solid $blue-ghost
+//		border-bottom: 1px solid $blue-ghost
+//		text-indent: $gutter
+//		transition: background-color .25s ease
+//		cursor: pointer
+//
+//	&__select-item:hover
+//		background-color: $blue
+//		color: #fff
+//
+//	&__multiple-select
+//		.ss-multi-selected
+//			position: relative
+//			height: 56px
+//			padding: 0
+//			text-indent: $gutter
+//			background-color: $blue-ghost
+//			border: 0
+//			box-shadow: 0px 0px 0px 4px transparent
+//			transition: box-shadow .25s ease
+//			&:hover,&:focus
+//				box-shadow: 0px 0px 0px 4px #BFE5FB
+//			.placeholder
+//				color: $text-light
+//
+//			.ss-values
+//				height: 30px
+//
+//			.ss-add
+//				padding-right: $gutter / 2
+//				flex: 0 1 auto
+//				margin: 0 6px
+//				align-items: center
+//				.ss-plus
+//					border: solid $text-dark
+//					border-width: 0 2px 2px 0
+//					display: inline-block
+//					padding: 4px
+//					transition: margin .2s,-webkit-transform .2s
+//					transition: transform .2s,margin .2s
+//					transition: transform .2s,margin .2s,-webkit-transform .2s
+//					height: inherit
+//					width: inherit
+//					background: transparent
+//					transform: rotate(45deg)
+//					&:after
+//						display: none
+//
+//		// .ss-optgroup-label
+//		// 	padding: $gutter / 2 !important
+//
+//		// .ss-list
+//		// 	max-height: 100% !important
+//
+//		.ss-open-below
+//			.ss-add
+//				.ss-plus
+//					transform: translateY(2px) rotate(-134deg) !important
+//
+//.ss-content .ss-list .ss-option.ss-disabled
+//	cursor: default
